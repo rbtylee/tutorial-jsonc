@@ -1,4 +1,4 @@
-# Parsing a JSON object - part 2 complex parsing
+# Parsing a JSON object - part 3 complex parsing
 
 At this point in the tutorial, we have almost all the tools needed to completely parse the file _*contact.json*_.
 
