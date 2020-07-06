@@ -175,6 +175,3 @@ Now to see the effect of using JSON_C_TO_STRING_SPACED edit the file json-file01
 1. What happens if our json file contains invalid json and we run _*json-file01*_ ? Alter the program to print a message informing the user the json is invalid.
 
 2. todo JSON_C_TO_STRING_PRETTY | other values what does this do? I saw it in a sample program online. explore this
-
-
-
