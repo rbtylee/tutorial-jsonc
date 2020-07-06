@@ -112,7 +112,7 @@ You can see this if you insert the statement below into the code:
 
 Why does it not simply return the string itself (no quotes included)? Because remember a _*json_object*_  is not necessarily always a string. It can be a number, a boolean, an array of _*json_objects*_  or even another _*json_object*_ . In general, we don't know unless we know the _*semantics*_ of the JSON data being parsed in advance or have some way of testing the _*type*_ of the _*json_object*_ . (More on JSON types latter).
 
-!["JSON state diagram for values"](/src/EFL/CookBook/json-c/value.png)
+!["JSON state diagram for values"](https://github.com/rbtylee/tutorial-jsonc/blob/master/Images/value.png)
 
 What about error handling you might ask? What happens if the funnction _*json_object_object_get(obj, key)*_ is unable to find the value associate with the key in the _*json_object*_? in this case NULL is returned. Again play with the code to see the results of such an invalid search. In production code we should put in some error handling code in our example. 
 
