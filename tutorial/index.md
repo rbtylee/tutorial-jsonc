@@ -1,4 +1,4 @@
-# JSON Tutorial Index
+# Json-c Tutorial Index
 
 - [Intro](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/Intro.md)
   
