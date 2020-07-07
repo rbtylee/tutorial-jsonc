@@ -47,7 +47,7 @@ children  -> [ ]
 spouse  -> (null)
 ```
 
-As you can see we have looped over every Name/value pairs in our _*contact.json*_ file. The code is simple and easy to understand. As you may have noticed, the brackets are not needed if only a single statement is executed in the loop, just as is the case with other c style loops.
+We have looped over every Name/value pairs in our _*contact.json*_ file. The code is simple and easy to understand. As you may have noticed, the brackets are not needed if only a single statement is executed in the loop, just as is the case with other c style loops.
 
 In cases where the value is another json\_object or a json\_array, the obj or array is not parsed. Simply printed as a string. Hence, the program is not generic in nature. However, we have all the tools to implement a recursive function to fully parse our _*contact.json*_ file, or in general any JSON.
 
