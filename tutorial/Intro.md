@@ -41,19 +41,19 @@ If you are unfamiliar with JSON, it may be clearer to consider an actual example
 }
 ```
 
-The example above should be readable enough for most people to see what is going on. For more information on JSON read the [Wikipedia article](https://en.wikipedia.org/wiki/JSON) or look over the [state diagrams](https://en.wikipedia.org/wiki/State_diagram) found on [json.org](https://www.json.org/json-en.html) descriping the 'language'.  The official standard describing the JSON format is: [RFC 7159](https://tools.ietf.org/html/rfc7159).
+The example above should be readable enough for most people to see what is going on. For more information on JSON read the [Wikipedia article](https://en.wikipedia.org/wiki/JSON) or look over the [state diagrams](https://en.wikipedia.org/wiki/State_diagram) found on [json.org](https://www.json.org/json-en.html) describing the 'language'.  The official standard describing the JSON format is [RFC 7159](https://tools.ietf.org/html/rfc7159).
 
 ## Problems
 
 1. Create a JSON file representing three or more people, with each person containing the same attributes as the JSON example given above. Make sure you have a valid JSON file by using a JSON validation web site.
 
-- Create a C _*struct*_ to store the data contained in this JSON represntation of a person.
+- Create a C _*struct*_ to store the data contained in this JSON representation of a person.
 
 - Explain what is meant by this comment:
 >> "The JSON syntax is not a specification of a complete data interchange. Meaningful data interchange requires agreement between a producer and consumer on the semantics attached to a particular use of the JSON syntax. What JSON does provide is the syntactic framework to which such semantics can be attached." - [The JSON Data Interchange Syntax](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)
 
 - Do you have any programs installed that use JSON as a configuration file? If so examine the file.
 
-- What are some potential downsides of using json as a configuration file?
+- What are some potential downsides of using JSON as a configuration file?
 
-- Do some research and find some websites with json  as REST API responses.
+- Do some research and find some websites with JSON  as REST API responses.
