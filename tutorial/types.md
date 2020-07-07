@@ -29,7 +29,7 @@ It should also be noted that in the json-c library a value of json_type_int is a
 We have two functions in the json-c library to help us determine the type of an _*json_object*_:
 
 - int json_object_is_type(json_object \*obj, json_type type)
-- json_type json_object_get_type(json_object \*obj)
+- json_type json_type json_object_get_type(json_object \*obj)
 
 We have seen the usage of the function _*json_object_get_string*_, json-c natural also provides the functions:
 
