@@ -161,4 +161,4 @@ Problems
 
 - Write a classic C program that does the same thing as _*json-parse04.c*_ using only functions found in the C standard library. Simplicity is better than a complex solution. Depending upon your programming ability, this may be a difficult problem.
 
-- if have completed the above problem, discuss the pros and cons of using your classic C solution verses a json-c implemtation.
+- If have completed the above problem, discuss the pros and cons of using your classic C solution verses a json-c implemtation.
