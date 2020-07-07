@@ -1,6 +1,6 @@
 # Creating and saving a JSON object
 
-It is perhaps traditional when discussing an Object Oriented library to first introduce creating and deleting a new object. But, we have taken a backwards appproach: Introducing initializing a json\_object from a file or string first and then going start to parsing the JSON data contained within. Now it is time to introducing creating a new JSON object and adding data to it and saving it as a file.
+It is perhaps traditional when discussing an Object Oriented library to first introduce creating and deleting a new object. But, we have taken a backwards appproach: Introducing initializing a json\_object from a file or string first and then going to parsing the JSON data contained within. Now it is time to introducing creating a new JSON object and adding data to it and saving it as a file.
 
 ## Json Constructors
 
