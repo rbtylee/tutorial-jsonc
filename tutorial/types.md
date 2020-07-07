@@ -4,7 +4,7 @@ As we have seen, extracting a string value for a _*json\_object*_ is rather easy
 
 Review the state diagram for JSON values again:
 
-!["JSON state diagram for values"](/src/EFL/CookBook/json-c/value.png)
+!["JSON state diagram for values"](https://github.com/rbtylee/tutorial-jsonc/blob/master/Images/value.png)
 
 The json-c library has an enumated type _*json\_type*_ which can be used with the apprioate function to test an _*json_object*_ to determine its type in advance. We have the following '_types_' defined:
 
