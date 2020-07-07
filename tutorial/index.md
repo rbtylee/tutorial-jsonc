@@ -28,7 +28,7 @@
   
 - [Parsing a Json object - part 3 complex parsing](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing2.md)
 
-  > Print all vlaues of all objects in contact.json: _*json-parse04.c*_
+  > Print all values of all objects in contact.json: _*json-parse04.c*_
   
 - [Parsing a Json object - part 4: Json strings](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing3.md)
 
