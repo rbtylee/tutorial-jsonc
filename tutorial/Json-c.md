@@ -3,7 +3,7 @@
 
 Json-c is a c library aiming to provide an object oriented like approach to using JSON objects in C. It aims to conform to RFC 7159 while being easy to use. Most of the memory management issues are handled by the library itself 'behind the scenes'.
 
-The home page for json-c: [https://github.com/json-c/json-c/wiki.]()
+The home page for json-c: [https://github.com/json-c/json-c](https://github.com/json-c/json-c).
 
 Linux users may be able to install json-c using their OS's packaging system. Doing so may not result in the most recent version of the library tho. If that concerns you, install by following the installations instructions found on the Github page. Note, the documentation can be generated directly from the source codes using Doxygen or accessed [online](http://json-c.github.io/json-c/).
 
