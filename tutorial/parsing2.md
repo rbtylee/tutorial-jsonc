@@ -2,10 +2,9 @@
 
 At this point in the tutorial, we have almost all the tools needed to completely parse the file _*contact.json*_.
 
-However, there is some ambiquity in the file _*contact.json*_ we need to address first.
+However, there is some ambiguity in the file _*contact.json*_ we need to address first.
 
 Consider the two attributes, "children" and "spouse":
-
 ```
   "children": [],
   "spouse": null
@@ -37,7 +36,7 @@ Where is a known spouse, record the full name and age as in:
 
 ## Some needed Array functions
 
-With ambiquity issue addressed, we precede to read every value of every field in our contact.json file and print the results. To accomplish this we need first to determine the length of a json\_array in order to deal with the **Children** attribute. Json-c provides a function much like _*json_object_get_string_len*_ only for json_arrays:
+With the ambiguity issue addressed, we proceed to read every value of every field in our contact.json file and print the results. To accomplish this we need first to determine the length of a json\_array in order to deal with the **Children** attribute. Json-c provides a function much like _*json_object_get_string_len*_ only for json_arrays:
 
 - int json_object_array_length(json_object \*obj)
 
@@ -47,7 +46,7 @@ Once we know the length of a json\_array, we have to be able to loop thru every 
 
 - json_object\* json_object_array_get_idx(json_object \*obj, int idx)
 
-This function retrives and returns the element at specificed index of the json_array or in the case of failure returns NULL.
+This function retrieves and returns the element at the specified index of the json_array or in the case of failure returns NULL.
 
 With these two functions now _under our belt_ the rest is just *grunt work*: 
 
@@ -161,4 +160,4 @@ Problems
 
 - Write a classic C program that does the same thing as _*json-parse04.c*_ using only functions found in the C standard library. Simplicity is better than a complex solution. Depending upon your programming ability, this may be a difficult problem.
 
-- If have completed the above problem, discuss the pros and cons of using your classic C solution verses a json-c implemtation.
+- If have completed the above problem, discuss the pros and cons of using your classic C solution verses a json-c implementation.

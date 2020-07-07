@@ -1,12 +1,12 @@
 # json_types
 
-As we have seen, extracting a string value for a _*json\_object*_ is rather easy. While we haven't considered it yet, the same holds when the value is a number, boolean or a null value. Things get more complex, however, if the JSON value is another _*json_object*_ or a _*json_array*_. However, to fully parse our _*contact.json*_ file, we must be able to handle the attributes with values that are either _*json_objects*_ or json arrays.
+As we have seen, extracting a string value for a _*json\_object*_ is rather easy. While we haven't considered it yet, the same holds when the value is a number, boolean, or a null value. Things get more complex, however, if the JSON value is another _*json_object*_ or a _*json_array*_. However, to fully parse our _*contact.json*_ file, we must be able to handle the attributes with values that are either _*json_objects*_ or json arrays.
 
 Review the state diagram for JSON values again:
 
 !["JSON state diagram for values"](https://github.com/rbtylee/tutorial-jsonc/blob/master/Images/value.png)
 
-The json-c library has an enumated type _*json\_type*_ which can be used with the apprioate function to test an _*json_object*_ to determine its type in advance. We have the following '_types_' defined:
+The json-c library has an enumerated type _*json\_type*_ which can be used with the appropriate function to test a _*json_object*_ to determine its type in advance. We have the following '_types_' defined:
 
 - json_type_null
 - json_type_boolean
@@ -24,7 +24,7 @@ typedef int json_bool;
 
 in the json-c header files.
 
-It should also be noted that in the json-c library a value of json_type_int is a 64-bit value internally. In C, this corresponds to the type *int64\_t*. Some readers may be unfamilar with the types, *int32\_t* and *int64\_t*. These "new" types are typedefs you can in the C header file *<stdint.h>*. They were introduced into the C language by the [C99 standard](https://en.wikipedia.org/wiki/C99). These are exact-width integer types that are guaranteed to have the same number of bits across all implementations. So *int32\_t* is a 32 bit integer while *int64\_t* is 64 bits. In general, it is safest to always use the int64 functions in the json-c library.
+It should also be noted that in the json-c library the value of json_type_int is a 64-bit value internally. In C, this corresponds to the type *int64\_t*. Some readers may be unfamiliar with the types, *int32\_t* and *int64\_t*. These "new" types are typedefs you can in the C header file *<stdint.h>*. They were introduced into the C language by the [C99 standard](https://en.wikipedia.org/wiki/C99). These are exact-width integer types that are guaranteed to have the same number of bits across all implementations. So *int32\_t* is a 32 bit integer while *int64\_t* is 64 bits. In general, it is safest to always use the int64 functions in the json-c library.
 
 We have two functions in the json-c library to help us determine the type of an _*json_object*_:
 
@@ -45,7 +45,7 @@ One can also see we have two new types:
 - lh_table
 - array_list
 
-Both of course *structs* defined in the _*json_object.h*_ header file. For now, we can safely ignore these types as the details are not important here. Curious users can read the docs or look up the defintions in the header file. More details on these functions can be found in the json-c documentation. TO DO referencing details of the two functions returning pointers.
+Both of course *structs* defined in the _*json_object.h*_ header file. For now, we can safely ignore these types as the details are not important here. Curious users can read the docs or look up the definitions in the header file. More details on these functions can be found in the json-c documentation. TO DO referencing details of the two functions returning pointers.
 
 Now, let's demonstrate some of these functions usage with our _*contact.json*_ file example:
 
@@ -144,13 +144,12 @@ json_object_print_type(json_object *obj, const char *key)
 
 ```
 
-Save (_*json-type00.c*_) above, compile and execute. Compare your results with the orginal _*contact.json*_ file to ensure the results make sense.
+Save (_*json-type00.c*_) above, compile, and execute. Compare your results with the original _*contact.json*_ file to ensure the results make sense.
 
 ## Problems
 
-1. In any language, write a implemntation of a state machine to determine whether a JSON value is valid. Consult the state diagram for a JSON values above. You are free to use a state machine library. However, for such a simple example it is hardly necesary.
+1. In any language, write an implementation of a state machine to determine whether a JSON value is valid. Consult the state diagram for a JSON value above. You are free to use a state machine library. However, for such a simple example it is hardly necessary.
 
 - If you choose a language other than C for Problem 1, explain why? Explain how difficult would it be to implement your non-C solution or something akin to it in C? If it is possible for you to do so in a reasonable amount of time, implement your non-C solution in C.
 
-- If you solved problem 1. in C, try it again in a non-C language. Preferably a 'popular' well known one. 
-
+- If you solved problem 1. in C, try it again in a non-C language. Preferably a 'popular' well-known one. 
