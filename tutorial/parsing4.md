@@ -1,6 +1,6 @@
 # Parsing a Json object - part 5: Iteration thru a JSON obj
 
-Looking at the parsing code discussed so far, you might wonder if there is an easier way to parse the file rather checking every attribute one at a time. Since we have been printing out the values for every attribute in the JSON file or string, shouldn't it be possible to simply iterate over the objects name/value pairs. Similar to a for loop only for json\_objects.
+Looking at the parsing code discussed so far, you might wonder if there is an easier way to parse the file rather than checking every attribute one at a time. Since we have been printing out the values for every attribute in the JSON file or string, shouldn't it be possible to simply iterate over the objects name/value pairs? Similar to a for loop only for json\_objects.
 
 The answer is, naturally, yes.
 
@@ -13,7 +13,7 @@ json_object_object_foreach(obj, key, val)
 }
 ```
 
-where obj is the JSON object you want to parse; key and value correspond to key: value pairs. However, key and value are placeholds and not actual variables you have to declare. They are declared by the macro itself, and you can use them inside the loop. Key is a char\* and val is a json_object\*. You can choose any _variable_ names to correspond to key and value if you wish.
+where obj is the JSON object you want to parse; key and value correspond to key: value pairs. However, key and value are placeholders and not actual variables you have to declare. They are declared by the macro itself, and you can use them inside the loop. Key is a char\* and val is a json_object\*. You can choose any _variable_ names to correspond to key and value if you wish.
 
 ## json_object_object_foreach: json-parse06.c
 
