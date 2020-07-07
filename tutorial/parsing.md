@@ -1,6 +1,6 @@
 # Parsing a JSON object - part 2: Depreciated Function solution
 
-In our last section, we noted the function _*json_object_object_get(obj, key)*_ is depreciated and gcc will throw some ugly warnings for each usage of this function when compiling the function. There are two reasons I covered this function first instead of using the function intended to replace it.
+In our last section, we noted the function _*json_object_object_get(obj, key)*_ is depreciated and gcc will throw some ugly warnings for each usage of this function when compiling the function. There are two reasons that I covered this function first instead of using the function intended to replace it.
 
 1. Usage of this function still occurs in current production code and it is best to be familiar with it
 
@@ -100,5 +100,5 @@ Save (_*json-parse03.c *_), compile and execute.
 
 ## Problems
 
-1. Verify the function _*_json_object_object_get*_ behaves more or less the same as _*json_object_object_get*_ when it comes to dereferencing and freeing memory issues. Do this by playing with the code and using Valgrind. How about my function _*\_json_object_object_get*_ used in _*json-parse03.c *_?
+1. Verify that the function _*_json_object_object_get*_ behaves more or less the same as _*json_object_object_get*_ when it comes to dereferencing and freeing memory issues. Do this by playing with the code and using Valgrind. How about my function _*\_json_object_object_get*_ used in _*json-parse03.c *_?
 

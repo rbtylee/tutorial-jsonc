@@ -53,7 +53,7 @@ The json object to string:
 
 ```
 
-Not much to say here, other than it is a hassle to escape all the quote characters in a JSON representation for usage in a C program. This would not be a problem for downloading and storing JSON from the internet.
+Not much to say here, other than it is a hassle to escape all the quote characters in a JSON representation for usage in a C program. However, this is not a problem for downloading and storing JSON from the internet.
 
 Problem:
 

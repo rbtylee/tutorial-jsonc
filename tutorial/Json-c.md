@@ -18,7 +18,7 @@ This installs all the development (header) files as well as the library itself (
 
 For reference, the version installed is *0.12.1-1.3ubuntu0.3*. Note, this corresponds to *Version 0.12.1*, released Jun 7, 2016, as is per the case for Ubuntu LTS releases. Rather dated but sufficient enough for this tutorial.
 
-Without much explanation, as it is rather self-explanatory, our first json-c program, _*json-version.c*_:
+Without much explanation, as it is rather self-explanatory,  let's write our first json-c program, _*json-version.c*_:
 
 ````
 #include <stdio.h>

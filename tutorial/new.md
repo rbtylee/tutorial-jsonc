@@ -1,6 +1,6 @@
 # Creating and saving a JSON object
 
-It is perhaps traditional when discussing an Object-Oriented library to first introduce creating and deleting a new object. But, we have taken a backward approach: Introducing initializing a json\_object from a file or string first and then going to parsing the JSON data contained within. Now it is time to introducing creating a new JSON object and adding data to it and saving it as a file.
+It is perhaps traditional when discussing an Object-Oriented library to first introduce creating and deleting a new object. But, we have taken a backward approach: Introducing initializing a json\_object from a file or string first and then going to parsing the JSON data contained within. Now it is time to introducing creating a new JSON object, adding data to it and saving it as a file.
 
 ## Json Constructors
 
@@ -41,7 +41,7 @@ The json representation:
 
 ```
 
-After creating a _*json\_object*_, you usually initialize it the data you want to store in it. Remember the data is always in name/value pairs where name is a string and value is another _*json_object*_ of a particular _*json_type*_. The json-c function for this operation is:
+After creating a _*json\_object*_, you usually intialize it with the data you want to store in it. Remember that the data  is always in name/value pairs where name is a string and value is another _*json_object*_ of a particular _*json_type*_. The json-c function for this operation is:
 
 - void json_object_object_add(json_object *obj, const char * key, json_object *val)
 
@@ -152,7 +152,7 @@ main(void)
 Expected output:
 
 ```
-$ ./json-new00 
+$ ./json-new00
 The json representation:
 
 {

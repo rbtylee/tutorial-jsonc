@@ -119,11 +119,11 @@ The json file:
 
 ```
 
-Here, the output is more readable being reformatted some but certainly more suitable for human reading than before. Especially for more complex and long json files.
+Here, the output is more readable having been reformatted somewhat, but it is certainly more suitable for human reading than before. Especially for more complex and long json files.
 
 So let's examine what we have learned from the code above.
 
-First and foremost, I have introduced a new 'type': _*json_object*_. As expected for a C program, _*json_object*_ is really a structure defined in the _*json_object_private.h*_ header file. Installed in Ubuntu/Debian distros at /usr/include/json-c. You can examine the definition if you are so inclined. But the details of its implementation are not important here: we can just think of it as a basic object that the json-c functions operate upon.
+First and foremost, I have introduced a new 'type': _*json_object*_. As expected for a C program, _*json_object*_ is really a structure defined in the _*json_object_private.h*_ header file.  In Ubuntu/Debian distos it is installed at /usr/include/json-c. You can examine the definition if you are so inclined, but the details of its implementation are not important here: we can just think of it as a basic object that the json-c functions operate upon.
 
 Some programmers who wish to stress the idea _*json_object*_ is a *struct* would write the line of code
 
@@ -136,7 +136,7 @@ as
 ```
 struct json_object *root = json_object_from_file("contact.json");
 ```
-That is a personal choice and do as you will. I prefer to leave the struct part off and think of it more like an additional basic type the library offers much like *int* or *float*.
+That is a personal choice and do whichever you prefer. I prefer to leave the struct part off and think of it more like an additional basic type the library offers much like *int* or *float*.
 
 Next I introduce the function:
 
@@ -165,9 +165,9 @@ First, the constant _*JSON_C_TO_STRING_PRETTY*_ used in the function _*json_obje
 - JSON_C_TO_STRING_PLAIN
 - JSON_C_TO_STRING_SPACED
 
-These flags tell the function _*json_object_to_json_string_ext*_ how to format the JSON in the string representation. We have already saw the usage and effect of _*JSON_C_TO_STRING_PLAIN*_: The function _*json_object_to_json_string(obj)*_ is equivalent to _*json_object_to_json_string_ext(obj, JSON_C_TO_STRING_SPACED)*_. Here all superfluous white space is removed from the string representation.
+These flags tell the function _*json_object_to_json_string_ext*_ how to format the JSON in the string representation. We have already seen the usage and effect of _*JSON_C_TO_STRING_PLAIN*_: The function _*json_object_to_json_string(obj)*_ is equivalent to _*json_object_to_json_string_ext(obj, JSON_C_TO_STRING_SPACED)*_. Here all superfluous white space is removed from the string representation.
 
-Now to see the effect of using JSON_C_TO_STRING_SPACED edit the file json-file01.c and add it as the flag instead of _*JSON_C_TO_STRING_PRETTY*_. What do think it does?
+Now, to see the effect of using JSON_C_TO_STRING_SPACED edit the file json-file01.c and add it as the flag instead of _*JSON_C_TO_STRING_PRETTY*_. What do think it does?
 
 ## Problems
 

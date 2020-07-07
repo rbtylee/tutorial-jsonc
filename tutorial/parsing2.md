@@ -10,7 +10,7 @@ Consider the two attributes, "children" and "spouse":
   "spouse": null
 ```
 For *children*, assume a value of null means _*No Children*_ whereas an empty array means _*Unknown*_.
-Where there are children, record the full name and age as in, for each child:
+Where there are children, record the full name and age, for each child:
 
 ```
   "children": [
@@ -24,8 +24,8 @@ Where there are children, record the full name and age as in, for each child:
     }
   ]
 ```
-For Spouse, a value of null will mean _*No Spouse Known*_. 
-Where is a known spouse, record the full name and age as in:
+For Spouse, a value of null will mean _*No Spouse Known*_.
+Where a spouse is known, record the full name and age as in:
 
 ```
   "spouse": {
@@ -36,19 +36,19 @@ Where is a known spouse, record the full name and age as in:
 
 ## Some needed Array functions
 
-With the ambiguity issue addressed, we proceed to read every value of every field in our contact.json file and print the results. To accomplish this we need first to determine the length of a json\_array in order to deal with the **Children** attribute. Json-c provides a function much like _*json_object_get_string_len*_ only for json_arrays:
+With the ambiguity issue addressed, we proceed to read every value of every field in our contact.json file and print the results. To accomplish this we first need to determine the length of a json\_array in order to deal with the **Children** attribute. Json-c provides a function much like _*json_object_get_string_len*_ only for json_arrays:
 
 - int json_object_array_length(json_object \*obj)
 
 The usage of this function is should be intuitively clear. It does what it says it does.
 
-Once we know the length of a json\_array, we have to be able to loop thru every _*json_object*_ the array contains. That is we need some function to _index_ the json_array. Hence:
+Once we know the length of a json\_array, we have to be able to loop through every _*json_object*_ the array contains. That is we need some function to _index_ the json_array. Hence:
 
 - json_object\* json_object_array_get_idx(json_object \*obj, int idx)
 
 This function retrieves and returns the element at the specified index of the json_array or in the case of failure returns NULL.
 
-With these two functions now _under our belt_ the rest is just *grunt work*: 
+With these two functions now _under our belt_ the rest is just *grunt work*:
 
 ## json-parse04.c
 
@@ -148,7 +148,7 @@ main(void)
 
 ```
 
-Save, compile and execute _*json-parse04.c*_ above. 
+Save, compile and execute _*json-parse04.c*_ above.
 
 Note: latter a simpler solution to this problem will be presented.
 
@@ -160,4 +160,4 @@ Problems
 
 - Write a classic C program that does the same thing as _*json-parse04.c*_ using only functions found in the C standard library. Simplicity is better than a complex solution. Depending upon your programming ability, this may be a difficult problem.
 
-- If have completed the above problem, discuss the pros and cons of using your classic C solution verses a json-c implementation.
+- If you have completed the above problem, discuss the pros and cons of using your classic C solution verses a json-c implementation.
