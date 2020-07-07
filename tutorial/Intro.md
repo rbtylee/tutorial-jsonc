@@ -10,9 +10,9 @@ The following comment from [json.org](https://www.json.org/json-en.html) should 
 
 >>An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence.
 
-In this tutorial, we are going to take a meandering path thru learning the json-c API. We will use functions as needed and perhaps not always do things the 'proper' way at first or at all. We will start playing with the code to get just general sense of it, and then gradually learn more as time goes on. We'll try to keep the examples applicable to real world problems and not just be _*toy snipplets*_. It will be assumed you already know C well enough to get by and are comfortable compiling, linking, and running code.
+In this tutorial, we are going to take a meandering path thru learning the json-c API. We will use functions as needed and perhaps not always do things the 'proper' way at first or at all. We will start playing with the code to get just a general sense of it, and then gradually learn more as time goes on. We'll try to keep the examples applicable to real-world problems and not just be toy snippets. It will be assumed you already know C well enough to get by and are comfortable compiling, linking, and running code.
 
-If you are unfamilar with JSON, it may be clearer to consider an actual example. The JSON example below (taken from wikipedia) is a possible representation of a person:
+If you are unfamiliar with JSON, it may be clearer to consider an actual example. The JSON example below (taken from Wikipedia) is a possible representation of a person:
 
 ```
 {
