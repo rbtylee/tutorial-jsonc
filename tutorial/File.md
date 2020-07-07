@@ -166,7 +166,7 @@ First, the constant _*JSON_C_TO_STRING_PRETTY*_ used in the function _*json_obje
 - JSON_C_TO_STRING_PLAIN
 - JSON_C_TO_STRING_SPACED
 
-These flags tell the function _*json_object_to_json_string_ext*_ how to format the JSON in the string representation. We have already saw the usage and effect of _*JSON_C_TO_STRING_PLAIN*_: The function _*json_object_to_json_string(obj)*_ is equivalent to json_object_to_json_string_ext(obj, JSON_C_TO_STRING_SPACED). Here all superfluous white space is removed from the string representation.
+These flags tell the function _*json_object_to_json_string_ext*_ how to format the JSON in the string representation. We have already saw the usage and effect of _*JSON_C_TO_STRING_PLAIN*_: The function _*json_object_to_json_string(obj)*_ is equivalent to _*json_object_to_json_string_ext(obj, JSON_C_TO_STRING_SPACED)*_. Here all superfluous white space is removed from the string representation.
 
 Now to see the effect of using JSON_C_TO_STRING_SPACED edit the file json-file01.c and add it as the flag instead of _*JSON_C_TO_STRING_PRETTY*_. What do think it does?
 
