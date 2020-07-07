@@ -5,7 +5,7 @@ Json-c is a c library aiming to provide an object oriented like approach to usin
 
 The home page for json-c: [https://github.com/json-c/json-c](https://github.com/json-c/json-c).
 
-Linux users may be able to install json-c using their OS's packaging system. Doing so may not result in the most recent version of the library tho. If that concerns you, install by following the installations instructions found on the Github page. Note, the documentation can be generated directly from the source codes using Doxygen or accessed [online](http://json-c.github.io/json-c/).
+Linux users may be able to install json-c using their OS's packaging system. Doing so may not result in the most recent version of the library tho. While you may  install by following the installations instructions found on the Github page, this is only recommended if you really know what you are doing. Many other packages may depend upon json-c. Note, the documentation can be generated directly from the source codes using Doxygen or accessed [online](http://json-c.github.io/json-c/).
 
 I will be using [Bodhi Linux 5.1](https://www.bodhilinux.com/) based on Ubuntu 18.04 as my Distro in this tutorial and gcc as my compiler. So to install:
 
