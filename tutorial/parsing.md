@@ -100,5 +100,5 @@ Save (_*json-parse03.c *_), compile and execute.
 
 ## Problems
 
-1. Verify the function _*json_object_object_get_ex*_ behaves more less the same as _*json_object_object_get*_ when it comes to dereferencing and freeing memory issues. Do this by playing with the code and using valgrind. How about my function _*\_json_object_object_get*_ used in _*json-parse03.c *_?
+1. Verify the function _*_json_object_object_get*_ behaves more less the same as _*json_object_object_get*_ when it comes to dereferencing and freeing memory issues. Do this by playing with the code and using valgrind. How about my function _*\_json_object_object_get*_ used in _*json-parse03.c *_?
 
