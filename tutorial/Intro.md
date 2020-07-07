@@ -1,8 +1,8 @@
 # Intro
 
-Love it or hate it JSON (Java Script Object Notation) is ubiquitous these days as a file format. As it's name implies, it was derived from JavaScript. Most programming languages provide support for it, either in the standard libraries or via third part libraries. JSON is simply a way of storing or exchanging data for use by a program in a more or less human readable text file. It is a heavily used data format for transitting data over the internet and sometimes used as an ad hoc appplication configuration language. As a text format, JSON is completely language independent and uses conventions that are familiar to programmers of the C-family of languages. As such the data representation has a style similar to C structures. The data representation consists of name–value pairs and array data types.
+Love it or hate it JSON (JavaScript Object Notation) is ubiquitous these days as a file format. As its name implies, it was derived from JavaScript. Most programming languages provide support for it, either in the standard libraries or via third party libraries. JSON is simply a way of storing or exchanging data for use by a program in a more or less human-readable text file. It is a heavily used data format for transmitting data over the internet and sometimes used as an ad hoc application configuration language. As a text format, JSON is completely language independent and uses conventions that are familiar to programmers of the C-family of languages. As such the data representation has a style similar to C structures. The data representation consists of name-value pairs and array data types.
 
-The following comment from [json.org](https://www.json.org/json-en.html) should clarify the concept of the json format for most progammers:
+The following comment from [json.org](https://www.json.org/json-en.html) should clarify the concept of the JSON format for most programmers:
 
 >JSON is built on two structures:
 
