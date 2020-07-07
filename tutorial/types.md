@@ -148,7 +148,7 @@ Save (_*json-type00.c*_) above, compile and execute. Compare your results with t
 
 ## Problems
 
-1. In whatever language you wish, write a implemntation of a state machine to determine whether a JSONvalue is valid. Consult the state diagram for a JSON values above. You are free to use a state machine library if you wish altho For such a simple example it is hardly necesary.
+1. In any language, write a implemntation of a state machine to determine whether a JSON value is valid. Consult the state diagram for a JSON values above. You are free to use a state machine library. However, for such a simple example it is hardly necesary.
 
 - If you choose a language other than C for Problem 1, explain why? Explain how difficult would it be to implement your non-C solution or something akin to it in C? If it is possible for you to do so in a reasonable amount of time, implement your non-C solution in C.
 
