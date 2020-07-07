@@ -34,7 +34,7 @@
 
   > Create a JSON object from a string and print it: _*json-str00.c*_
   
-  > Print all values of all objects in contact.json:-*json-parse05.c*_ (left as excersise)
+  > Print all values of all objects in contact.json: _*json-parse05.c*_ (left as excersise)
  
 - [Parsing a Json object - part 5: Iteration thru a JSON obj](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing4.md)
 
