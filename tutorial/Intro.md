@@ -45,14 +45,14 @@ The example above should be readable enough for most people to see what is going
 
 ## Problems
 
-1. Create a JSON file representing three or more people, with each person containing the same attributes as the JSON example given above. make sure you have a valid JSON file by using a JSON validation web site.
+1. Create a JSON file representing three or more people, with each person containing the same attributes as the JSON example given above. Make sure you have a valid JSON file by using a JSON validation web site.
 
 - Create a C _*struct*_ to store the data contained in this JSON represntation of a person.
 
 - Explain what is meant by this comment:
 >> "The JSON syntax is not a specification of a complete data interchange. Meaningful data interchange requires agreement between a producer and consumer on the semantics attached to a particular use of the JSON syntax. What JSON does provide is the syntactic framework to which such semantics can be attached." - [The JSON Data Interchange Syntax](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)
 
--  Do you have any programs installed that use JSON as a configuration file? If so examine the file.
+- Do you have any programs installed that use JSON as a configuration file? If so examine the file.
 
 - What are some potential downsides of using json as a configuration file?
 
