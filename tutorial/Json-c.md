@@ -39,3 +39,7 @@ To compile:
 gcc json-version.c -ljson-c -o json-version
 ```
 Now run json-version to see what version of json-c you have installed. Not very exciting but it is a start.
+
+Problem
+
+1. How many packages in your distro depend upon json-c?
