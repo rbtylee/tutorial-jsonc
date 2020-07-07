@@ -10,7 +10,7 @@ Since we are merely incrementing John's age, json-c fortunately provides an easy
 
 - int json_object_int_inc(json_object \*obj, int64_t val)
 
-The variable value can be negative, therefore this function can also decrement. Hence:
+The variable value can be negative. Therefore, this function can also decrement. Hence:
 
 ```
    json_object *root = json_object_from_file("contact.json");
@@ -220,5 +220,3 @@ The Edited JSON:
 Problem:
 
 1. Look over the _*json_object.h*_ header file or the documentation for other functions of the form: json\_object\_set\_* for the remaining JSON types. Write some sample code and if need sample JSON files, shwing how to use a few of these not adressed here.
-
-
