@@ -2,12 +2,12 @@
 
 In our last section, we noted the function _*json_object_object_get(obj, key)*_ is depreciated and gcc will throw some ugly warnings for each usage of this function when compiling the function. There are two reasons I covered this function first instead of using the function intended to replace it.
 
-1. Usage of this function still occurs in current production code and it is best to be familar with it
+1. Usage of this function still occurs in current production code and it is best to be familiar with it
 
 2. I find using this function slightly more convenient than using the newer non-depreciated function.
 
 
-But with depreciated functions it is best to not use them. Future updates may break your code or your code may not work as expected. Plus tons of compiler warns do not look very professional.
+But with depreciated functions, it is best to not use them. Future updates may break your code or your code may not work as expected. Plus tons of compiler warns do not look very professional.
 
 The function we should be using is:
 
@@ -28,7 +28,7 @@ and
 #define TRUE   ((json_bool) 1)
 ```
 
-You can use these if you wish. Many other libraries also provide simliar 'types' and values for booleans.
+You can use these if you wish. Many other libraries also provide similar 'types' and values for booleans.
 
 Clearly the function _*json_object_object_get_ex(obj, key, &value)*_ returns TRUE (1) on success and FALSE (0) otherwise.
 
@@ -100,5 +100,5 @@ Save (_*json-parse03.c *_), compile and execute.
 
 ## Problems
 
-1. Verify the function _*_json_object_object_get*_ behaves more less the same as _*json_object_object_get*_ when it comes to dereferencing and freeing memory issues. Do this by playing with the code and using valgrind. How about my function _*\_json_object_object_get*_ used in _*json-parse03.c *_?
+1. Verify the function _*_json_object_object_get*_ behaves more or less the same as _*json_object_object_get*_ when it comes to dereferencing and freeing memory issues. Do this by playing with the code and using Valgrind. How about my function _*\_json_object_object_get*_ used in _*json-parse03.c *_?
 
