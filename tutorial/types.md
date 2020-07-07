@@ -24,12 +24,12 @@ typedef int json_bool;
 
 in the json-c header files.
 
-It should also be noted that in the json-c library a value of json_type_int is a 64-bit value internally. In C, this corresponds to the type *int64\_t*. Many readers may be unfamilar with the types, *int32\_t* and *int64\_t*. These "new" types are typedefs you can in the C header file *<stdint.h>*. They were introduced into the C language by the [C99 standard](https://en.wikipedia.org/wiki/C99). These are exact-width integer types that are guaranteed to have the same number of bits across all implementations. So *int32\_t* is a 32 bit integer while *int64\_t* is 64 bits. In general, it is safest to always use the int64 functions in the json-c library.
+It should also be noted that in the json-c library a value of json_type_int is a 64-bit value internally. In C, this corresponds to the type *int64\_t*. Some readers may be unfamilar with the types, *int32\_t* and *int64\_t*. These "new" types are typedefs you can in the C header file *<stdint.h>*. They were introduced into the C language by the [C99 standard](https://en.wikipedia.org/wiki/C99). These are exact-width integer types that are guaranteed to have the same number of bits across all implementations. So *int32\_t* is a 32 bit integer while *int64\_t* is 64 bits. In general, it is safest to always use the int64 functions in the json-c library.
 
 We have two functions in the json-c library to help us determine the type of an _*json_object*_:
 
-_ int json_object_is_type(json_object \*obj, json_type type)
-_ json_type json_object_get_type(json_object \*obj)
+- int json_object_is_type(json_object \*obj, json_type type)
+- json_type json_object_get_type(json_object \*obj)
 
 We have seen the usage of the function _*json_object_get_string*_, json-c natural also provides the functions:
 
