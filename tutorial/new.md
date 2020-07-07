@@ -33,7 +33,7 @@ main(void)
 The expected output of the above program:
 
 ```
-$ ./json-shit 
+$ ./json-example
 The json representation:
 
 {
