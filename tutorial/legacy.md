@@ -1,6 +1,6 @@
 # Parsing a Json object - part 1: Legacy code
 
-Printing a json\_object is rather boring and mostly useful for debugging purposes. So any JSON library worth a shit is going to include functions to make extracting the needed data from the JSON file as easy and simple as possible.
+Printing a json\_object is rather boring and mostly useful for debugging purposes. Naturally one would expect a JSON library to include functions to make extracting the needed data from the JSON file as easy and simple as possible.
 
 So let's examine _*contact.json*_ again:
 
