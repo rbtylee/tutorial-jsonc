@@ -224,7 +224,7 @@ Problem:
 2. What happens if the order of _*spouse*_ is not at the end of the JSON?
 
 3. Write a function:
--_json_object_set_string
+- _json_object_set_string
 
 like the json-c library function, json_object_set_string except if the JSON obj is not a string replaces it with a string. How many arguments does it need if it is implemented as deleting the object and readding it.
 
