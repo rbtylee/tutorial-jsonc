@@ -1,4 +1,4 @@
-# Editing JSON and more
+# Editing JSON objects
 
 In working with JSON, it may be the case one needs to edit an existing JSON. If it is a file, one can edit it in a text editor or by using classic Unix tools, sed et al. But it may be the case that the application you are working on needs to modify the JSON itself, whether the JSON is a file or merely an internal representation.
 
