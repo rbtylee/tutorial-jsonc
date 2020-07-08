@@ -221,8 +221,10 @@ Problem:
 
 1. Look over the _*json_object.h*_ header file or the documentation for other functions of the form: json\_object\_set\_* for the remaining JSON types. Write some sample code and if need sample JSON files, shwing how to use a few of these not adressed here.
 
-2.Write a function:
-- int _json_object_set_string((json_object \*obj, const char \*new_value)
+2. What happens if the order of _*spouse*_ is not at the end of the JSON?
 
-that behaves like the json-c library function, json_object_set_string except if the JSON obj is not a string replaces it with a string.
+3. Write a function:
+-_json_object_set_string
+
+like the json-c library function, json_object_set_string except if the JSON obj is not a string replaces it with a string. How many arguments does it need if it is implemented as deleting the object and readding it.
 
