@@ -46,7 +46,7 @@
 
   > Create, initialize and save a JSON: _*json-new00.c*_
 
-- [Editing JSON](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit.md)
+- [Editing a JSON Object](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit.md)
 
   > Change attribute values in a JSON: _*json-edit00.c*_
   
