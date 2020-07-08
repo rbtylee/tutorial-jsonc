@@ -219,7 +219,7 @@ The Edited JSON:
 
 Problem:
 
-1. Look over the _*json_object.h*_ header file or the documentation for other functions of the form: json\_object\_set\_* for the remaining JSON types. Write some sample code and if need sample JSON files, shwing how to use a few of these not adressed here.
+1. Look over the _*json_object.h*_ header file or the documentation for other functions of the form: json\_object\_set\_* for the remaining JSON types. Write some sample code and if necessary a sample JSON files, showing how to use a few of these not adressed here.
 
 2. What happens if the order of _*spouse*_ is not at the end of the JSON?
 
