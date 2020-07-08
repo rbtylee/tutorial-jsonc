@@ -24,7 +24,7 @@
 
 - [JSON_types](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/types.md)
 
-  > Print types of the JSON objects in Sample.json: _*json-type00.c*_
+  > Print types of the JSON objects in contact.json: _*json-type00.c*_
 
 - [Parsing a Json object - part 3 complex parsing](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing2.md)
 
@@ -44,5 +44,9 @@
 
 - [Creating and saving a JSON object](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/new.md)
 
-  > Create, initialize and save a json: _*json-new00.c*_
+  > Create, initialize and save a JSON: _*json-new00.c*_
 
+- [Editing JSON](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit.md)
+
+  > Change attribute values in a JSON: _*json-edit00.c*_
+  
