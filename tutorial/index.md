@@ -14,7 +14,7 @@
 
   > Read contact.json from a file and print the JSON: _*json-file01.c*_
 
-- [Parsing a Json object - part 1: Legacy code](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/legacy.md)
+- [Parsing a Json object - part 1: Intro](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/legacy.md)
 
   > read contact.json  and print 2 name/attribute pairs: _*json-parse00.c*_
 
