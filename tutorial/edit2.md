@@ -13,7 +13,7 @@ Examining _*json-edit00.c*_, one may note the code for changing John's office ph
 
 Imagine how much more complex it would become in a JSON where objects are nested much more deeply. Surely there must be an easier way to access or modify JSON objects deeply nested within another JSON object. This is where JSON pointers come in: JSON pointer uses a string syntax for identifying a specific value within a JSON object.
 
-Consider again our example, John's Office phone number. For the JSON represented by our _*contact.json*_ file, the string "/phoneNumbers/1/number" is a JSON pointer to the value of his office number.
+Consider again our example, John's Office phone number. For the JSON represented by our _*contact.json*_ file, the string "_*/phoneNumbers/1/number*_" is a JSON pointer to the value of his office number.
 
 ```
 {
