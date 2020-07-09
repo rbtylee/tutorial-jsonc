@@ -50,7 +50,7 @@
 
   > Change attribute values in a JSON: _*json-edit00.c*_
   
-- [JSON POINTERS](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit2.md)
+- [JSON Pointers](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit2.md)
 
    > Introduce using JSON pointers
   
