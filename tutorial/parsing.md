@@ -16,14 +16,8 @@ We have
 ```
 typedef int json_bool;
 ```
-and
- 
-```
-#define FALSE   ((json_bool) 0)
-#define TRUE   ((json_bool) 1)
-```
 
-You can use these if you wish. Many other libraries also provide similar 'types' and values for booleans.
+Many other libraries also provide similar 'types' and values for booleans.
 
 Clearly the function _*json_object_object_get_ex(obj, key, &value)*_ returns TRUE (1) on success and FALSE (0) otherwise.
 
