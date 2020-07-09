@@ -34,7 +34,7 @@ Consider again our example, John's Office phone number. For the JSON represented
 
 ```
 
- The '1' in the JSON pointer, "/phoneNumbers/1/number" is the array index, as the JSON object _*phoneNumbers*_ is an array. The rest of the string should be clear. For a full describtion of the JSON pointer standard, see [RFC 6901](https://tools.ietf.org/html/rfc6901). Don't worry it looks more complex than it is.
+ The '1' in the JSON pointer, "_*/phoneNumbers/1/number*_" is the array index, as the JSON object _*phoneNumbers*_ is an array. The rest of the string should be clear. For a full describtion of the JSON pointer standard, see [RFC 6901](https://tools.ietf.org/html/rfc6901). Don't worry it looks more complex than it is.
  
 The json-c library, version 0.13 or later, has several functions which support this standard:
  
