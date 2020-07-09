@@ -1,4 +1,4 @@
-# Parsing a Json object - part 1: Legacy code
+# Parsing a Json object - part 1: Intro
 
 Printing a json\_object is rather boring and mostly useful for debugging purposes. Naturally one would expect a JSON library to include functions to make extracting the needed data from the JSON file as easy and simple as possible.
 
