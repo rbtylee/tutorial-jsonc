@@ -16,8 +16,7 @@ We have
 ```
 typedef int json_bool;
 ```
-
-Many other libraries also provide similar 'types' and values for booleans.
+While some versions of json-c have TRUE and FALSE macros defined you probably shouldn't use them as they have removed in version 0.14. Many other libraries also provide similar 'types' and values for booleans.
 
 Clearly the function _*json_object_object_get_ex(obj, key, &value)*_ returns TRUE (1) on success and FALSE (0) otherwise.
 
