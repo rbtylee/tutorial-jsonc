@@ -49,6 +49,10 @@
 
     * Change attribute values in a JSON: _*json-edit00.c*_
   
+- [JSON Comparison](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/equal.md)
+
+    * Compare two JSONs for egaulity: _*json-equal00.c*_
+
 - [JSON Pointers](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit2.md)
 
     * Introduce using JSON pointers
