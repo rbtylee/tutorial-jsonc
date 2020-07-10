@@ -2,6 +2,7 @@
 
 // Need more research in this referencing stuff
 // purpose to show 2 attributes can have the same json obj as value
+// from docs: Call json_object_get if you want to maintain shared ownership or also add this object as a child of multiple objects or arrays. 
 
 
 #include <stdio.h>
