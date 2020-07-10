@@ -73,6 +73,7 @@ Functions for adding other *_json\_types*_ are listed below and their usage shou
 - json_object\* json_object_new_array(void)
 - json_object\* json_object_new_string(const char \*s)
 - json_object\* json_object_new_string_len(const char \*s, int len)
+- json_object\* json_object_new_null(void)
 
 ## Adding elements to json arrays
 
