@@ -7,11 +7,10 @@ To test for equality of two JSON objects json-c provides the function:
 From the documentation:
 
 > If the passed objects are equal 1 will be returned. Equality is defined as follows:
-
 > - json_objects of different types are never equal
-- json_objects of the same primitive type are equal if the c-representation of their value is equal
-- json-arrays are considered equal if all values at the same indices are equal (same order)
-- Complex json_objects are considered equal if all contained objects referenced by their key are equal, regardless their order.
+> - json_objects of the same primitive type are equal if the c-representation of their value is equal
+> - json-arrays are considered equal if all values at the same indices are equal (same order)
+> - Complex json_objects are considered equal if all contained objects referenced by their key are equal, regardless their order.
 
 ## json-equal00.c
 
