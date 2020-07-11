@@ -8,9 +8,9 @@ Not surprisingly, the constructor for a new _*json_object*_ is:
 
 - json_object\* json_object_new_object(void)
 
-The documentation says this function creates:
+The (latest) documentation states this function creates:
 
->a new empty object with a reference count of 1. The caller of this object initially has sole ownership. Remember, when using json_object_object_add or json_object_array_put_idx, ownership will transfer to the object/array. Call json_object_get if you want to maintain shared ownership or also add this object as a child of multiple objects or arrays. Any ownerships you acquired but did not transfer must be released through json_object_put.
+>a new empty object with a reference count of 1.  The caller of this object initially has sole ownership.  Remember, when using json_object_object_add or json_object_array_put_idx, ownership will transfer to the object/array.  Call json_object_get if you want to maintain shared ownership or also add this object as a child of multiple objects or arrays.  Any ownerships you acquired but did not transfer must be released through json_object_put.
 
 
 Consider:
