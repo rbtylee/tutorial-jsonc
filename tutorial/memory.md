@@ -83,3 +83,6 @@ This is the [same point](https://github.com/json-c/json-c/issues/642#issuecommen
 > 
 > You can take a reference to a sub-section of the object tree and use it for a non-trivial amount of time, perhaps after the original object tree was freed, by get()ing root of the sub-tree to increase it's "reference count" ... then you can treat it as an independent object tree. But you may not have to do this, depending on your application.
     
+It is highly recommended you use Valgrind to check for memory errors, especially if you are somewhat confused  by the above discussion.
+
+In our next section, we will consider some concrete code examples to illustrate some of the above.
