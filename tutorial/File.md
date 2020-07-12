@@ -148,11 +148,17 @@ Now note, right before our program exits we have the function:
 
 - void json_object_put(json_object \* obj)
 
-We call this function on the json_object we created using *json_object_from_file*. You can think of this as freeing the memory allocated by creating the json_object. The official documentation states _*json_object_put*_
+We call this function on the json_object we created using *json_object_from_file*. You can think of this as freeing the memory allocated by creating the json_object. Technically though, the memory is only freed if the reference count of the object is zero. The official documentation states _*json_object_put*_
 
 > Decrements the reference count of json\_object and frees if it reaches zero. You must have ownership of obj prior to doing this or you will cause an imbalance in the reference count.
 
-You may be thinking, "WTF is ownership of an object?" More on that latter (hopefully), just ignore it for now and note that in this case, we need it for the *root* _*json_object*_.
+You may be thinking, "What is meant by _*ownership of an object*_?" More on that latter, but for now note most of sample programs will follow this template:
+
+|  Pseudo-Code                            | Ownership                                                                                         |
+| :-------------------------------------- | :------------------------------------------------------------------------------------------- |
+| Create or initialize a root JSON_object |  _*at this point we own the object root and roots reference count is 1*_ |
+| Process JSON, saving or displaying JSON data as needed | _*we usually create or initialize other json objects here and transfer ownership of them to root*_ |
+| Dereference our JSON object |  _*at this point we lose ownership of root and its reference count is 0. Memory of root and all objects owned by root with a reference count of 0 is freed*_ |
 
 Finally, I introduced 2 functions and a constant to convert the json_object to a string:
 
