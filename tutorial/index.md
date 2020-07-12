@@ -31,6 +31,10 @@
     * Change attribute values in a JSON: _*json-edit00.c*_
 - [JSON Comparison](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/equal.md)
     * Compare two JSONs for egaulity: _*json-equal00.c*_
+- List, searching and sorting
+   *
+- Parsing a Json object - part 6: Iteration yet again
+   *
 - [JSON Pointers](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit2.md)
     * Introduce using JSON pointers
 - [Parsing a Json object - part 6: Iterators](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing5.md)
