@@ -157,8 +157,8 @@ You may be thinking, "What is meant by _*ownership of an object*_?" More on that
 |  Pseudo-Code                            | Ownership                                                                                         |
 | :-------------------------------------- | :------------------------------------------------------------------------------------------- |
 | Create or initialize a root JSON_object |  _*at this point we own the object root and roots reference count is 1*_ |
-| Process JSON, saving or displaying JSON data as needed | _*we usually create or initialize other json objects here and transfer ownership of them to root*_ |
-| Dereference our JSON object |  _*at this point we lose ownership of root and its reference count is 0. Memory of root and all objects owned by root with a reference count of 0 is freed*_ |
+| Process JSON, saving or displaying JSON data as needed | _*we usually create or initialize other json objects here and transfer ownership of them to root. As longs as roots ownership is not transfered or shared with another object, roots reference count is unchanged*_ |
+| Dereference our JSON object |  _*at this point we lose ownership of root and its reference count is decremented. if roots reference count is 0, roots memory and all objects owned by root with a reference count of 0 is freed*_ |
 
 Finally, I introduced 2 functions and a constant to convert the json_object to a string:
 
