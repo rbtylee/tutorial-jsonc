@@ -2,9 +2,9 @@
 
 The json-c library makes memory management somewhat easier than traditional C as a JSON object is owned by either the programmer or another JSON object. A reference count for each JSON object is stored and incremented or decremented by certain json-c functions (get and put).  The JSON object's memory will be freed when its reference count reaches zero. Freeing a JSON object also frees the memory of all the objects the JSON object owns. So addition to reference counts, A JSON object is either owned by the programmer or another JSON object. Certain json-c functions change the ownership of an object. If more than one JSON object owns a given JSON object, then that object's reference count is a count of all the objects which own it. The only objects programmers need to explicitly manage the memory of in json-c are the JSON objects they own.
 
-This entire discussion is to clarify these issues and answer the question of when to call json_object_put or json_object_get. This issue can be somewhat confusing to new users of the json-c library. Curretnly there is no entralized discussion of this in the json-c documentation, instead the issue is mentioned in various discussions of individual functions.
+This entire discussion is to clarify these issues and answer the question of when to call json_object_put or json_object_get. This issue can be somewhat confusing to new users of the json-c library. Currently, there is no centralized discussion of this in the json-c documentation, instead, the issue is mentioned in various discussions of individual functions.
 
-Now perhaps the most imprtant point, the function _*json_object_get()*_ is the only function that increments the reference count:
+Now perhaps the most important point, the function _*json_object_get()*_ is the only function that increments the reference count:
 
 - void json_object_get(json_object \* obj)
 
