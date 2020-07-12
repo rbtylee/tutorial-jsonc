@@ -27,8 +27,10 @@
     * Create, initialize and save a JSON: _*json-new00.c*_
 - [Editing a JSON Object](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit.md)
     * Change attribute values in a JSON: _*json-edit00.c*_
-- [Memory management, ownership and references](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory.md)
+- [Memory management, ownership and references - part one: overview](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory.md)
     * Clarify these issues and answer the question of when to call json_object_put or json_object_get
+- [Memory management, ownership and references - part two: examples](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory01.md)
+    * Code illustrate memory issues and some pitfalls
 - [JSON Comparison](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/equal.md)
     * Compare two JSONs for egaulity: _*json-equal00.c*_
 - List, searching and sorting
