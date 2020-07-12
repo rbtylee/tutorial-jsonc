@@ -41,7 +41,11 @@ If you are unfamiliar with JSON, it may be clearer to consider an actual example
 }
 ```
 
-The example above should be readable enough for most people to see what is going on. For more information on JSON read the [Wikipedia article](https://en.wikipedia.org/wiki/JSON) or look over the [state diagrams](https://en.wikipedia.org/wiki/State_diagram) found on [json.org](https://www.json.org/json-en.html) describing the 'language'.  The official standard describing the JSON format is [RFC 7159](https://tools.ietf.org/html/rfc7159).
+The example above should be readable enough for most people to see what is going on. To make it even more clear below is the same JSON only represented as a tree, but like a file manager lists your directory structure.
+
+!["JSON tree"]https://github.com/rbtylee/tutorial-jsonc/blob/master/Images/json-tree.png)
+
+For more information on JSON read the [Wikipedia article](https://en.wikipedia.org/wiki/JSON) or look over the [state diagrams](https://en.wikipedia.org/wiki/State_diagram) found on [json.org](https://www.json.org/json-en.html) describing the 'language'.  The official standard describing the JSON format is [RFC 7159](https://tools.ietf.org/html/rfc7159).
 
 ## Problems
 
