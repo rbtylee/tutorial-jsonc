@@ -77,7 +77,7 @@ As previously [noted](https://github.com/rbtylee/tutorial-jsonc/blob/master/tuto
 | Dereference our JSON object |  _*at this point we lose ownership of root and its reference count is decremented. If roots reference count is 0, roots memory and all objects owned by root with a reference count of 0 is freed*_ |
 
 
-This is the [same point](https://github.com/json-c/json-c/issues/642#issuecomment-656326298) made by [Pierce Lopez](https://github.com/ploxiln), only his answer is more detail. Read it carefully and make sure you understand it:
+This is the [same point](https://github.com/json-c/json-c/issues/642#issuecomment-656326298) made by [Pierce Lopez](https://github.com/ploxiln), only his answer is more detailed. Read it carefully and make sure you understand it:
 
 > Typically, you create a tree of json objects, either by parsing text with a tokener, or by creating-and-adding them  one-by-one. Typically, every object in the tree will have one reference, from it's parent. When you are done with the tree of objects, you put() just the root object, and that put()s its child objects automatically, and that frees the entire tree in a cascading manner from a single put(). This is pretty simple. You can get a reference to a single child and copy its value in just a few lines, while obviously not freeing the parent, without dealing with any reference count changes, and this is safe.
 > 
