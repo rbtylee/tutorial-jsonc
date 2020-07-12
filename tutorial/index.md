@@ -28,11 +28,11 @@
 - [Editing a JSON Object](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit.md)
     * Change attribute values in a JSON: _*json-edit00.c*_
 - [Memory management, ownership and references](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory.md)
-    * see issue and my code json_new02.c json_new01.c
+    * Clarify these issues and answer the question of when to call json_object_put or json_object_get
 - [JSON Comparison](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/equal.md)
     * Compare two JSONs for egaulity: _*json-equal00.c*_
 - List, searching and sorting
-    * Clarify these issues and answer the question of when to call json_object_put or json_object_get
+    * 
 - Parsing a Json object - part 6: Iteration yet again
     *
 - [JSON Pointers](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit2.md)
