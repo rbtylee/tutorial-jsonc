@@ -166,7 +166,7 @@ Finally, I introduced 2 functions and a constant to convert the json_object to a
 - const char\* json_object_to_json_string_ext(json_object \*obj, int flags)
 - JSON_C_TO_STRING_PRETTY
 
-First, the constant _*JSON_C_TO_STRING_PRETTY*_ used in the function _*json_object_to_json_string_ext*_ as a _foramtting flag_. There are 3 such flags used in this function, the other two are:
+First, the constant _*JSON_C_TO_STRING_PRETTY*_ used in the function _*json_object_to_json_string_ext*_ as a _formatting flag_. There are 3 such flags used in this function, the other two are:
 
 - JSON_C_TO_STRING_PLAIN
 - JSON_C_TO_STRING_SPACED
