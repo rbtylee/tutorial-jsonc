@@ -43,5 +43,5 @@
     * Bettter Encapsulation using iterators
 - threads 
 - debugging
-- autmake and meson
+- automake and meson
 
