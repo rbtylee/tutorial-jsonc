@@ -53,7 +53,7 @@ We can create and own a JSON object by using one of:
 - json_object* json_tokener_parse_ex()
 - json_object* json_tokener_parse_verbose()
 
-How exactly does on lose ownership of a JSON object?
+How exactly does on loose ownership of a JSON object?
 
 By using any of the following functions:
 
