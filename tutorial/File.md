@@ -152,7 +152,7 @@ We call this function on the json_object we created using *json_object_from_file
 
 > Decrements the reference count of json\_object and frees if it reaches zero. You must have ownership of obj prior to doing this or you will cause an imbalance in the reference count.
 
-You may be thinking, "What is meant by _*ownership of an object*_?" More on that latter, but for now note most of sample programs will follow this template:
+You may be thinking, "What is meant by _*ownership of an object*_?" More on that [latter](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory.md), but for now, note most of sample programs will follow this template:
 
 |  Pseudo-Code                            | Ownership                                                                                         |
 | :-------------------------------------- | :------------------------------------------------------------------------------------------- |
