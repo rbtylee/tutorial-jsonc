@@ -1,5 +1,7 @@
 # JSON Comparison
 
+Now for something easier. What does it mean for two JSON objects to be equal?
+
 To test for equality of two JSON objects json-c provides the function:
 
 - int json_object_equal(json_object *obj1, json_object *obj2)
