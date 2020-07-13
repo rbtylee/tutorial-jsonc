@@ -1,6 +1,6 @@
 # Memory management, ownership and references - part two: examples
 
-If you are feeling somewhat confused by the previous discussion, this section will consider some concrete examples to illustrate the concepts of _*ownership*_ and _*references*_. To best utilize this section, one needs to be somewhat familar with using to  tool _*Valgrind*_.
+If you are feeling somewhat confused by the previous discussion, this section will consider some concrete examples to illustrate the concepts of _*ownership*_ and _*references*_. To best utilize this section, one needs to be somewhat familiar with using to the tool _*Valgrind*_.
 
 Recall the previous statement:
 >You may think that for every json_object_get there should eventually follow a json_object_put, much like the classic c way of following an malloc with a free at some latter point. However, we will see this is not always the case.
@@ -63,6 +63,11 @@ The statement _*json_object_put(root)*_ decrements the reference count of the JS
 
 Note: at no point did we have to _*json_object_put(str)*_, as the management of _*str's*_ memory was handled by the json-c library when the _*json_object_put(root)*_ statement was executed. So as promised, we can see why it is not necessarily the case that for every _*json_object_get*_ there should eventually follow a _*json_object_put*_. It all depends upon the _*ownership*_ of the object.
 
+What about the usage of _*str*_ after the execution of _*json_object_put(root)*_? The pointer _*str*_ is no longer valid. Trying to use it after the json_object_put statement is a use-after-free error, exactly as if one attempted to do:
+```
+char \*str = malloc(10); free(str); \*str = 'x';.
+```
+
 ## json-mem00.c
 
 ```
@@ -105,7 +110,10 @@ main(void)
 
    // cleanup and exit
    json_object_put(root);
-   return 1;
+   return 0;
 }
-
 ```
+
+As usual, compile and execute this program. Run the binary through Valgrind to ensure there are no memory errors.
+
+
