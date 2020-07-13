@@ -61,3 +61,8 @@ For more information on JSON read the [Wikipedia article](https://en.wikipedia.o
 - What are some potential downsides of using JSON as a configuration file?
 
 - Do some research and find some websites with JSON  as REST API responses.
+
+- One of the more interesting uses of JSON is [Vega](https://vega.github.io/vega/): 
+> Vega is a visualization grammar, a declarative language for creating, saving, and sharing interactive visualization designs. With Vega, you can describe the visual appearance and interactive behavior of a visualization in a JSON format, and generate web-based views using Canvas or SVG.
+
+Examine a few of the examples of try to implement one of them using python or javascript. 
