@@ -1,0 +1,35 @@
+chapters to write: so far SIX to write
+
+--------------------------------------------------------------------------------
+Memory management, ownership and references - part 1
+Memory management, ownership and references - part two: examples
+url examples
+iteration part two
+lists and sorting and searching
+threads 
+debugging
+autmake and meson
+--------------------------------------------------------------------------------
+EXMAPLE CODE: make a json object with two attributes having the same json_obj value.
+
+DISCUS circular references and show example:
+
+
+Problem 
+- use valgrind in my EXAMPLE CODE  above to verify mem management. show results of removing statements or adding statements
+
+____ 
+
+
+Eric Hawicz <erh+git@nimenees.com>
+
+https://groups.google.com/forum/#!topic/json-c/gD_p68OA-L8
+    hashlink  https://groups.google.com/forum/?nomobile=true#!topic/json-c/jt0pxWL9GP8
+curl -XPOST 'https://hastebin.com/documents' -d'hello world' 
+
+shit iteration part 2
+    https://json-c.github.io/json-c/json-c-0.13/doc/html/json__visit_8h.html
+todo JSON_C_TO_STRING_PRETTY | other values what does this do? I saw it in a sample program online. explore this
+
+
+
