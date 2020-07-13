@@ -62,6 +62,8 @@ For more information on JSON read the [Wikipedia article](https://en.wikipedia.o
 
 - Do some research and find some websites with JSON  as REST API responses.
 
+- Take a look at [jq](https://stedolan.github.io/jq/). Is this a tool you could use?
+
 - One of the more interesting uses of JSON is [Vega](https://vega.github.io/vega/): 
 > Vega is a visualization grammar, a declarative language for creating, saving, and sharing interactive visualization designs. With Vega, you can describe the visual appearance and interactive behavior of a visualization in a JSON format, and generate web-based views using Canvas or SVG.
 
