@@ -32,7 +32,9 @@
 - [Memory management, ownership and references - part two: examples](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory01.md)
     * Code illustrating memory issues and some pitfalls
 - [JSON Comparison](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/equal.md)
-    * Compare two JSONs for egaulity: _*json-equal00.c*_
+    * Compare two JSONs for equality: _*json-equal00.c*_
+- JSON Copying
+   *
 - List, searching and sorting
     * 
 - Parsing a Json object - part 6: Iteration yet again
