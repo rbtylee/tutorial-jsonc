@@ -117,3 +117,8 @@ main(void)
 As usual, compile and execute this program. Run the binary through Valgrind to ensure there are no memory errors.
 
 
+> Cases where you might need to increase the refcount include:
+> - Using an object field or array index (retrieved through _*json_object_object_get*_ or _*json_object_array_get_idx*_) beyond the lifetime of the parent object.
+> - Detaching an object field or array index from its parent object (using _*json_object_object_del*_ or _*json_object_array_del_idx*_) 
+> - Sharing a json_object with multiple (not necesarily parallel) threads of execution that all expect to free it (with _*json_object_put*_) when they're done.
+ 
