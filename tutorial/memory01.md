@@ -145,5 +145,17 @@ $2 = <incomplete type>
 There is no member named _ref_count.
 ```
 
-The only way we are going to able to deteremine the reference count of an object in json-c code is to use the header file, _*json_object_private.h*_.
+The only way we are going to able to deteremine the reference count of an object in json-c code is to use the header file, _*json_object_private.h*_. If it is not there, place it with other json-c header files and add the line below to _*json-mem00.c*_:
+
+```
+#include <json-c/json_object_private.h>
+```
+
+Also add:
+
+```
+   printf("The reference count of str is T %d\n", str->_ref_count);
+```
+
+and recompile the code. It should work now!
 
