@@ -44,7 +44,7 @@ Next, add it the first item in the JSON array _*items*_:
 json_object_object_add(item, "status", str);
 ```
 
-After adding _*str*_ to the JSON object _*item*_, _*item*_ now _*owns*_ our JSON string, _*str*_ and _*str_* has a reference count of 2. We no longer own _*str*_. 
+After adding _*str*_ to the JSON object _*item*_, _*item*_ now _*owns*_ our JSON string, _*str*_ and _*str*_ has a reference count of 2. We no longer own _*str*_. 
 
 The documentation for _*json_object_object_add*_ states:
 > Upon calling this, the ownership of val transfers to obj. Thus you must make sure that you do in fact have ownership over this object.
