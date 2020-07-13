@@ -41,7 +41,7 @@ If you are unfamiliar with JSON, it may be clearer to consider an actual example
 }
 ```
 
-The example above should be readable enough for most people to see what is going on. To make it even more clear below is the same JSON only represented as a tree, but like a file manager lists your directory structure.
+The example above should be readable enough for most people to see what is going on. To make it even more clear below is the same JSON only represented as a tree. Similar to the way a file manager lists your directory structure.
 
 !["JSON tree"](https://github.com/rbtylee/tutorial-jsonc/blob/master/Images/json-tree.png)
 
