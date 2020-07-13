@@ -2,7 +2,7 @@
 
 // Need more research in this referencing stuff
 // purpose to show 2 attributes can have the same json obj as value
-// from docs: Call json_object_get if you want to maintain shared ownership or also add this object as a child of multiple objects or arrays. 
+// from docs: Remember, when using json_object_object_add or json_object_array_put_idx, ownership will transfer to the object/array. Call json_object_get if you want to maintain shared ownership or also add this object as a child of multiple objects or arrays.
 
 
 #include <stdio.h>
@@ -27,19 +27,17 @@ main(void)
    json_object_object_add(item, "status", json_object_new_string("online"));
    json_object_array_add(items, item);
    location = json_object_new_object();
-   json_object_get(location); // <--- has to have or seg fault
-   
+      
    json_object_object_add(location, "latitude", json_object_new_double(-117.125));
    json_object_object_add(location, "longitude", json_object_new_double(31.125));
    json_object_object_add(item, "location", location);
+   json_object_get(location);
    //       item 2
    item = json_object_new_object();
    json_object_object_add(item, "id", json_object_new_int(4678));
    json_object_object_add(item, "status", json_object_new_string("online"));
    json_object_array_add(items, item);
-
    json_object_object_add(item, "location", location);
-   //json_object_put(location); <- can't use put on it or segfault
 
    //       item 3
    item = json_object_new_object();
