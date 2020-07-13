@@ -195,3 +195,24 @@ By now you know what to do here ...
 ## Problems
 
 1. What happens if _*json\_object \*address*_ is NULL in the above code, _*json-new00.c*_? Refactor the code above to prevent all such unlikely but serious cases of that happening.
+2. Write a json-c program to create and save the following json:
+```
+{
+  "items":
+  {
+    "properties":
+    {
+      "name":
+      {
+        "type": "unknown"
+      }
+    }
+  },
+  "common":
+  {
+    "properties": null
+  }
+}
+
+```
+
