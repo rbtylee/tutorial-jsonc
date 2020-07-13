@@ -31,7 +31,7 @@ In addition to json_object_put, we can also delete an attribute/value pair withi
 
 - void json_object_object_del(json_object * obj, const char *key)
 
-Deletes the given attribute/value pair within json_object *obj for the attribute key if it exist. 
+> Deletes the given attribute/value pair within json_object *obj for the attribute key if it exist. 
 
 The reference count will be decremented for the deleted object. If there are no more owners of the value represented by this key, then the value is freed. Otherwise, the reference to the value will remain in memory.
 
@@ -39,9 +39,9 @@ And likewise we can the same for one or more json objects within a JSON array:
 
 - void json_object_array_del_idx(json_object *obj, size_t idx, size_t count) 
 
-Delete count number of elements from a specified index, idx, in a JSON array. And as expected the reference count will be decremented for each of the deleted objects. If there are no more owners of an element that is being deleted, then the value is freed. Otherwise, the reference to the value will remain in memory.
-
-When one creates a new JSON object, its reference count is 1 and the caller of this object initially owns it. There is no need to call json_object_get on a newly created JSON object unless you lose ownership of the object but want to maintain ownership for some latter usage.
+> Delete count number of elements from a specified index, idx, in a JSON array. And as expected the reference count will be decremented for each of the deleted objects. If there are no more owners of an element that is being deleted, then the value is freed. Otherwise, the reference to the value will remain in memory.
+> 
+>When one creates a new JSON object, its reference count is 1 and the caller of this object initially owns it. There is no need to call json_object_get on a newly created JSON object unless you lose ownership of the object but want to maintain ownership for some latter usage.
 
 We can create and own a JSON object by using one of:
 
@@ -61,7 +61,7 @@ By using any of the following functions:
 - json_object_object_add_ex()
 - json_object_array_add() 
 
-No reference counts are changed for the above functions, but the ownership is transferred.
+>No reference counts are changed for the above functions, but the ownership is transferred.
 
 But ownership is not affected by the following functions, nor are reference counts changed:
     
