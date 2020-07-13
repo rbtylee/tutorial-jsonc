@@ -38,7 +38,7 @@ json_object *str =  json_object_new_string("online");
 
 At this point we _*own*_ the object _*str*_ and its reference count is 1.
 
-Next, add it the first item in the JSON array items:
+Next, add it the first item in the JSON array _*items*_:
 
 ```
 json_object_object_add(item, "status", str);
