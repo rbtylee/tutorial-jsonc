@@ -30,7 +30,7 @@
 - [Memory management, ownership and references - part one: overview](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory.md)
     * Clarify these issues and answer the question of when to call json_object_put or json_object_get
 - [Memory management, ownership and references - part two: examples](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory01.md)
-    * Code illustrate memory issues and some pitfalls
+    * Code illustrating memory issues and some pitfalls
 - [JSON Comparison](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/equal.md)
     * Compare two JSONs for egaulity: _*json-equal00.c*_
 - List, searching and sorting
