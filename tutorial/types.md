@@ -45,7 +45,7 @@ One can also see we have two new types:
 - lh_table
 - array_list
 
-Both of course *structs* defined in the _*json_object.h*_ header file. For now, we can safely ignore these types as the details are not important here. Curious users can read the docs or look up the definitions in the header file. More details on these functions can be found in the json-c documentation. TO DO referencing details of the two functions returning pointers.
+Both of course *structs* defined in the _*json_object.h*_ header file. For now, we can safely ignore these types as the details are not important here. Curious users can read the docs or look up the definitions in the header file. More details on these functions can be found in the json-c documentation. 
 
 Now, let's demonstrate some of these function's usage with our _*contact.json*_ file example:
 
