@@ -30,6 +30,7 @@ int main(void)
       printf("%s  -> %s\n", key, json_object_get_string(val));
 
    json_object_put(root);
+   return 0;
  }
 
 ```
@@ -98,11 +99,11 @@ main(void)
    json_object *root = json_object_from_file("contact.json");
 
    if (!root)
-      return 0;
+      return 1;
    doit(root);
 
    json_object_put(root);
-   return 1;
+   return 0;
 }
 
 ```
