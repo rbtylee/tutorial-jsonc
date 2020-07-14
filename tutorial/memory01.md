@@ -126,7 +126,7 @@ Other cases where one might need to increase the reference count of an object vi
  
 At this point one may wonder if it is possible to deteremine the reference count of an object in json-c code? The answer is no, one _*should not*_, but yes one can.
 
-Since json-c takes an Object-Oriented approach as best it can considering it is a C library, the actual implementation details of a _*json_object*_ are or should be hidden to the programmers using the library. Take a look at the header file, _*json_object_private.h*_, in the source code. Here one has the implementation for the _*struct json_object*_. This is a private header file and is not even installed by recent versions of json-c. Ideally one should not use it. For a json object like _*str*_ in the above example, trying to access the reference count as in:
+Since json-c takes an Object-Oriented approach as best it can considering it is a C library, the actual implementation details of a _*json_object*_ are or should be hidden from the programmers using the library. Take a look at the header file, _*json_object_private.h*_, in the source code. Here one has the implementation for the _*struct json_object*_. This is a private header file and is not even installed by recent versions of json-c. Ideally one should not use it. For a json object like _*str*_ in the above example, trying to access the reference count as in:
 
 ```
    printf("The reference count of str is T %d\n", str->_ref_count);
