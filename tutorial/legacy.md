@@ -30,7 +30,7 @@ So let's examine _*contact.json*_ again:
   "spouse": null
 }
 ```
-Suppose we wish to read this JSON file and print only the first and last name. Create the file below, _*json-parse00.c*_ and compile _*gcc json-parse00.c -ljson-c -o json-parse00 *_:
+Suppose we wish to read this JSON file and print only the first and last name. Create the file below, _*json-parse00.c*_ and compile _*gcc json-parse00.c -ljson-c -o json-parse00*_:
 
 ```
 #include <stdio.h>
