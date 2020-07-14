@@ -23,7 +23,7 @@ main(void)
 
    root = json_object_from_file("contact.json");
    if (!root)
-      return 0;
+      return 1;
 
    json_object *first_name = _json_object_object_get(root, "firstName");
    printf("First name: %s\n", json_object_get_string(first_name));
