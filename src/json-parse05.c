@@ -60,7 +60,7 @@ main(void)
    if (!root)
       {
          printf("Root is null\n");
-         return 0;
+         return 1;
       }
 
    json_object *first_name = _json_object_object_get(root, "firstName");
