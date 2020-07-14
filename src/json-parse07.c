@@ -42,7 +42,7 @@ main(void)
    json_object *root = json_object_from_file("contact.json");
 
    if (!root)
-      return 0;
+      return 1;
    doit(root);
 
    json_object_put(root);
