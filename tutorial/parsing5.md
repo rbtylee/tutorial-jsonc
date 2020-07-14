@@ -8,7 +8,8 @@ Consider our previous example:
 #include <stdio.h>
 #include <json-c/json.h>
 
-int main(void)
+int 
+main(void)
 {
    json_object *root = json_object_from_file("contact.json");
    json_object_object_foreach(root, key, val)
@@ -26,7 +27,8 @@ If we refactor the above by replacing essentially implementing the macro _*json_
 #include <stdio.h>
 #include <json-c/json.h>
 
-int main(void)
+int 
+main(void)
 {
    struct lh_entry *entry; // Struct needed here
    char *key;
