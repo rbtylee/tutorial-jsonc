@@ -37,7 +37,7 @@ Next, we consider changing the office phone number in the JSON. Remember the _*p
 
 We wish to change the second JSON objects _*number*_ attribute's string to a new number, this array member has index 1. Just like C arrays, json-c starts indexing array elements at 0. Assume the new number is _843 276-3583_.
 
-The json-c library provides a set of functions of the form: json\_object\_set\_*. Such as  the one we need for this case:
+The json-c library provides a set of functions of the form: _*json\_object\_set\_\**_. Such as  the one we need for this case:
 
 - int json_object_set_string(json_object \*obj, const char \*new_value)
 
