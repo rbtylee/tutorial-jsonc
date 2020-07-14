@@ -5,3 +5,5 @@
 My tutorial on using the [json-c library](https://github.com/json-c/json-c)
 
 Please see the [Index](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/index.md)
+
+This is still a work in progress. 
