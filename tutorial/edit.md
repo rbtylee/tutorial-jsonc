@@ -66,7 +66,7 @@ Let the adopted daughter's name be _*Paige Crawford*_, age 15. As expected, the 
 ```
    json_object *root = json_object_from_file("contact.json");
 
-   json_object *children =  _json_object_object_get(root, "children");
+   json_object *children =  json_object_object_get(root, "children");
    json_object *paige = json_object_new_object();
    json_object_object_add(paige, "name", json_object_new_string("Paige Crawford"));
    json_object_object_add(paige, "age", json_object_new_int(15));
@@ -77,17 +77,15 @@ Finally, let's add John's wife. If her name is Kate Smith, then you may think th
 
 ```
    json_object *root = json_object_from_file("contact.json");
-   json_object *spouse = _json_object_object_get(root, "spouse");
+   json_object *spouse = json_object_object_get(root, "spouse");
    json_object_set_string(spouse, "Kate Smith");
 ```
 
-But no, our JSON is unchanged by this. The function _*json_object_set_string*_ behaves just like the related function:
+But no, our JSON is unchanged by this.
 
-- int json_object_set_string_len(json_object \*obj, const char \*new_value, int len)
+In both cases,in the json-c function,_*json_object_set_string*_, the JSON object type is checked and if it is not a _*json_type_string*_, 0 is returned and nothing is changed. If the type of the object is _*json_type_string*_, the object value is changed to new_value.
 
-In both cases, the JSON object type is checked and if it is not a _*json_type_string*_, 0 is returned and nothing is changed. If the type of the object is _*json_type_string*_, the object value is changed to new_value.
-
-Makes sense. But here it is a minor complication, solvable in this case by deleting the object first and then re-adding it:
+Makes sense as _*spouse*_ is a JSON type NULL. But here it is a minor complication, solvable in this case by deleting the object first and then re-adding it:
 
 ```
    json_object *root = json_object_from_file("contact.json");
