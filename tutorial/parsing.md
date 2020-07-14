@@ -45,7 +45,7 @@ main(void)
 
 ```
 
-As usual save this file as_*json-parse02.c*_. Compile and  execute ( _*gcc json-parse02.c -ljson-c -o json-parse02*_ ).
+As usual save this file as _*json-parse02.c*_. Compile and  execute ( _*gcc json-parse02.c -ljson-c -o json-parse02*_ ).
 
 No compiler warnings and the code is only marginally more complex.
 
