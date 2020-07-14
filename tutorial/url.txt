@@ -1,27 +1,14 @@
-todo: remove the use of my replacement for the depreciated funtion _json_ ...
-        this includes changing that section some
-      check my use of return(?) in all c code make sure it makes sense!!
-
-chapters to write: so far SIX to write
+chapters to write: so far SEVEN to write
 
 --------------------------------------------------------------------------------
 url examples
 iteration part two
 lists and sorting and searching
+hadling errors
 threads 
 debugging
 autmake and meson
 --------------------------------------------------------------------------------
-EXMAPLE CODE: make a json object with two attributes having the same json_obj value.
-
-DISCUS circular references and show example:
-
-
-Problem 
-- use valgrind in my EXAMPLE CODE  above to verify mem management. show results of removing statements or adding statements
-
-____ 
-
 
 Eric Hawicz <erh+git@nimenees.com>
 
