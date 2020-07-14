@@ -10,7 +10,7 @@ Since we are merely incrementing John's age, json-c fortunately provides an easy
 
 - int json_object_int_inc(json_object \*obj, int64_t val)
 
- This function can also decrement as the variable value can be negative. Hence:
+Hence:
 
 ```
    json_object *root = json_object_from_file("contact.json");
@@ -18,6 +18,7 @@ Since we are merely incrementing John's age, json-c fortunately provides an easy
    json_object_int_inc(age, 1);
 ```
 
+This function can also decrement as the variable value can be negative.
 Next, we consider changing the office phone number in the JSON. Remember the _*phoneNumbers*_ attribute is a JSON array of two JSON objects:
 
 ```
