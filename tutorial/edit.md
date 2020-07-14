@@ -19,6 +19,7 @@ Hence:
 ```
 
 This function can also decrement as the variable value can be negative.
+
 Next, we consider changing the office phone number in the JSON. Remember the _*phoneNumbers*_ attribute is a JSON array of two JSON objects:
 
 ```
