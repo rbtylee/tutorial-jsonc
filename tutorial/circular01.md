@@ -69,7 +69,7 @@ to
 json_object_object_add(items, "properties", root);
 ```
 
-This is a circular reference, the JSON object root contains itself. Json-c only checks for the simplist of errors of this sort. This code will compile but fails to run:
+This is a circular reference, the JSON object root contains a reference to itself in a field. The leads to infinite recursion and is an error situation. Json-c only checks for the simplist of errors of this sort. This code will compile but naturally fails to run:
 
 ```
 ~$ ./json-error00
@@ -81,6 +81,6 @@ json-new02: json_object.c:189: json_object_put: Assertion `jso->_ref_count > 0' 
 Aborted (core dumped)
 ```
 
-A programmer is unlikely to do anything this **obvious**. But by keeping or owning references to existing JSON objects and perhaps by having several pointers pointing to the same JSON object, it would be possible to introduce such a circular reference in a manner that is not so obvious.
+A programmer is unlikely to do anything this **obvious**. Yet by keeping or owning references to existing JSON objects and perhaps by having several pointers pointing to the same JSON object, it would be possible to introduce such a circular reference in a manner that is not so obvious.
 
 So view this section as a warning ...
