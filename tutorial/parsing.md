@@ -51,7 +51,7 @@ No compiler warnings and the code is only marginally more complex.
 
 ## Roll your own json_object_object_get function.
 
-**Note:** since _*json_object_object_get*_ is no longer depreciated, we will not be using the function _*/_json_object_object_get*_. It is only introduced here for historical reasons.
+**Note:** since _*json_object_object_get*_ is no longer depreciated, we will not be using the function _*_json_object_object_get*_. It is only introduced here for historical reasons.
 
 Since I like the simplicity of the depreciated function _*json_object_object_get*_, I prefer to create my own substitute and hence avoid the depreciated warnings. Hence, _*json-parse03.c*_ :
 
