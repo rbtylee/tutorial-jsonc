@@ -4,6 +4,7 @@ chapters to write: so far SEVEN to write
 url examples
 iteration part two
 lists and sorting and searching
+printing ... display, serializers
 handling errors
 threads 
 debugging
@@ -20,5 +21,6 @@ shit iteration part 2
     https://json-c.github.io/json-c/json-c-0.13/doc/html/json__visit_8h.html
 todo JSON_C_TO_STRING_PRETTY | other values what does this do? I saw it in a sample program online. explore this
 
+read weather json (weather.json) create a json with some of the data (forecasts.hson like our forecast module) and display it
 
 
