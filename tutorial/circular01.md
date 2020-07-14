@@ -34,7 +34,7 @@ main(void)
 {
    json_object *root = json_object_new_object();
    if (!root)
-      return 0;
+      return 1;
 
    // main array
    json_object *items = json_object_new_object();
@@ -56,7 +56,7 @@ main(void)
 
    // cleanup and exit
    json_object_put(root);
-   return 1;
+   return 0;
 }
 ```
 
