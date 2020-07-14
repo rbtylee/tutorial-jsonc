@@ -166,10 +166,12 @@ Finally, I introduced 2 functions and a constant to convert the json_object to a
 - const char\* json_object_to_json_string_ext(json_object \*obj, int flags)
 - JSON_C_TO_STRING_PRETTY
 
-First, the constant _*JSON_C_TO_STRING_PRETTY*_ used in the function _*json_object_to_json_string_ext*_ as a _formatting flag_. There are 3 such flags used in this function, the other two are:
+First, the constant _*JSON_C_TO_STRING_PRETTY*_ used in the function _*json_object_to_json_string_ext*_ as a _formatting flag_. There are 3 such flags used with this function in json-c version 0.12, more in latter version. The other two in v0.12 are:
 
 - JSON_C_TO_STRING_PLAIN
 - JSON_C_TO_STRING_SPACED
+
+For information of the remaining flags your json-c version supports consult the documentation.
 
 These flags tell the function _*json_object_to_json_string_ext*_ how to format the JSON in the string representation. We have already seen the usage and effect of _*JSON_C_TO_STRING_PLAIN*_: The function _*json_object_to_json_string(obj)*_ is equivalent to _*json_object_to_json_string_ext(obj, JSON_C_TO_STRING_SPACED)*_. Here all superfluous white space is removed from the string representation.
 
