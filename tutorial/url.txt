@@ -4,7 +4,7 @@ chapters to write: so far SEVEN to write
 url examples
 iteration part two
 lists and sorting and searching
-hadling errors
+handling errors
 threads 
 debugging
 autmake and meson
