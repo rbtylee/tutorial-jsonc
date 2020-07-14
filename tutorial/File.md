@@ -123,7 +123,7 @@ Here, the output is more readable having been reformatted somewhat, but it is ce
 
 So let's examine what we have learned from the code above.
 
-First and foremost, I have introduced a new 'type': _*json_object*_. As expected for a C program, _*json_object*_ is really a structure defined in the _*json_object_private.h*_ header file.  In Ubuntu/Debian distos it is installed at /usr/include/json-c. You can examine the definition if you are so inclined, but the details of its implementation are not important here: we can just think of it as a basic object that the json-c functions operate upon.
+First and foremost, I have introduced a new 'type': _*json_object*_. As expected for a C program, _*json_object*_ is really a structure defined in the _*json_object_private.h*_ header file.  In recent json-c versions, this file is not installed as it is a private header file. The actaul implemetation details of _*json_object*_ should not concern the average developer using this library. But if you wish, can examine the definition in json-c source code. For now, we can just think of it as a basic object that the json-c functions operate upon.
 
 Some programmers who wish to stress the idea _*json_object*_ is a *struct* would write the line of code
 
