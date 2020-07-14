@@ -114,7 +114,7 @@ Why does it not simply return the string itself with no quotes? Because remember
 
 !["JSON state diagram for values"](https://github.com/rbtylee/tutorial-jsonc/blob/master/Images/value.png)
 
-What about error handling you might ask? What happens if the function _*json_object_object_get(obj, key)*_ is unable to find the value associate with the key in the _*json_object*_? in this case, NULL is returned. Again play with the code to see the results of such an invalid search. In production code, we would include some error handling code.
+What about error handling you might ask? What happens if the function _*json_object_object_get(obj, key)*_ is unable to find the value associate with the key in the _*json_object*_? In this case, NULL is returned. Again play with the code to see the results of such an invalid search. In production code, we would include some error handling code.
 
 ## json\_object\_get\_string
 
