@@ -86,7 +86,7 @@ main(void)
 
 ```
 
-Save (_*json-parse03.c *_), compile and execute.
+Save (_*json-parse03.c*_), compile and execute.
 
 ## Problems
 
