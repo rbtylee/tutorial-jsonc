@@ -35,7 +35,7 @@ In addition to json_object_put, we can also delete an attribute/value pair withi
 > 
 > The reference count will be decremented for the deleted object. If there are no more owners of the value represented by this key, then the value is freed. Otherwise, the reference to the value will remain in memory.
 
-And likewise we can the same for one or more json objects within a JSON array:
+And likewise we can do the same for one or more json objects within a JSON array:
 
 - void json_object_array_del_idx(json_object *obj, size_t idx, size_t count) 
 
