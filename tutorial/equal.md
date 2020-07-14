@@ -48,7 +48,7 @@ main(void)
    // cleanup and exit
    json_object_put(doc1);
    json_object_put(doc2); 
-   return 1;
+   return 0;
 }
 
 ```
