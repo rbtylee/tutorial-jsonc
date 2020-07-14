@@ -1,8 +1,10 @@
+todo: remove the use of my replacement for the depreciated funtion _json_ ...
+        this includes changing that section some
+      check my use of return(?) in all c code make sure it makes sense!!
+
 chapters to write: so far SIX to write
 
 --------------------------------------------------------------------------------
-Memory management, ownership and references - part 1
-Memory management, ownership and references - part two: examples
 url examples
 iteration part two
 lists and sorting and searching
