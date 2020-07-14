@@ -1,6 +1,6 @@
 # JSON Circular references
 
-After the previous two sections, you should be pretty clear on when to use json-c's put and get functions. In this section, we will examine one possible problem that can result from the reckless use of json_object_object_add. The problem is trying to create a JSON that contains a reference to itself.
+After the previous two sections, you should be pretty clear on when to use json-c's _*put*_ and _*get*_ functions. In this section, we will examine one possible problem that can result from the reckless use of _*json_object_object_add*_. The problem is trying to create a JSON that contains a reference to itself.
 
 [Previously in a problem](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/new.md), you were asked to write a program to generate the following JSON:
 
