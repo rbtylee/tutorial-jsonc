@@ -26,7 +26,7 @@ main(void)
    printf("The json representation:\n\n%s\n\n", json_object_to_json_string_ext(root, JSON_C_TO_STRING_PRETTY));
 
    json_object_put(root);
-   return 1;
+   return 0;
 }
 ```
 
@@ -95,7 +95,7 @@ main(void)
    const char *filename = "contact2.json";
    json_object *root = json_object_new_object();
    if (!root)
-      return 0;
+      return 1;
 
    // basic data
    json_object_object_add(root, "firstName", json_object_new_string("Bart"));
@@ -145,7 +145,7 @@ main(void)
 
    // cleanup and exit
    json_object_put(root);
-   return 1;
+   return 0;
 }
 
 ```
