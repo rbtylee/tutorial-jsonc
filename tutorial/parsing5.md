@@ -15,6 +15,7 @@ int main(void)
       printf("%s  -> %s\n", key, json_object_get_string(val));
 
    json_object_put(root);
+   return 0;
 }
 
 ```
@@ -39,6 +40,7 @@ int main(void)
        entry = entry->next;
    }
    json_object_put(root);
+   return 0;
 }
 ```
 
@@ -56,7 +58,7 @@ main(void)
       printf("Entry %p\n",entrykey);
 
    json_object_put(root);
-   return(0);
+   return 0;
 }
 
 ``` 
@@ -67,7 +69,8 @@ The json-c libraries offers a way to avoid this "_*problem*_". To illustrate, co
 #include <stdio.h>
 #include <json-c/json.h>
 
-int main(void)
+int 
+main(void)
 {
    struct json_object_iterator it;
    struct json_object_iterator itEnd;
@@ -85,6 +88,7 @@ int main(void)
       json_object_iter_next(&it);
    }
    json_object_put(root);
+   return 0;
 }
 ```
 
