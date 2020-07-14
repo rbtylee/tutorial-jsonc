@@ -11,5 +11,5 @@ main(void)
 
    printf("The json file:\n\n%s\n", json_object_to_json_string_ext(root, JSON_C_TO_STRING_PRETTY));
    json_object_put(root);
-   return 1;
+   return 0;
 }

@@ -9,7 +9,7 @@ main(void)
    char fname[255], lname[255];
    json_object *root = json_object_from_file("contact.json");
    if (!root)
-       return 0;
+       return 1;
        
    json_object *first_name = json_object_object_get(root,  "firstName");
    json_object *last_name = json_object_object_get(root,  "lastName");
@@ -21,5 +21,5 @@ main(void)
    // Verify our char arrays still have the proper values
    printf("%s, %s\n", fname, lname);
    
-   return 1;
+   return 0;
 }

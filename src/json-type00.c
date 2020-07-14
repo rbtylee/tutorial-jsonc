@@ -40,7 +40,7 @@ main(void)
    json_object_print_type(spouse, "spouse");
 
    json_object_put(root);
-   return 1;
+   return 0;
 }
 
 void

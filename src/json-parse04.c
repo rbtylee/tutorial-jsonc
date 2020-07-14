@@ -89,5 +89,5 @@ main(void)
       }
 
    json_object_put(root);
-   return 1;
+   return 0;
 }

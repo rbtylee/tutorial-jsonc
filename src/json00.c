@@ -11,4 +11,5 @@ int main(void)
          printf("%s  -> %s\n", key, json_object_get_string(val));
     
     json_object_put(root);
+    return 0;
  }
