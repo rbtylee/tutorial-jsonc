@@ -45,6 +45,7 @@
     * Bettter Encapsulation using iterators
 - Parsing a Json object - part 6: Iteration yet again
     *
+- Error handling
 - threads 
 - debugging
 - automake and meson
