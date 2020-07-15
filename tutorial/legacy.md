@@ -161,9 +161,9 @@ Verify this works as expected and does not leak memory using Valgrind.
 
 ## json_object_object_get_ex
 
-we noted the function _*json_object_object_get(obj, key)*_ may throw depreciated function warnings depending upon what version of jcon-c you have installed. Gcc will throw these ugly warnings for each usage of this function when compiling the function. It seems the function was depreciated and then latter this warning was removed.
+We noted the function _*json_object_object_get(obj, key)*_ may throw depreciated function warnings json-c version 0.12. This function was depreciated then but latter this warning was removed. There are no issues with using this function.
 
-An alternative to _*json_object_object_get(obj, key)*_  is the function _*json_object_object_get_ex*_. It will compile warning free.
+However, an alternative to _*json_object_object_get(obj, key)*_  is the function _*json_object_object_get_ex*_. It will compile warning free in json-c 0.12.
 
 - json_bool json_object_object_get_ex(json_object \*obj, const char *key, json_object \*\*value)
 
