@@ -54,9 +54,9 @@ So here is the original code to change the office phone number:
 ```
    json_object *root = json_object_from_file("contact.json");
    
-   json_object *phone_numbers =  _json_object_object_get(root, "phoneNumbers");
+   json_object *phone_numbers =  json_object_object_get(root, "phoneNumbers");
    json_object *office = json_object_array_get_idx(phone_numbers, 1);
-   json_object *number = _json_object_object_get(office,"number");
+   json_object *number = json_object_object_get(office,"number");
    json_object_set_string(number, "843 276-3583");
 ```
 
