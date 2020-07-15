@@ -124,9 +124,7 @@ Here, the output is more readable having been reformatted somewhat, but it is ce
 
 So let's examine what we have learned from the code above.
 
-First and foremost, I have introduced a new 'type': _*json_object*_. As expected for a C program, _*json_object*_ is really a structure defined in the _*json_object_private.h*_ header file.  In recent json-c versions, this file is not installed as it is a private header file. The actaul implemetation details of _*json_object*_ should not concern the average developer using this library. But if you wish, can examine the definition in json-c source code. For now, we can just think of it as a basic object that the json-c functions operate upon.
-
-Some programmers who wish to stress the idea _*json_object*_ is a *struct* would write the line of code
+First and foremost, I have introduced a new 'type': _*json_object*_. As expected for a C program, _*json_object*_ is really an opaque structure whose internal implementation is not available in application code outside of the json-c library. Your code will only ever deal with a _pointer_ to a _*json_object*_, and all operations must be performed through the json-c API functions. Some programmers who wish to stress the idea _*json_object*_ is a *struct* would write the line of code:
 
 ```
 json_object *root = json_object_from_file("contact.json");
@@ -137,6 +135,7 @@ as
 ```
 struct json_object *root = json_object_from_file("contact.json");
 ```
+
 That is a personal choice and do whichever you prefer. I prefer to leave the struct part off and think of it more like an additional basic type the library offers much like *int* or *float*.
 
 Next I introduce the function:
