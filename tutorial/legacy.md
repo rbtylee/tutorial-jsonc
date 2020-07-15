@@ -155,6 +155,55 @@ main(void)
 Store this as _*json-parse01.c*_ and compile as usual (_*gcc json-parse01.c -ljson-c -o json-parse01*_)
 Verify this works as expected and does not leak memory using Valgrind.
 
+## json_object_object_get_ex
+
+we noted the function _*json_object_object_get(obj, key)*_ may throw depreciated function warnings depending upon what version of jcon-c you have installed. Gcc will throw these ugly warnings for each usage of this function when compiling the function. It seems the function was depreciated and then latter this warning was removed.
+
+An alternative to _*json_object_object_get(obj, key)*_  is the function _*json_object_object_get_ex*_. It will compile warning free.
+
+- json_bool json_object_object_get_ex(json_object \*obj, const char *key, json_object \*\*value)
+
+## json_bool
+
+Note: this introduces a new type. _*json_bool*_, clearly as expected merely a convenience to deal with Boolean values.
+
+We have
+```
+typedef int json_bool;
+```
+While some versions of json-c have TRUE and FALSE macros defined you probably shouldn't use them as they have removed in version 0.14. Many other libraries also provide similar 'types' and values for booleans.
+
+Clearly the function _*json_object_object_get_ex(obj, key, &value)*_ returns TRUE (1) on success and FALSE (0) otherwise.
+
+## json_object_object_get_ex
+
+So here is _*json-parse00.c*_ refactored using this new function:
+
+```
+#include <stdio.h>
+#include <json-c/json.h>
+
+int 
+main(void)
+{
+   json_object *first_name, *last_name;
+   json_object *root = json_object_from_file("contact.json");
+   if (!root)
+       return 1;
+       
+   json_object_object_get_ex(root, "firstName", &first_name);
+   json_object_object_get_ex(root, "lastName", &last_name);
+   printf("%s, %s\n", json_object_get_string(last_name), json_object_get_string(first_name));
+   json_object_put(root);
+   return 0;
+}
+
+```
+
+As usual save this file as _*json-parse02.c*_. Compile and  execute ( _*gcc json-parse02.c -ljson-c -o json-parse02*_ ).
+
+No compiler warnings and the code is only marginally more complex.
+
 ## Problems
 
 1. Rewrite json-parse00.c with proper error checks on the returned values before the print statements. In other words, if the key is not found do not print (null) for either the first name and last name.
