@@ -118,7 +118,7 @@ What about error handling you might ask? What happens if the function _*json_obj
 
 ## json\_object\_get\_string
 
-It should be intuitively clear what the function _*json\_object\_get_string(obj)*_ does. It simply returns the string value (const char*) of the _*json_\object*_. According to the docs:
+It should be intuitively clear what the function _*json\_object\_get_string(obj)*_ does. It simply returns the string value (const char*) of the _*json_object*_. According to the docs:
 >If the passed object is not of type json\_type_string then the JSON representation of the object is returned.
 
 Hence, it is safe to call this function with a NULL object, in which case (null) is returned.
