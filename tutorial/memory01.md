@@ -49,7 +49,7 @@ After adding _*str*_ to the JSON object _*item*_, _*item*_ now _*owns*_ our JSON
 The documentation for _*json_object_object_add*_ states:
 > Upon calling this, the ownership of val transfers to obj. Thus you must make sure that you do in fact have ownership over this object.
 
-So before we can add _*str*_ to the remaining items in the JSON array _*items*_, we need _*ownership*_ of the JSON object. That is, we need a _*json_object_get(str)*_ statement before we try to add _*str*_ to another JSON object. So the remaining two times we add _*str*_ to an item in the _*items*_ array we must use:
+So before we can add _*str*_ to the remaining items in the JSON array _*items*_, we need to re-acquire _*ownership*_ of the JSON object. That is, we need a _*json_object_get(str)*_ statement before we try to add _*str*_ to another JSON object. So the remaining two times we add _*str*_ to an item in the _*items*_ array we must use:
 
 ```
    json_object_get(str);
