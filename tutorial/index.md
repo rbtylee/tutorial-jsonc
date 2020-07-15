@@ -11,14 +11,14 @@
     * read contact.json  and print 2 name/attribute pairs: _*json-parse00.c*_
 - [JSON_types](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/types.md)
     * Print types of the JSON objects in contact.json: _*json-type00.c*_
-- [Parsing a Json object - part 3 complex parsing](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing2.md)
+- [Parsing a Json object - part 2 complex parsing](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing2.md)
     * Print all values of all objects in contact.json: _*json-parse04.c*_
-- [Parsing a Json object - part 4: Json strings](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing3.md)
+- [Parsing a Json object - part 3: Json strings](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing3.md)
     * Create a JSON object from a string and print it: _*json-str00.c*_
     * Print all values of all objects in contact.json: _*json-parse05.c*_ (left as excersise)
 - Curl/url example
     * use curl or ecore_con_url
-- [Parsing a Json object - part 5: Iteration through a JSON obj](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing4.md)
+- [Parsing a Json object - part 4: Iteration through a JSON obj](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing4.md)
     * Illustrate iteration over a JSON object: example
     * Print all values of all objects in contact.json yet again: _*json-parse06.c*_
 - [Creating and saving a JSON object](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/new.md)
@@ -39,7 +39,7 @@
     * 
 - [JSON Pointers](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit2.md)
     * Introduce using JSON pointers
-- [Parsing a Json object - part 6: Iterators](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing5.md)
+- [Parsing a Json object - part 5: Iterators](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing5.md)
     * Bettter Encapsulation using iterators
 - Parsing a Json object - part 6: Iteration yet again
     *
