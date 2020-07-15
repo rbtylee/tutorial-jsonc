@@ -124,38 +124,3 @@ Other cases where one might need to increase the reference count of an object vi
 > - Detaching an object field or array index from its parent object (using _*json_object_object_del*_ or _*json_object_array_del_idx*_) 
 > - Sharing a json_object with multiple (not necesarily parallel) threads of execution that all expect to free it (with _*json_object_put*_) when they're done.
  
-At this point one may wonder if it is possible to deteremine the reference count of an object in json-c code? The answer is no, one _*should not*_, but yes one can.
-
-Since json-c takes an Object-Oriented approach as best it can considering it is a C library, the actual implementation details of a _*json_object*_ are or should be hidden from the programmers using the library. Take a look at the header file, _*json_object_private.h*_, in the source code. Here one has the implementation for the _*struct json_object*_. This is a private header file and is not even installed by recent versions of json-c. Ideally one should not use it. For a json object like _*str*_ in the above example, trying to access the reference count as in:
-
-```
-   printf("The reference count of str is T %d\n", str->_ref_count);
-```
-
-Results in the  error: _*dereferencing pointer to incomplete type ‘json_object {aka struct json_object}’*_ when one attempts to compile the code.
-
-Even use of gdb does not help:
-
-```
-(gdb) p str
-$1 = (json_object *) 0x5555557579f0
-(gdb) p *str
-$2 = <incomplete type>
-(gdb) p str->_ref_count
-There is no member named _ref_count.
-```
-
-The only way we are going to able to deteremine the reference count of an object in json-c code is to use the header file, _*json_object_private.h*_. If it is not there, place it with other json-c header files and add the line below to _*json-mem00.c*_:
-
-```
-#include <json-c/json_object_private.h>
-```
-
-Also add:
-
-```
-   printf("The reference count of str is T %d\n", str->_ref_count);
-```
-
-and recompile the code. It should work now!
-
