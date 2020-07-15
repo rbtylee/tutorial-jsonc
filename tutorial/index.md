@@ -9,8 +9,6 @@
     * Read contact.json from a file and print the JSON: _*json-file01.c*_
 - [Parsing a Json object - part 1: Intro](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/legacy.md)
     * read contact.json  and print 2 name/attribute pairs: _*json-parse00.c*_
-- [Parsing a Json object - part 2: Depreciated Function solution](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing.md)
-    * Fix depreciated function warnings : _*json-parse03.c*_
 - [JSON_types](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/types.md)
     * Print types of the JSON objects in contact.json: _*json-type00.c*_
 - [Parsing a Json object - part 3 complex parsing](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing2.md)
