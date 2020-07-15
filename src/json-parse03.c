@@ -3,16 +3,6 @@
 #include <stdio.h>
 #include <json-c/json.h>
 
-json_object *
-_json_object_object_get(json_object *obj, const char *key)
-{
-   json_object *temp;
-   if (json_object_object_get_ex(obj, key, &temp))
-      return temp;
-   printf("Error: in json obj or key\n");
-   return NULL;
-}
-
 int
 main(void)
 {
@@ -20,8 +10,8 @@ main(void)
    if (!root)
       return 1;
 
-   json_object *first_name = _json_object_object_get(root, "firstName");
-   json_object *last_name = _json_object_object_get(root, "lastName");
+   json_object *first_name = json_object_object_get(root, "firstName");
+   json_object *last_name = json_object_object_get(root, "lastName");
 
    printf("%s, %s\n", json_object_get_string(last_name), json_object_get_string(first_name));
    json_object_put(root);
