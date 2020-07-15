@@ -1,4 +1,4 @@
-# Parsing a Json object - part 6: Iterators
+# Parsing a Json object - part 5: Iterators
 
 We introduced the function _*json_object_object_foreach*_ previously. However, json-c offers another iteration API more in a C++ iterator type style.
 
