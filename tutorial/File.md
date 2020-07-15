@@ -1,6 +1,7 @@
 # Reading a JSON file
 
-Rather than start with the problem of how to parse a JSON file, let's approach the subject rather slowly. First, we consider how to read a JSON file into memory and print the file contents as a c string. For this example and many of the rest of the examples, I am going to use the JSON representation of a person taken from the aforementioned [Wikipedia article](https://en.wikipedia.org/wiki/JSON). Copy and paste the JSON below into a text editor and save as _*contact.json*_:
+To ease into things, let's start by using a simple utility function to parse aJSON file; later we'll delve into how we can control the parsing in more detail. 
+First, we consider how to read a JSON file into memory and print the file contents as a c string. For this example and many of the rest of the examples, I am going to use the JSON representation of a person taken from the aforementioned [Wikipedia article](https://en.wikipedia.org/wiki/JSON). Copy and paste the JSON below into a text editor and save as _*contact.json*_
 
 ```
 {
