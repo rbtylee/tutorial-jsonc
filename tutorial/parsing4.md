@@ -1,4 +1,4 @@
-# Parsing a Json object - part 5: Iteration through a JSON obj
+# Parsing a Json object - part 4: Iteration through a JSON obj
 
 Looking at the parsing code discussed so far, you might wonder if there is an easier way to parse the file rather than checking every attribute one at a time. Since we have been printing out the values for every attribute in the JSON file or string, shouldn't it be possible to simply iterate over the objects name/value pairs? Similar to a for loop only for json\_objects.
 
