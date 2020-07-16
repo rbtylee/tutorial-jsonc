@@ -12,7 +12,7 @@ From the documentation:
 
 > Increment the reference count of json_object, thereby grabbing shared ownership of obj. 
 
-Recall the function _*json_object_get()*_ decrements the reference count of a JSON object:
+Recall the function _*json_object_put()*_ decrements the reference count of a JSON object:
 
 - int json_object_put(json_object \*obj)
 
