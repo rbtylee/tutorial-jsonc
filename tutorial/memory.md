@@ -27,6 +27,16 @@ Again from the documentation:
 
 You may think that for every json_object_get there should eventually follow a json_object_put, much like the classic c way of following an malloc with a free at some latter point. However, **we will see this is not always the case**.
 
+We can create and own a JSON object by using one of:
+
+- json_object_new_object() 
+- json_object* json_object_from_file()
+- json_object* json_object_from_fd()
+- json_object* json_object_from_fd_ex()
+- json_object* json_tokener_parse()
+- json_object* json_tokener_parse_ex()
+- json_object* json_tokener_parse_verbose()
+
 In addition to json_object_put, we can also delete an attribute/value pair within a JSON object:
 
 - void json_object_object_del(json_object * obj, const char *key)
@@ -43,15 +53,7 @@ And likewise we can do the same for one or more json objects within a JSON array
 > 
 >When one creates a new JSON object, its reference count is 1 and the caller of this object initially owns it. There is no need to call json_object_get on a newly created JSON object unless you lose ownership of the object but want to maintain ownership for some latter usage.
 
-We can create and own a JSON object by using one of:
 
-- json_object_new_object() 
-- json_object* json_object_from_file()
-- json_object* json_object_from_fd()
-- json_object* json_object_from_fd_ex()
-- json_object* json_tokener_parse()
-- json_object* json_tokener_parse_ex()
-- json_object* json_tokener_parse_verbose()
 
 How exactly does one lose ownership of a JSON object?
 
