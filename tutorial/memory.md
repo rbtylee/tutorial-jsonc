@@ -1,4 +1,11 @@
 # Memory management, ownership and references
+<table width="100%">
+<tr>
+<td width="20%" align="left"><a href="https://www.google.com/">Previous</a></td>
+<td width="60%" align="center"><a href="https://www.google.com/">Index</a></td>
+<td width="20%" align="right" "><a href="https://www.google.com/">Next</a></td>
+</tr>
+</table>
 
 The json-c library makes memory management somewhat easier than traditional C as a JSON object is owned by either the programmer or another JSON object. A reference count for each JSON object is stored and incremented or decremented by certain json-c functions (get and put).  The JSON object's memory will be freed when its reference count reaches zero. Freeing a JSON object also frees the memory of all the objects the JSON object owns. So in addition to reference counts, A JSON object is either owned by the programmer or another JSON object. Certain json-c functions change the ownership of an object. If more than one JSON object owns a given JSON object, then that object's reference count is a count of all the objects which own it. The only objects programmers need to explicitly manage the memory of in json-c are the JSON objects they own.
 
