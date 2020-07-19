@@ -38,16 +38,16 @@ Consider again our example, John's Office phone number. For the JSON represented
  
 The json-c library, version 0.13 or later, has several functions which support this standard:
  
-- int json_pointer_get(json_object *obj, const char *path, json_object **res)
-- int json_pointer_getf(json_object *obj, json_object **res, const char *path_fmt,...)  
+- [int json_pointer_get(json_object *obj, const char *path, json_object **res)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__pointer_8h.html#aff88937e32b0ba6ffbd07cb4b1919053)
+- [int json_pointer_getf(json_object *obj, json_object **res, const char *path_fmt,...)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__pointer_8h.html#af0ac03df64b215d05041e8007ed0233d) 
 
-- int json_pointer_set(json_object **obj, const char *path, json_object *value)
-- int json_pointer_setf(json_object **obj, json_object *value, const char *path_fmt,...) 
+- [int json_pointer_set(json_object **obj, const char *path, json_object *value)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__pointer_8h.html#aef0e651f63ce5ce35648503705e2586b)
+- [int json_pointer_setf(json_object **obj, json_object *value, const char *path_fmt,...)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__pointer_8h.html#a66f1f98a2ce085c19f6750193b4c726d)
 
 
 We have two sets of functions, one set to retrieve the value given the JSON pointer and one to set the value.
 
-For more details on these functions, please consult the documentation.
+For more details on these functions, please consult the [documentation](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__pointer_8h.html).
 
 So here is the original code to change the office phone number:
 
