@@ -38,13 +38,13 @@ Where a spouse is known, record the full name and age as in:
 
 With the ambiguity issue addressed, we proceed to read every value of every field in our contact.json file and print the results. To accomplish this we first need to determine the length of a json\_array in order to deal with the **Children** attribute. Json-c provides a function much like _*json_object_get_string_len*_ only for json_arrays:
 
-- int json_object_array_length(json_object \*obj)
+- [int json_object_array_length(json_object \*obj)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#ab9ea8f9c72d5adf83fdcbfe69f97fa44)
 
 The usage of this function is should be intuitively clear. It does what it says it does.
 
 Once we know the length of a json\_array, we have to be able to loop through every _*json_object*_ the array contains. That is we need some function to _index_ the json_array. Hence:
 
-- json_object\* json_object_array_get_idx(json_object \*obj, int idx)
+- [json_object\* json_object_array_get_idx(json_object \*obj, int idx)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a676711a76545d4ec65cc75f100f5fd19)
 
 This function retrieves and returns the element at the specified index of the json_array or in the case of failure returns NULL.
 
