@@ -94,6 +94,6 @@ main(void)
 }
 ```
 
-The code should explain itself, but consult the documentation for more details if needed.
+The code should explain itself, but consult the [documentation](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object__iterator_8h.html) for more details if needed.
 
 **Note:** The usage of _*struct*_ in the declarations of _*it*_ and _*itEnd*_ are necessary for the data 'type' _*json_object_iterator*_.
