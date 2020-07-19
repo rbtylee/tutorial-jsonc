@@ -140,13 +140,13 @@ That is a personal choice and do whichever you prefer. I prefer to leave the str
 
 Next I introduce the function:
 
-- json_object\* *json_object_from_file*(const char \*filename)
+- [json_object\* *json_object_from_file*(const char \*filename)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__util_8h.html#a03119ec0a71af4eee95318e9b2aaf05b)
 
 This function should be self-explanatory: It reads the file *filename* and returns the _*json_object*_ representing the JSON data contained in the file. If there is a failure to read the file, this function returns NULL. Of course, as we will later see json-c can also create a _*json_object*_ from a string (technically a NULL-terminated character array in C, not that I am pedantic enough to care).
 
 Now note, right before our program exits we have the function:
 
-- void json_object_put(json_object \* obj)
+- [void json_object_put(json_object \* obj)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#afabf61f932cd64a4122ca8092452eed5)
 
 We call this function on the json_object we created using *json_object_from_file*. You can think of this as freeing the memory allocated by creating the json_object. Technically though, the memory is only freed if the reference count of the object is zero. The official documentation states _*json_object_put*_
 
@@ -174,7 +174,7 @@ First, the constant _*JSON_C_TO_STRING_PRETTY*_ used in the function _*json_obje
 - JSON_C_TO_STRING_NOZERO
 - JSON_C_TO_STRING_NOSLASHESCAPE
 
-For information of the remaining flags your json-c version supports consult the documentation.
+For information of the remaining flags your json-c version supports consult [the documentation](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html).
 
 These flags tell the function _*json_object_to_json_string_ext*_ how to format the JSON in the string representation. We have already seen the usage and effect of _*JSON_C_TO_STRING_PLAIN*_: The function _*json_object_to_json_string(obj)*_ is equivalent to _*json_object_to_json_string_ext(obj, JSON_C_TO_STRING_SPACED)*_. Here all superfluous white space is removed from the string representation.
 
