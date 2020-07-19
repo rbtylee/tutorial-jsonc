@@ -65,7 +65,7 @@ By using any of the following functions:
 
 But ownership is not affected by the following functions, nor are reference counts changed:
     
-- [json_object_object_get()](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a1a097805abb53b4c8a60d573730a8939)] or [json_object_object_get_ex()](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a90d5f16d58636f01d2ed1a6030c7366a)
+- [json_object_object_get()](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a1a097805abb53b4c8a60d573730a8939) or [json_object_object_get_ex()](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a90d5f16d58636f01d2ed1a6030c7366a)
 - [json_object_array_put_idx()](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a1ac0ccdbc13a25da7d8b2dc9e421dfad)
 
 As previously [noted](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/File.md), most of sample programs will follow this template:
