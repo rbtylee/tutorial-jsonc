@@ -4,7 +4,7 @@ Looking at the parsing code discussed so far, you might wonder if there is an ea
 
 The answer is, naturally, yes.
 
-In json-c, this is implemented as a macro: [_*json_object_object_foreach*_](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#acf5f514a9e0061c10fc08055762639ee) Typical usage is of the form:
+In json-c, this is implemented as a macro: [_*json_object_object_foreach*_](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#acf5f514a9e0061c10fc08055762639ee). Typical usage is of the form:
 
 ```
 json_object_object_foreach(obj, key, val)
