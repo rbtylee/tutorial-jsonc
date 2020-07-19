@@ -162,17 +162,17 @@ You may be thinking, "What is meant by _*ownership of an object*_?" More on that
 
 Finally, I introduced 2 functions and a constant to convert the json_object to a string:
 
-- const char\* json_object_to_json_string(json_object \*obj)
-- const char\* json_object_to_json_string_ext(json_object \*obj, int flags)
-- JSON_C_TO_STRING_PRETTY
+- [const char\* json_object_to_json_string(json_object \*obj)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#ab7390c22baa1700d977c2af6b22d43a4)
+- [const char\* json_object_to_json_string_ext(json_object \*obj, int flags)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a9db613127bd4ef7db42307e43a85fc1b)
+- [JSON_C_TO_STRING_PRETTY](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a2025bc677c35f130e117dfda5bf1ef73)
 
 First, the constant _*JSON_C_TO_STRING_PRETTY*_ used in the function _*json_object_to_json_string_ext*_ as a _formatting flag_. There are 6 such flags, the remaining ones are:
 
-- JSON_C_TO_STRING_PLAIN
-- JSON_C_TO_STRING_SPACED
-- JSON_C_TO_STRING_PRETTY_TAB
-- JSON_C_TO_STRING_NOZERO
-- JSON_C_TO_STRING_NOSLASHESCAPE
+- [JSON_C_TO_STRING_PLAIN](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a3294cb92765cdeb497cfd346644d1059)
+- [JSON_C_TO_STRING_SPACED](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#aa821746c8668e6ad62bed90ec9e00103)
+- [JSON_C_TO_STRING_PRETTY_TAB](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#afc1486af21f6b1653c6f523025bdfd3b)
+- [JSON_C_TO_STRING_NOZERO](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a34f027c147babf69fc530d088f2b49b0)
+- [JSON_C_TO_STRING_NOSLASHESCAPE](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a5c11d72c55f3ab7c088f19e7bf118163)
 
 For information of the remaining flags your json-c version supports consult [the documentation](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html).
 
