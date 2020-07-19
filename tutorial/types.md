@@ -33,19 +33,19 @@ We have two functions in the json-c library to help us determine the type of a _
 
 We have seen the usage of the function _*json_object_get_string*_, json-c naturally also provides the functions:
 
-- json_bool     json_object_get_boolean(json_object *obj)
-- double        json_object_get_double(json_object *obj)
-- int32_t       json_object_get_int(json_object *obj)
-- int64_t       json_object_get_int64(json_object *obj)
-- lh_table*     json_object_get_object(json_object *obj)
-- array_list *  json_object_get_array(json_object *obj)
+- [json_bool     json_object_get_boolean(json_object *obj)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#ac003fb99db7ecd674bb16d983d2f92ee)
+- [double        json_object_get_double(json_object *obj)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a94a70cff6a14398b581b7b10b0792c5b)
+- [int32_t       json_object_get_int(json_object *obj)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a8c56dc58a02f92cd6789ba5dcb9fe7b1)
+- [int64_t       json_object_get_int64(json_object *obj)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a1a14750b3af4df18ec8dc93b090a8e8a)
+- [lh_table*     json_object_get_object(json_object *obj)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a2caa52ae1863bd073444f3737138a4db)
+- [array_list *  json_object_get_array(json_object *obj)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a23d20e3f886c1638a7116be66b7b5ec2)
 
 One can also see we have two new types:
 
-- lh_table
-- array_list
+- [lh_table](https://json-c.github.io/json-c/json-c-0.14/doc/html/structlh__table.html)
+- [array_list](https://json-c.github.io/json-c/json-c-0.14/doc/html/structarray__list.html_
 
-Both of course *structs* defined in the _*json_object.h*_ header file. For now, we can safely ignore these types as the details are not important here. Curious users can read the docs or look up the definitions in the header file. More details on these functions can be found in the json-c documentation. 
+Both of course *structs* defined in the json-c header files. For now, we can safely ignore these types as the details are not important here. Curious users can read the docs or look up the definitions in the header files. More details on these functions can be found in the json-c documentation. 
 
 Now, let's demonstrate some of these function's usage with our _*contact.json*_ file example:
 
