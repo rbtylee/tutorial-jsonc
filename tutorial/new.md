@@ -65,7 +65,7 @@ This example covers the user case of adding a key with _*json\_type\_null*_ valu
 
 Functions for adding other *_json\_types*_ are listed below and their usage should be intuitively obvious:
 
-1. [json_object\* json_object_new_boolean(json_bool b)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a2e290acd80e72cca745f89fb4600fb78)
+- [json_object\* json_object_new_boolean(json_bool b)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a2e290acd80e72cca745f89fb4600fb78)
 - [json_object\* json_object_new_double(double d)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a594a093bafb9091f843da3197e0638aa)
 - [json_object\* json_object_new_double_s(double d)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a594a093bafb9091f843da3197e0638aa)
 - [json_object\* json_object_new_int(int32_t i)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#ae92f0770fb4b3c884ce35de52d3d7de8)
