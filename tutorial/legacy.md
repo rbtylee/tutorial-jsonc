@@ -78,8 +78,8 @@ In file included from /usr/include/json-c/linkhash.h:16:0,
 
 I will address this issue in a bit, but first let's examine the two new functions used in the code above.
 
-- json_object\* json\_object\_object\_get(json_object \* obj, const char \*key)
-- const char\* json_object_get_string(json_object \*obj)
+- [json_object\* json\_object\_object\_get(json_object \* obj, const char \*key)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a1a097805abb53b4c8a60d573730a8939)
+- [const char\* json_object_get_string(json_object \*obj)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a9ee29ca8d79896e15007131527f6002e)
 
 
 ## json_object_object_get
@@ -165,7 +165,7 @@ We noted the function _*json_object_object_get(obj, key)*_ may throw depreciated
 
 However, an alternative to _*json_object_object_get(obj, key)*_  is the function _*json_object_object_get_ex*_. It will compile warning free in json-c 0.12.
 
-- json_bool json_object_object_get_ex(json_object \*obj, const char *key, json_object \*\*value)
+- [json_bool json_object_object_get_ex(json_object \*obj, const char *key, json_object \*\*value)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a90d5f16d58636f01d2ed1a6030c7366a)
 
 ## json_bool
 
