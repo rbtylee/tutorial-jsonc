@@ -84,7 +84,7 @@ This function returns 0 on success and -1 on failure.
 
 ## json-new00.c
 
-As an example of using these functions along with a new function to write the JSON to your disk, consider the program, _*json-new00.c*_, below. This program creates a new contact JSON file with the same JSON structure as our _*contact.json*_. It prints the JSON and saves it to the hard drive.
+As an example of using these functions along with a new function to write the JSON to your disk, consider the program, [_*json-new00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-new00.c), below. This program creates a new contact JSON file with the same JSON structure as our _*contact.json*_. It prints the JSON and saves it to the hard drive.
 
 ```
 #include <stdio.h>
