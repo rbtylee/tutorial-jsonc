@@ -83,7 +83,7 @@ I will address this issue in a bit, but first let's examine the two new function
 
 
 ## json_object_object_get
-The first function, _*json\_object\_object\_get(obj, key)*_, simply returns the _*json_object*_ associated with the given key. There is no need to dereference the returned _*json_object*_ with a _*json_object_put*_ as no reference counts are changed. According to the documentation, "Ownership of the returned value is retained by obj. " This means that if the owning object is freed (by a  _*json_object_put(obj)*_ function call then any usage of the _*json_object*_  returned by
+The first function, _*json\_object\_object\_get(obj, key)*_, simply returns the _*json_object*_ associated with the given key. When you're done with the returned json_object there's no need to release it with a _*json_object_put()*_ as no reference counts are changed. According to the documentation, "Ownership of the returned value is retained by obj. " This means that if the owning object is freed (by a  _*json_object_put(obj)*_ function call then any usage of the _*json_object*_  returned by
  _*json_object_object_get(obj, key)*_ will return garbage as this pointer is no longer valid.
 
 In our example, we have
