@@ -47,7 +47,7 @@ One can also see we have two new types:
 
 Both of course *structs* defined in the json-c header files. For now, we can safely ignore these types as the details are not important here. Curious users can read the docs or look up the definitions in the header files. More details on these functions can be found in the json-c documentation. 
 
-Now, let's demonstrate some of these function's usage with our _*contact.json*_ file example:
+Now, let's demonstrate some of these function's usage with our _*contact.json*_ file. Example [_*json-type00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-type00.c) below:
 
 ```
 #include <stdio.h>
@@ -134,7 +134,7 @@ json_object_print_type(json_object *obj, const char *key)
 
 ```
 
-Save (_*json-type00.c*_) above, compile, and execute. Compare your results with the original _*contact.json*_ file to ensure the results make sense.
+Compile, and execute. Compare your results with the original _*contact.json*_ file to ensure the results make sense.
 
 ## Problems
 
