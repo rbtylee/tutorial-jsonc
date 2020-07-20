@@ -135,7 +135,7 @@ main(void)
 
 ```
 
-Save, compile and execute _*json-parse04.c*_ above.
+Compile and execute [_*json-parse04.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse04.c) above.
 
 Note: latter a simpler solution to this problem will be presented.
 
