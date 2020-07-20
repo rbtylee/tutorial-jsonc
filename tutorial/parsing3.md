@@ -6,7 +6,7 @@ At last, we have all the tools needed to parse a JSON file. Yet, the most common
 
 The usage of this function is rather simple.
 
-Consider _*json-str00.c*_:
+Consider [_*json-str00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-str00.c):
 
 ```
 #include <stdio.h>
