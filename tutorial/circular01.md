@@ -69,7 +69,7 @@ to
 json_object_object_add(items, "properties", root);
 ```
 
-This is a circular reference, the JSON object root contains a reference to itself in a field. The leads to infinite recursion and is an error situation. Json-c only checks for the simplist of errors of this sort. This code will compile but naturally fails to run:
+This is a circular reference, the JSON object root contains a reference to itself in a field. The leads to infinite recursion and is an error situation. Json-c only checks for the simplist of errors of this sort. [This code](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-error00.c) will compile but naturally fails to run:
 
 ```
 ~$ ./json-error00
