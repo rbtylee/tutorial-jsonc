@@ -30,7 +30,7 @@
 - [Memory management, ownership and references - part two: examples](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory01.md)
     * Code illustrating memory issues and some pitfalls
 - [JSON Circular references](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/circular01.md)
-    * An example of a circular reference: [_*json-error00*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-error00.c)
+    * An example of a circular reference: [_*json-error00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-error00.c)
 - [JSON Comparison](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/equal.md)
     * Compare two JSONs for equality: [_*json-equal00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-equal00.c)
 - JSON Copying
