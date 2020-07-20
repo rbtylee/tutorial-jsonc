@@ -65,7 +65,7 @@ main(void)
 
 ``` 
 
-The json-c libraries offers a way to avoid this "_*problem*_". To illustrate, consider the code below:
+The json-c libraries offers a way to avoid this "_*problem*_". To illustrate, consider [_*json-parse08.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse08.c):
 
 ```
 #include <stdio.h>
