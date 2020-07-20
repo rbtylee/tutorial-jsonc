@@ -16,7 +16,7 @@ From the documentation:
 
 ## json-equal00.c
 
-As expected some sample code illustrating the usage of this function:
+As expected some sample code.[_*json-equal00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-equal00.c) illustrating the usage of this function:
 
 ```
 #include <stdio.h>
