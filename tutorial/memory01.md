@@ -136,7 +136,7 @@ Now experiment with removing one or more of the _*json_object_get(str)*_ stateme
 
 There's an alternate approach:  call _*json_object_get(str)*_ before *each* of the _*json_object_object_add(item, "status", str)*_ calls, even the first one, and then add a _*json_object_put(str)*_ at the end.  In a more complicated program, one where maybe the code to add each item is factored out into a separate function, this can result in a more natural flow.
 
-To illustrate this approach examine [_*json-mem01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-mem01.c) below, each new item is added to the items array in a seperate function, _*json_object *new_item(int id, json_object *str)*_. The function new_item ensures it has ownership of _*str*_ when adding _*str*_ to the JSON object _*item*_ by calling _*json_object_get(str)*_. 
+To illustrate this approach examine [_*json-mem01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-mem01.c) below, each new item is added to the items array in a seperate function, _*json_object \*new_item(int id, json_object \*str)*_. The function _*new_item*_ ensures it has ownership of _*str*_ when adding _*str*_ to the JSON object _*item*_ by calling _*json_object_get(str)*_. 
 
 ```
 #include <stdio.h>
