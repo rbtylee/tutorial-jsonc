@@ -6,6 +6,7 @@
     * Installation
     * Print version:[ _*json-version.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-version.c)
 - [Reading a JSON file](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/File.md)
+    * Read contact.json from a file and print the JSON: [_*json-file00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-file00.c)
     * Read contact.json from a file and print the JSON: [_*json-file01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-file01.c)
 - [Parsing a Json object - part 1: Intro](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/legacy.md)
     * read contact.json  and print 2 name/attribute pairs: [_*json-parse00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse00.c)
