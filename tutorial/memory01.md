@@ -28,7 +28,7 @@ Here is the JSON document we wish to create:
 }
 ```
 
-We see the field _*"status": "online"*_ occurs three times in this JSON. Suppose we just want to create one JSON object for this attribute/pair instead of using three separate JSON objects with the same content. Examine _*json-mem00.c*_ which follows.
+We see the field _*"status": "online"*_ occurs three times in this JSON. Suppose we just want to create one JSON object for this attribute/pair instead of using three separate JSON objects with the same content. Examine [_*json-mem00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-mem00.c) which follows.
 
 First, create the needed JSON string:
 
