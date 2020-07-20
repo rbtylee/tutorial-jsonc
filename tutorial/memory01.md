@@ -74,7 +74,7 @@ Though you won't have explicit, individual calls to _*json_object_put()*_ in the
          * json_object_put(<json_type_int with value 2345>)
          * json_object_put(str) (refcount decremented, now it's 0, so it is freed)
 
-**Note:** at no point did we in in the application code have to _*json_object_put(str)*_ explicitly, as the management of _*str's*_ memory was handled by the json-c library when the _*json_object_put(root)*_ statement was executed. So as promised, we can see why it is not necessarily the case that for every _*json_object_get*_ there should eventually follow a _*json_object_put*_. It all depends upon the _*ownership*_ of the object.
+**Note:** at no point did we in the application code have to _*json_object_put(str)*_ explicitly, as the management of _*str's*_ memory was handled by the json-c library when the _*json_object_put(root)*_ statement was executed. So as promised, we can see why it is not necessarily the case that for every _*json_object_get*_ there should eventually follow a _*json_object_put*_. It all depends upon the _*ownership*_ of the object.
 
 What about the usage of _*str*_ after the execution of _*json_object_put(root)*_? The pointer _*str*_ is no longer valid. Trying to use it after the json_object_put statement is a _*use-after-free error*_, exactly as if one attempted to do:
 ```
@@ -130,6 +130,59 @@ main(void)
 As usual, compile and execute this program. Run the binary through Valgrind to ensure there are no memory errors.
 
 Now experiment with removing one or more of the _*json_object_get(str)*_ statements in _*json-mem00.c*_. Does the code compile? Does it run? What does valgrind report?
+
+
+## json-mem01.c
+
+There's an alternate approach:  call _*json_object_get(str)*_ before *each* of the _*json_object_object_add(item, "status", str)*_ calls, even the first one, and then add a _*json_object_put(str)*_ at the end.  In a more complicated program, one where maybe the code to add each item is factored out into a separate function, this can result in a more natural flow.
+
+To illustrate this approach examine [_*json-mem01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-mem01.c) below, each new item is added to the items array in a seperate function, _*json_object *new_item(int id, json_object *str)*_. The function new_item ensures it has ownership of _*str*_ when adding _*str*_ to the JSON object _*item*_ by calling _*json_object_get(str)*_. 
+
+```
+#include <stdio.h>
+#include <json-c/json.h>
+
+#define NUM_ID_ITEMS 3
+
+json_object *
+new_item(int id, json_object *str)
+{
+   json_object *item = json_object_new_object();
+   json_object_object_add(item, "id", json_object_new_int(id));
+   json_object_object_add(item, "status", json_object_get(str));
+   return item;
+}
+
+int
+main(void)
+{
+   json_object *items, *str;
+   int id[3] = {3201, 4678, 2345};
+
+   json_object *root = json_object_new_object();
+   if (!root)
+      return 1;
+
+   // main array
+   items = json_object_new_array();
+   json_object_object_add(root, "items", items);
+   str = json_object_new_string("online");
+
+   // Add Items
+   for(int i=0; i<NUM_ID_ITEMS; i++)
+      json_object_array_add(items, new_item(id[i], str));
+
+   printf("The json representation:\n\n%s\n\n", json_object_to_json_string_ext(root, JSON_C_TO_STRING_PRETTY));
+
+   // cleanup and exit
+   json_object_put(str);
+   json_object_put(root);
+   return 0;
+}
+
+```
+
+As before, compile and execute this program. Run the binary through Valgrind to ensure there are no memory errors.
 
 Other cases where one might need to increase the reference count of an object via _*json_object_get*_ are:
 
