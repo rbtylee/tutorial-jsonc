@@ -100,7 +100,7 @@ Notice the introduction of the self-explanatory function:
 
 ## json-edit00.c
 
-Wrapping it up, our complete program:
+Wrapping it up, our complete program, [_*json-edit00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-edit00.c):
 
 ```
 #include <stdio.h>
