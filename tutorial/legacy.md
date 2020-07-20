@@ -2,7 +2,7 @@
 
 Printing a json\_object is rather boring and mostly useful for debugging purposes. Naturally one would expect a JSON library to include functions to make extracting the needed data from the JSON file as easy and simple as possible.
 
-So let's examine _*contact.json*_ again:
+So let's examine [_*contact.json*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/contact.json) again:
 
 ```
 {
@@ -30,7 +30,7 @@ So let's examine _*contact.json*_ again:
   "spouse": null
 }
 ```
-Suppose we wish to read this JSON file and print only the first and last name. Create the file below, _*json-parse00.c*_ and compile _*gcc json-parse00.c -ljson-c -o json-parse00*_:
+Suppose we wish to read this JSON file and print only the first and last name. Examine [_*json-parse00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse00.c) below. Compile with _*gcc json-parse00.c -ljson-c -o json-parse00*_:
 
 ```
 #include <stdio.h>
@@ -125,7 +125,7 @@ It should be intuitively clear what the function _*json\_object\_get_string(obj)
 
 Hence, it is safe to call this function with a NULL object, in which case (null) is returned.
 
-It is important to note that the returned "string memory is managed by the json\_object and will be freed when the reference count of the json\_object drops to zero." Therefore, if one wishes to 'keep' the value of this string around, one has to store it in a char array. For example:
+It is important to note that the returned "string memory is managed by the json\_object and will be freed when the reference count of the json\_object drops to zero." Therefore, if one wishes to 'keep' the value of this string around, one has to store it in a char array. For example, [_*json-parse01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse01.c):
 
 ```
 #include <stdlib.h>
@@ -158,7 +158,7 @@ main(void)
 
 ```
 
-Store this as _*json-parse01.c*_ and compile as usual (_*gcc json-parse01.c -ljson-c -o json-parse01*_)
+Compile as usual (_*gcc json-parse01.c -ljson-c -o json-parse01*_)
 Verify this works as expected and does not leak memory using Valgrind.
 
 ## json_object_object_get_ex
