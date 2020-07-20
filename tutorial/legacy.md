@@ -96,7 +96,7 @@ If we wish to keep the _*json_object \*first_name*_  *AFTER* executing _*json_ob
 
 This point is very important. To see this play around with the code some by moving the line _*json_object_put(root);*_ around in the source and then again after adding some _*json_object_get*_ function calls on the appropriate objects. Each time not only execute the binary file but also run the code through  [_*Valgrind*_](https://www.valgrind.org/).
 
-Hopefully, all this is clear by now. If not we will [later](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory.md) [examine](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory01.md) the concept of ownsership and references in quite a bit of detail.
+Hopefully, all this is clear by now. If not, we will [later](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory.md) [examine](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory01.md) the concept of ownsership and references in quite a bit of detail.
 
 So let's examine what the function _*json_object_object_get(obj, key)*_ actually does. In our case the line of code:
 
