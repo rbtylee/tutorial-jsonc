@@ -61,7 +61,20 @@ Hence right before the program exits and immediately before the _*json_object_pu
 
 The statement _*json_object_put(root)*_ decrements the reference count of the JSON object _*root*_. Since _*root*_ has only been referenced once in our program by the initial _*json_object *root = json_object_new_object()*_, the reference count for _*root*_ goes to 0. Hence, _*root*_ is freed and all objects owned by root have their reference count decremented and those with a reference count of zero are also freed. The result is everything contained within _*root*_ is freed.
 
-**Note:** at no point did we have to _*json_object_put(str)*_, as the management of _*str's*_ memory was handled by the json-c library when the _*json_object_put(root)*_ statement was executed. So as promised, we can see why it is not necessarily the case that for every _*json_object_get*_ there should eventually follow a _*json_object_put*_. It all depends upon the _*ownership*_ of the object.
+Though you won't have explicit, individual calls to _*json_object_put()*_ in the application code, when _*json_object_put(root)*_ is executed the json-c library _*internally*_ performs roughly the following steps:
+
+* json_object_put(items)
+     * json_object_put(item <1st one>)
+         * json_object_put(<json_type_int with value 3201>)
+         * json_object_put(str) (refcount decremented, not yet freed)
+     * json_object_put(item <2nd one>)
+         * json_object_put(<json_type_int with value 4678>)
+         * json_object_put(str) (refcount decremented, not yet freed)
+     * json_object_put(item <3rd one>)
+         * json_object_put(<json_type_int with value 2345>)
+         * json_object_put(str) (refcount decremented, now it's 0, so it is freed)
+
+**Note:** at no point did we in in the application code have to _*json_object_put(str)*_ explicitly, as the management of _*str's*_ memory was handled by the json-c library when the _*json_object_put(root)*_ statement was executed. So as promised, we can see why it is not necessarily the case that for every _*json_object_get*_ there should eventually follow a _*json_object_put*_. It all depends upon the _*ownership*_ of the object.
 
 What about the usage of _*str*_ after the execution of _*json_object_put(root)*_? The pointer _*str*_ is no longer valid. Trying to use it after the json_object_put statement is a _*use-after-free error*_, exactly as if one attempted to do:
 ```
