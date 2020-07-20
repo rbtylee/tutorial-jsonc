@@ -27,6 +27,8 @@
     * Change attribute values in a JSON: [_*json-edit00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-edit00.c)
 - [Memory management, ownership and references - part one: overview](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory.md)
     * Clarify these issues and answer the question of when to call json_object_put or json_object_get
+    *[_*json-mem00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-mem00.c)
+    *[_*json-mem01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-mem01.c)
 - [Memory management, ownership and references - part two: examples](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory01.md)
     * Code illustrating memory issues and some pitfalls
 - [JSON Circular references](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/circular01.md)
