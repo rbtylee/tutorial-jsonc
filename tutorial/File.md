@@ -1,7 +1,7 @@
 # Reading a JSON file
 
 To ease into things, let's start by creating a simple utility function to parse a JSON file; later we'll delve into how we can control the parsing in more detail. 
-First, we consider how to read a JSON file into memory and print the file contents as a c string. For this example and many of the rest of the examples, I am going to use the JSON representation of a person taken from the aforementioned [Wikipedia article](https://en.wikipedia.org/wiki/JSON). Copy and paste the JSON below into a text editor and save as _*contact.json*_
+First, we consider how to read a JSON file into memory and print the file contents as a c string. For this example and many of the rest of the examples, I am going to use the JSON representation of a person taken from the aforementioned [Wikipedia article](https://en.wikipedia.org/wiki/JSON), [_*contact.json*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/contact.json):
 
 ```
 {
@@ -31,7 +31,7 @@ First, we consider how to read a JSON file into memory and print the file conten
 
 ```
 
-Create the file _*json-file00.c*_ with the below contents in the same directory as _*contact.json*_:
+Now examine [_*json-file00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-file00.c):
 
 ```
 #include <stdio.h>
@@ -67,7 +67,7 @@ The json file:
 
 Admittedly, the output is not very pretty, all extraneous whitespace has been stripped from the document. That may or may not be what you want in your application. Fortunately, json-c  offers a little more control over the printing of the JSON object.
 
-As before, in the same directory as _*contact.json*_ create the file _*json-file01.c*_ with the below contents and compile with
+Now lets look at: [_*json-file01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-file01.c) Compile with
 _*gcc json-file01.c -ljson-c -o json-file01*_:
 
 ```
