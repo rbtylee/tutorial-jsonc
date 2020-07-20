@@ -92,11 +92,13 @@ In our example, we have
 json_object *first_name = json_object_object_get(root,  "firstName");
 ```
 
-If we wish to keep the _*json_object \*first_name*_  *AFTER* executing _*json_object_put(root)*_, we must use the function _*json_object_get(first_name)* *BEFORE* executing the _*json_object_put(root)*_ command!! If we gain ownership of _*json_object \*first_name*_, we must latter dereference it with a _*json_object_put(first_name)*_ statement.
+If we wish to keep the _*json_object \*first_name*_  *AFTER* executing _*json_object_put(root)*_, we must use the function _*json_object_get(first_name)* *BEFORE* executing the _*json_object_put(root)*_ command!! If we gain ownership of _*json_object \*first_name*_ and do not transfer that ownership to another JSON object, then we must latter lose that ownership with a _*json_object_put(first_name)*_ statement.
 
 This point is very important. To see this play around with the code some by moving the line _*json_object_put(root);*_ around in the source and then again after adding some _*json_object_get*_ function calls on the appropriate objects. Each time not only execute the binary file but also run the code through  [_*Valgrind*_](https://www.valgrind.org/).
 
-Hopefully, all this is clear by now. So let's examine what the function _*json_object_object_get(obj, key)*_ actually does. In our case the line of code:
+Hopefully, all this is clear by now. If not we will [later](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory.md) [examine](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/memory01.md) the concept of ownsership and references in quite a bit of detail.
+
+So let's examine what the function _*json_object_object_get(obj, key)*_ actually does. In our case the line of code:
 
 ```
 json_object *first_name = json_object_object_get(root,  "firstName");
