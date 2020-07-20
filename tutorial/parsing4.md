@@ -35,7 +35,7 @@ int main(void)
 
 ```
 
-As usual create this file, save, compile and run. Expected output:
+As usual compile and run [_*json-parse06.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse06.c). Expected output:
 
 ```
 firstName  -> John
@@ -54,7 +54,7 @@ In cases where the value is another json\_object or a json\_array, the obj or ar
 
 ## json_object_object_foreach: json-parse07.c
 
-So let's apply this idea to our previous example _*json-parse04.c*_ and parse the entire file as before, printing out the name/value pairs.
+So let's apply this idea to our previous example _*json-parse04.c*_ and parse the entire file as before, printing out the name/value pairs: [_*json-parse07.c*_] (https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse07.c)
 
 ```
 #include <stdio.h>
