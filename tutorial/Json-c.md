@@ -19,7 +19,7 @@ This installs all the development (header) files as well as the library itself (
 
 For reference, the version installed is *0.13.1+dfsg-7ubuntu0.3*. Note, this corresponds to *Version 0.13.1*, released Mar 5, 2018, as is per the case for Ubuntu LTS releases. Rather dated but sufficient enough for this tutorial.
 
-Without much explanation, as it is rather self-explanatory,  let's write our first json-c program, _*json-version.c*_:
+Without much explanation, as it is rather self-explanatory,  let's write our first json-c program, [_*json-version.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-version.c):
 
 ````
 #include <stdio.h>
