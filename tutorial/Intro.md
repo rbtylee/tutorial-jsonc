@@ -9,9 +9,9 @@ The following comment from [json.org](https://www.json.org/json-en.html) should 
 > - A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.
 > - An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence.
 
-In this tutorial, we are going to take a meandering path thru learning the [json-c](https://github.com/json-c/json-c) API. We will use functions as needed and perhaps not always do things the 'proper' way at first or at all. We will start playing with the code to get just a general sense of it, and then gradually learn more as time goes on. We'll try to keep the examples applicable to real-world problems and not just be toy snippets. It will be assumed you already know C well enough to get by and are comfortable compiling, linking, and running code.
+In this tutorial, we are going to take a meandering path thru learning the [json-c](https://github.com/json-c/json-c) API. We will use functions as needed and perhaps not always do things the 'proper' way at first or at all. We will start playing with the code to get just a general sense of it, and then gradually learn more as time goes on. We'll try to keep the examples applicable to real-world problems and not just be toy snippets. It will be assumed you already know C well enough to get by and are comfortable compiling, linking, and running code. All of needed JSON files and program source code discussed in this tutorial can be found in the [tutorial's github repo](https://github.com/rbtylee/tutorial-jsonc).
 
-If you are unfamiliar with JSON, it may be clearer to consider an actual example. The JSON example below (taken from Wikipedia) is a possible representation of a person:
+If you are unfamiliar with JSON, it may be clearer to consider an actual example. The [JSON example below](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/contact.json) (taken from Wikipedia) is a possible representation of a person:
 
 ```
 {
