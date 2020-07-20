@@ -67,7 +67,7 @@ The json file:
 
 Admittedly, the output is not very pretty, all extraneous whitespace has been stripped from the document. That may or may not be what you want in your application. Fortunately, json-c  offers a little more control over the printing of the JSON object.
 
-Now lets look at: [_*json-file01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-file01.c) Compile with
+Now lets look at our next program: [_*json-file01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-file01.c). Compile with
 _*gcc json-file01.c -ljson-c -o json-file01*_:
 
 ```
