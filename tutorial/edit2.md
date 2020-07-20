@@ -1,6 +1,6 @@
 # JSON Pointers
 
-Examining _*json-edit00.c*_, one may note the code for changing John's office phone number seems unduly complex:
+Examining [_*json-edit00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-edit00.c), one may note the code for changing John's office phone number seems unduly complex:
 
 ```
    json_object *root = json_object_from_file("contact.json");
@@ -69,6 +69,6 @@ json_pointer_set(&root, "/phoneNumbers/1/number", json_object_new_string("843 27
 
 ```
 
-As you can see the usage of these functions is pretty clear. If you need more examples look at the file _*test_json_pointer.c*_ in the source code itself.
+As you can see the usage of these functions is pretty clear. If you need more examples look at the file [_*test_json_pointer.c*_](https://github.com/json-c/json-c/blob/master/tests/test_json_pointer.c) in the json-c source code itself.
 
 
