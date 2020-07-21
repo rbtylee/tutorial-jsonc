@@ -39,8 +39,8 @@
     * Compare two JSONs for equality: [_*json-equal00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-equal00.c)
 - JSON Copying
    *
-- List, searching and sorting
-    * 
+- [JSON Arrays: sorting and searching](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/list.md)
+    * [_*json-array00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array00.c)
 - [JSON Pointers](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit2.md)
     * Introduce using JSON pointers
 - [Parsing a Json object - part 5: Iterators](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing5.md)
