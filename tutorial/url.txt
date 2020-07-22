@@ -3,7 +3,6 @@ chapters to write: so far SEVEN to write
 --------------------------------------------------------------------------------
 url examples
 iteration part two
-lists and sorting and searching
 printing ... display, serializers
 handling errors
 threads 
