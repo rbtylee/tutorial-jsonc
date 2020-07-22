@@ -147,7 +147,7 @@ main(void)
 
 One can loop thru a JSON array in the same fashion as one loops thru a C array.
 
-To illustrate, [_*json-array02.c*](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array02.c)
+To illustrate, [_*json-array02.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array02.c)
 
 ```
 #include <stdio.h>
