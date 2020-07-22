@@ -22,7 +22,7 @@ sort_fn(const void *j1, const void *j2)
    if (!*jso2)
        return 1;
 
-   str1 = json_object_get_string(*jso1); // This will always work even if not string
+   str1 = json_object_get_string(*jso1);
    str2 = json_object_get_string(*jso2);
 
    return strcmp(str1, str2);
