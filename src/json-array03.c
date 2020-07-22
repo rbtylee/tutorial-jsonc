@@ -1,5 +1,5 @@
 // gcc json-array03.c -ljson-c -o json-array03
-// https://blog.codinghorror.com/sorting-for-humans-natural-sort-order/
+
 #include <stdio.h>
 #include <json-c/json.h>
 #include <string.h>
