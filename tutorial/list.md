@@ -115,3 +115,4 @@ main(void)
 }
 
 ```
+todo: note return values of indexing functions
