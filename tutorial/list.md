@@ -57,7 +57,7 @@ typedef int json_bool;
 
 An important thing to note is a JSON array by itself is valid JSON.
 
-Consider _*json-array00.c*_:
+Consider [_*json-array00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array00.c):
 
 ```
 #include <stdio.h>
