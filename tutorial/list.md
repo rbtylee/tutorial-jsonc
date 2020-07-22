@@ -66,7 +66,6 @@ Consider [_*json-array00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/mas
 int
 main(void)
 {
-
    json_object *root = json_tokener_parse("[\"foo\", \"bar\", 32, null]");
    printf("The json string:\n\n%s\n\n", json_object_to_json_string(root));
    
