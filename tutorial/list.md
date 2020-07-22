@@ -76,3 +76,14 @@ main(void)
    return 0;
 }
 ```
+
+## Accessing and Deleting Array Values
+
+You access the array values by using the value's index number. Json-c provides two functions to access a JSON arrays value, one to get the value, and one to set the value as well as a function to delete the value (or values) at a specified index:
+
+- [json_object\* json_object_array_get_idx(json_object \*obj, int idx)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a676711a76545d4ec65cc75f100f5fd19)
+- [json_object_array_put_idx(json_object *obj, size_t idx, json_object *val)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a1ac0ccdbc13a25da7d8b2dc9e421dfad)
+- [json_object_array_del_idx(json_object *obj, size_t idx, size_t count)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a722eca9f578704d3af38b97549242c1f)
+
+
+
