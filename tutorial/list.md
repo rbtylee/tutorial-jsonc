@@ -1,4 +1,4 @@
-# JSON Arrays: sorting and searching
+# JSON Arrays: basics
 
 The json-c library provides some convenience functions so sort and perform a binary search of a JSON array. But first, let us review and expand upon what we currently know about JSON arrays and their implementation in the json-c library. As such JSON arrays resemble arrays in JavaScript or lists in Python.
 
