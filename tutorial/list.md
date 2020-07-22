@@ -33,11 +33,11 @@ A few valid JSON arrays:
 
 ## Arrays as JSON Objects
 
-In JSON, array values must be a valid JSON type, that is, of type string, number, object, array, boolean or null. Unlike arrays in C, JSON array values within an array do not all have to be the same type.
+In JSON, array values must be a valid JSON type, that is, of type string, number, object, array, boolean or null. Unlike arrays in C, JSON array values within an array do not all have to be the same type. However, in json-c JSON array values are all the same type, they are all _*json_objects*_. But the _*json_objects*_ an array contains in json-c have different _*json_types*_ corresonding to the C version of the types string, number, object, array, boolean or null.
 
 Recall our discussion in [JSON_types](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/types.md):
 
-The json-c library has an enumerated type [_*json\_type*_](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__types_8h.html) which can be used with the appropriate function to test a _*json_object*_ in order to determine its type in advance. We have the following '_types_' defined:
+The json-c library has an enumerated type [_*json_type*_](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__types_8h.html) which can be used with the appropriate function to test a _*json_object*_ in order to determine its type in advance. We have the following '_types_' defined:
 
 - json_type_null
 - json_type_boolean
@@ -82,10 +82,37 @@ main(void)
 You access the array values by using the value's index number. Json-c provides two functions to access a JSON arrays value, one to get the value, and one to set the value as well as a function to delete the value (or values) at a specified index:
 
 - [json_object\* json_object_array_get_idx(json_object \*obj, int idx)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a676711a76545d4ec65cc75f100f5fd19)
-- [json_object_array_put_idx(json_object *obj, size_t idx, json_object *val)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a1ac0ccdbc13a25da7d8b2dc9e421dfad)
-- [json_object_array_del_idx(json_object *obj, size_t idx, size_t count)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a722eca9f578704d3af38b97549242c1f)
+- [int json_object_array_put_idx(json_object *obj, size_t idx, json_object *val)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a1ac0ccdbc13a25da7d8b2dc9e421dfad)
+- [int json_object_array_del_idx(json_object *obj, size_t idx, size_t count)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a722eca9f578704d3af38b97549242c1f)
 
 ### json-array01.c
+
+Notice that the _*json_object_array_get_idx*_ returns the _*json_object*_ at the specified index. For example, if json_object_array_get_idx(root, 2) returns a _*json_object*_ of type _*json_type_int*_, to actually access the integer one has to use:
+
+```
+i = json_object_get_int(json_object_array_get_idx(root, 2))
+```
+
+Likewise, we can not set a JSON array value at a specific index unless the value is a _*json_object*_.  For example, we have:
+
+```
+json_object_array_put_idx(root, 2, json_object_new_string("foobar"))
+```
+and not:
+
+```
+json_object_array_put_idx(root, 2, "foobar")
+```
+If one tries the latter, the program will compile with a warning and if executed crash:
+
+```
+Segmentation fault (core dumped)
+```
+Also as per the documentation, unlike a C array, one can use _*json_object_array_del_idx*_ to set an index bigger than the length of the current array:
+
+> The array size will be automatically be expanded to the size of the index if the index is larger than the current size.
+
+In this instance, all of the missing array values that will be added during the expansion of the array are NULL (_*json_type_null*_)
 
 To illustrate the usage of these functions, [_*json-array01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array01.c):
 
@@ -115,4 +142,35 @@ main(void)
 }
 
 ```
-todo: note return values of indexing functions
+
+## Looping Through an Array
+
+One can loop thru a JSON array in the same fashion as one loops thru a C array.
+
+To illustrate, [_*json-array02.c*](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array02.c)
+
+```
+#include <stdio.h>
+#include <json-c/json.h>
+
+int
+main(void)
+{
+   const char *str;
+   json_object *root = json_tokener_parse("[\"foo\", \"bar\", 32, null]");
+
+   printf("The json representation:\n\n%s\n\n", json_object_to_json_string_ext(root, JSON_C_TO_STRING_PRETTY));
+
+   int n = json_object_array_length(root);
+   for (int i=0;i<n; i++)
+   {
+      str= json_object_get_string(json_object_array_get_idx(root, i));
+      printf("The value at %i position is: %s\n", i, str);
+   }
+   
+   json_object_put(root);
+
+   return 0;
+}
+```
+
