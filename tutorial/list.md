@@ -85,5 +85,33 @@ You access the array values by using the value's index number. Json-c provides t
 - [json_object_array_put_idx(json_object *obj, size_t idx, json_object *val)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a1ac0ccdbc13a25da7d8b2dc9e421dfad)
 - [json_object_array_del_idx(json_object *obj, size_t idx, size_t count)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a722eca9f578704d3af38b97549242c1f)
 
+### json-array01.c
 
+To illustrate the usage of these functions, [_*json-array01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array01.c):
 
+```
+#include <stdio.h>
+#include <json-c/json.h>
+
+int
+main(void)
+{
+   json_object *root = json_tokener_parse("[\"foo\", \"bar\", 32, null]");
+
+   printf("The json representation:\n\n%s\n\n", json_object_to_json_string_ext(root, JSON_C_TO_STRING_PRETTY));
+
+   int val = json_object_get_int(json_object_array_get_idx(root, 2));
+   printf("The third value of the array is: %d\n\n", val);
+
+   printf("Modifying the third value and deleting the fourth.\n\n");
+   json_object_array_put_idx(root, 2, json_object_new_string("foobar"));
+   json_object_array_del_idx(root, 3, 1);
+
+   printf("The json representation is now:\n\n%s\n\n", json_object_to_json_string_ext(root, JSON_C_TO_STRING_PRETTY));
+
+   json_object_put(root);
+
+   return 0;
+}
+
+```
