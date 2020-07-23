@@ -147,9 +147,9 @@ main(void)
 
 ## Looping Through an Array
 
-One can loop thru a JSON array in the same fashion as one loops thru a C array.
+Recall the function _*doarray*_ in program [_*json-parse07.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse07.c). Note this function loops thru the given JSON array in the same fashion as one loops thru a C array.
 
-To illustrate, [_*json-array02.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array02.c):
+To illustrate in slightly simpler code, [_*json-array02.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array02.c):
 
 ```
 #include <stdio.h>
