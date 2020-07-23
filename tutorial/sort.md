@@ -6,7 +6,7 @@ Now that we have reviewed JSON arrays, let's examine the json-c libraries functi
 First to sort a JSON array use:
 - [_*void json_object_array_sort(json_object \*jso, int(\*)(const void \*, const void \*) 	sort_fn)*_](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a5584e2f2051cd1faa7fafd07ba888fd1)
 
-This function is very much like the C library function - [_*qsort*_](https://linux.die.net/man/3/qsort): it relies upon the application code providing a comparison function, _*sort_fn*_. The comparison function behaves like the C function [_*strcmp_*](https://linux.die.net/man/3/strcmp).
+This function is very much like the C library function - [_*qsort*_](https://linux.die.net/man/3/qsort): it relies upon the application code providing a comparison function, _*sort_fn*_. The comparison function behaves like the C function [_*strcmp*_](https://linux.die.net/man/3/strcmp).
 
 From the documentation:
 > Sorts the elements of jso of type json_type_array
