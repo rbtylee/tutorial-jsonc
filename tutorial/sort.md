@@ -13,7 +13,7 @@ From the documentation:
 >
 > Pointers to the json_object pointers will be passed as the two arguments to sort_fn
 
-An example of a _*sort_fn*_ for ue with an array containing only intergers is found in the json-c program, [_*test1.c*_](https://github.com/json-c/json-c/blob/master/tests/test1.c):
+An example of a _*sort_fn*_ for use with an array containing only intergers is found in the json-c program, [_*test1.c*_](https://github.com/json-c/json-c/blob/master/tests/test1.c):
 
 ```
 static int sort_fn(const void *j1, const void *j2)
