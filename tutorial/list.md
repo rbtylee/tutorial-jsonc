@@ -108,7 +108,7 @@ If one tries the latter, the program will compile with a warning and if executed
 ```
 Segmentation fault (core dumped)
 ```
-Also as per the documentation, unlike a C array, one can use _*json_object_array_del_idx*_ to set an index bigger than the length of the current array:
+Also as per the documentation, unlike a C array, one can use _*json_object_array_put_idx*_ to set an index bigger than the length of the current array:
 
 > The array size will be automatically be expanded to the size of the index if the index is larger than the current size.
 
