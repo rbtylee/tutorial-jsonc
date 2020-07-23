@@ -42,8 +42,8 @@ This is the general form all _*sort_fns*_ are going to take:
 
 - Declare and initialize our variables.
 - Test for NULL values.
-- Get the values we need for our tests from the two JSON objects.
-- perform the needed tests and return the results.
+- Get the values we need for our comparison from the two JSON objects.
+- perform the needed comparison and return the result.
 
 ## json-array03.c
 
