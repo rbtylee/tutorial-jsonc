@@ -143,6 +143,8 @@ main(void)
 
 ```
 
+**Note:** in the section [JSON Pointers](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit2.md) we will see yet another method for accessing an arrays value at a specified index.
+
 ## Looping Through an Array
 
 One can loop thru a JSON array in the same fashion as one loops thru a C array.
