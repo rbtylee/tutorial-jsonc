@@ -164,7 +164,7 @@ main(void)
    printf("The json representation:\n\n%s\n\n", json_object_to_json_string_ext(root, JSON_C_TO_STRING_PRETTY));
 
    int n = json_object_array_length(root);
-   for (int i=0;i<n; i++)
+   for (int i=0; i<n; i++)
    {
       str= json_object_get_string(json_object_array_get_idx(root, i));
       printf("The value at %i position is: %s\n", i, str);
