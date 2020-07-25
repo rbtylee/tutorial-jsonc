@@ -1,5 +1,7 @@
 # Parsing a Json object - part 6: Iteration yet again
 
+We have previously discussed two methods for iterating over _*json_type_object*_ objects, here we yet another one inspired from [graph theory](https://en.wikipedia.org/wiki/Graph_theory). We shall illustrate its usage with a very simple example. Recall program [_*json-array02.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array02.c) demonstrating looping over all values in a JSON array. Now consider the program below, [_*json-array04*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array04.c), which iterates through all the values in the JSON array _*names.json*_, printing each value and the index of the value in the array:
+
 ## json-array04.c
 
 ```
@@ -26,6 +28,45 @@ main(void)
    return 0;
 }
 ```
+
+The function that does all the work here is _*json_c_visit*_. The first thing to note is that we must include the _*json_visit.h*_ header file to use this function. Now for the specifics:
+
+- [int json_c_visit(json_object *jso, int future_flags, json_c_visit_userfunc *userfunc, void *userarg)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__visit_8h.html)
+
+From the documentation:
+
+> Visit each object in the JSON hierarchy starting at jso. For each object, userfunc is called, passing the object and userarg. If the object has a parent (i.e. anything other than jso itself) its parent will be passed as parent_jso, and either jso_key or jso_index will be set, depending on whether the parent is an object or an array.
+> 
+> Nodes will be visited depth first, but containers (arrays and objects) will be visited twice, the second time with JSON_C_VISIT_SECOND set in flags.
+> 
+> userfunc must return one of the defined return values, to indicate whether and how to continue visiting nodes, or one of various ways to stop.
+> 
+> Returns 0 if nodes were visited successfully, even if some were intentionally skipped due to what userfunc returned. Returns <0 if an error occurred during iteration, including if userfunc returned JSON_C_VISIT_RETURN_ERROR.
+
+For our example, [_*json-array04*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array04.c), we call _*json_c_visit*_ on our JSON array, _*root*_ with a userfunc, _*print_str*_ which merely prints the array index and array value at that index. Note that the _*userfunc*_ is declared to be type _*json_c_visit_userfunc*_. This a typedef in the _*json_visit.h*_ header file:
+
+```
+typedef int( 	json_c_visit_userfunc )(json_object *jso, int flags, json_object *parent_jso, const char *jso_key, size_t *jso_index, void *userarg)
+```
+
+The _*userfunc*_ must return one of the below defined return values:
+
+- JSON_C_VISIT_RETURN_CONTINUE
+- JSON_C_VISIT_RETURN_ERROR
+- JSON_C_VISIT_RETURN_POP
+- JSON_C_VISIT_RETURN_SKIP
+- JSON_C_VISIT_RETURN_STOP
+
+These return values determine how the path through the JSON continues. Notice our function _*print_str*_ returns _*JSON_C_VISIT_RETURN_CONTINUE*_ for all values visited. We wish to loop over the entire array.
+
+Also note: the very first time _*print_str*_ is called it is called with the entire JSON array itself, and hence the argument _*jso_index*_ is NULL. We are not interested in printing this value or the JSON array itself so our _*print_str*_ function tests for this condition:
+
+```
+if (jso_index)
+     printf("The value at %ld position is: %s\n", (long)* jso_index, json_object_get_string(jso));
+```
+
+Using  _*json_c_visit*_ to loop over a JSON array as above is perhaps overkill. For profuction code I would recommend using a simple for loop as previously discussed. THe _*json_c_visit*_ solution is provided merely for completeness sake and to introduce the subject with a rather easy to understand example.
 
 ## json-parse10.c
 
