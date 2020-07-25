@@ -66,7 +66,7 @@ if (jso_index)
      printf("The value at %ld position is: %s\n", (long)* jso_index, json_object_get_string(jso));
 ```
 
-Using  _*json_c_visit*_ to loop over a JSON array as above is perhaps overkill. For profuction code I would recommend using a simple for loop as previously discussed. THe _*json_c_visit*_ solution is provided merely for completeness sake and to introduce the subject with a rather easy to understand example.
+Using  _*json_c_visit*_ to loop over a JSON array as above is perhaps overkill. For production code, I would recommend using a simple loop as previously discussed. The _*json_c_visit*_ solution is provided merely for completeness sake and to introduce the subject with a rather easy to understand example.
 
 ## json-parse10.c
 
