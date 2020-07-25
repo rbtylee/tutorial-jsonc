@@ -49,7 +49,7 @@
     * Introduce using JSON pointers
 - [Parsing a Json object - part 5: Iterators](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing5.md)
     * Bettter Encapsulation using iterators
-- Parsing a Json object - part 6: Iteration yet again
+- [Parsing a Json object - part 6: Iteration yet again](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing6.md)
     *
 - Error handling
 - threads 
