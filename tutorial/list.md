@@ -33,7 +33,18 @@ A few valid JSON arrays:
 
 ## Arrays as JSON Objects
 
-In JSON, array values must be a valid JSON type, that is, of type string, number, object, array, boolean or null. Unlike arrays in C, JSON array values within an array do not all have to be the same type. However, in json-c JSON array values are all the same type, they are all _*json_objects*_. But the _*json_objects*_ an array contains in json-c have different _*json_types*_ corresonding to the C version of the types string, number, object, array, boolean or null.
+In JSON, an array is a list of values, each a valid JSON type. This means a JSON array can not contain an attribute/value pair. For example, the following is a valid JSON:
+
+```
+{ "age":32 }
+```
+While the below is an invalid JSON array:
+
+```
+[ "age":32 ]
+```
+
+JSON array values must be a valid JSON type, that is, of type string, number, object, array, boolean or null. Unlike arrays in C, JSON array values within an array do not all have to be the same type. However, in json-c JSON array values are all the same type, they are all _*json_objects*_. But the _*json_objects*_ an array contains in json-c have different _*json_types*_ corresonding to the C version of the types string, number, object, array, boolean or null.
 
 Recall our discussion in [JSON_types](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/types.md):
 
