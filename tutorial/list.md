@@ -44,7 +44,7 @@ While the below is an invalid JSON array:
 [ "age":32 ]
 ```
 
-JSON array values must be a valid JSON type, that is, of type string, number, object, array, boolean or null. Unlike arrays in C, JSON array values within an array do not all have to be the same type. However, in json-c JSON array values are all the same type, they are all _*json_objects*_. But the _*json_objects*_ an array contains in json-c have different _*json_types*_ corresonding to the C version of the types string, number, object, array, boolean or null.
+JSON array values must be a valid JSON type, that is, of type string, number, object, array, boolean or null. Unlike arrays in C, JSON array values within an array do not all have to be the same type. However, in json-c JSON array values are all the same type, they are all _*json_objects*_. But the _*json_objects*_ an array contains in json-c have different _*json_types*_ corresonding to the C type of the data the _*json_obect*_ contains. Each data item being limited to a C type corresponding to a string, number, JSON object, JSON array, boolean or null.
 
 Recall our discussion in [JSON_types](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/types.md):
 
