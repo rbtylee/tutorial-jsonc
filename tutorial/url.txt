@@ -8,8 +8,19 @@ handling errors
 threads 
 debugging
 autmake and meson
+Documentation
 --------------------------------------------------------------------------------
-
+iteration. 
+    on write up mention visit is more powerful
+    compare for each and visit on getting all top level keys, values.
+    write my function to return keys like python json.keys[i] dictionary
+    write my function to return keys like python json.keys as eina hash
+problems.
+    read an array json, json-array02.c json-array04.c be sure works for general case
+    graph dot like python tree.py
+    generalize graph dot to work on contacts and general json
+     
+    
 Eric Hawicz <erh+git@nimenees.com>
 
 https://groups.google.com/forum/#!topic/json-c/gD_p68OA-L8
