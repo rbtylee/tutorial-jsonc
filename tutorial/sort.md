@@ -50,7 +50,7 @@ This is the general form all _*sort_fns*_ are going to take:
 Consider a JSON array whose values are first names. [_*names.json*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/names.json). Our JSON has the form:
 
 ```
-['Torin', 'Stefin', 'Emerson', 'Lisandro', 'Caidan', ...]
+["Torin", "Stefin", "Emerson", "Lisandro", "Caidan", ...]
 ```
 
 This array is clearly unsorted. In json-c, sorting this array is as easy as:
