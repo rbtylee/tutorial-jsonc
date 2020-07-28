@@ -10,6 +10,8 @@ debugging
 autmake and meson
 Documentation
 --------------------------------------------------------------------------------
+Pointer https://www.baeldung.com/json-pointer
+
 iteration. 
     on write up mention visit is more powerful
     compare for each and visit on getting all top level keys, values.
