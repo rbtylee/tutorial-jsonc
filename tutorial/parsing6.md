@@ -77,7 +77,7 @@ The function _*json_c_visit*_ is best illustrated by considering an actual examp
 
 A more general example of a Depth-first search would take through a more complex data structure. 
 
-I am going to take the [Animated example of a depth-first search](https://en.wikipedia.org/wiki/Depth-first_search#/media/File:Depth-First-Search.gif) from [wikipedia](https://en.wikipedia.org/wiki/Depth-first_search). Illustrate below along with a JSON document with a similar structure:
+I am going to take the [Animated example of a depth-first search](https://en.wikipedia.org/wiki/Depth-first_search#/media/File:Depth-First-Search.gif) from [wikipedia](https://en.wikipedia.org/wiki/Depth-first_search). Illustrated below along with a JSON document with a similar structure:
 
 <table>
 <tr>
