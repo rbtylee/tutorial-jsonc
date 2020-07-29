@@ -67,6 +67,13 @@ if (jso_index)
 ```
 
 Using  _*json_c_visit*_ to loop over a JSON array as above is perhaps overkill. For production code, I would recommend using a simple loop as previously discussed. The _*json_c_visit*_ solution is provided merely for completeness sake and to introduce the subject with a rather easy to understand example.
+
+## Depth-first search
+
+The function _*json_c_visit*_ is best illustrated by considering an actual example involving a nonlinear graph. The array example above fails to illustrate the path a Depth-first search would take through a more complex data structure.
+
+> Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.
+
 <table>
 <tr>
   <td> Json </td> <td>Graph </td>
