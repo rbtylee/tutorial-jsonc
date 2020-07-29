@@ -108,19 +108,18 @@ Using  _*json_c_visit*_ to loop over a JSON array as above is perhaps overkill. 
 #include <json_visit.h>
 
 static int 
-doit(json_object *jso, int flags, json_object *parent_jso, const char *jso_key,
-                       size_t *jso_index, void *userarg)
+doit(json_object *obj, int flags, json_object *parent, const char *key,
+                       size_t *index, void *data)
 {
-  printf("flags: 0x%x, key: %s, index: %ld, value: %s\n", flags,
-     (jso_key ? jso_key : "(null)"), (jso_index ? (long)*jso_index : -1L),
-      json_object_to_json_string(jso));
-  return JSON_C_VISIT_RETURN_CONTINUE;
+   if (!parent || flags==2 ) return JSON_C_VISIT_RETURN_CONTINUE;
+   printf("key: %s, value: %s\n", key, json_object_to_json_string(obj));
+   return JSON_C_VISIT_RETURN_CONTINUE;
 }
 
 int 
 main(void)
 {
-   json_object *root = json_object_from_file("contact.json");
+   json_object *root = json_object_from_file("depth.json");
    json_c_visit(root, 0, doit, NULL);
 
    json_object_put(root);
