@@ -67,6 +67,38 @@ if (jso_index)
 ```
 
 Using  _*json_c_visit*_ to loop over a JSON array as above is perhaps overkill. For production code, I would recommend using a simple loop as previously discussed. The _*json_c_visit*_ solution is provided merely for completeness sake and to introduce the subject with a rather easy to understand example.
+<table>
+<tr>
+<td> Json </td> <td>Graph </td>
+</tr>
+<tr>
+<td>
+
+```json
+{
+  "1": {
+    "2": {
+      "3": {
+        "4": 4
+      }
+    },     
+    "5": {
+        "6": {
+          "7": 7
+        },
+        "8": 8
+      },
+      "9": {
+        "10": 10
+      }
+  }
+}
+```
+
+</td>
+<td> <img src="https://github.com/rbtylee/tutorial-jsonc/blob/master/Images/Depth-First-Search.gif" width=200 height=200> </td>
+</tr>
+</table>
 
 ## json-parse10.c
 
