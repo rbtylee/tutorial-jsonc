@@ -96,16 +96,15 @@ I am going to take the [Animated example of a depth-first search](https://en.wik
   }
 }
 ```
-
 </td>
 <td> <img src="https://github.com/rbtylee/tutorial-jsonc/blob/master/Images/Depth-First-Search.gif" width=200 height=200> </td>
-
 </tr>
 </table>
 
 Now, the defintion of a JSON also from wikipedia:
 
 > Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.
+
 
 
 
