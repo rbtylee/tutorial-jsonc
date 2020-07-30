@@ -9,7 +9,7 @@ The example below shows a user case where one reuses the same JSON object by add
 
 Here is the JSON document we wish to create:
 
-```
+```json
 {
   "items":[
     {
@@ -32,7 +32,7 @@ We see the field _*"status": "online"*_ occurs three times in this JSON. Suppose
 
 First, create the needed JSON string:
 
-```
+```C
 json_object *str =  json_object_new_string("online");
 ```
 
@@ -40,7 +40,7 @@ At this point we _*own*_ the object _*str*_ and its reference count is 1.
 
 Next, add it the first item in the JSON array _*items*_:
 
-```
+```C
 json_object_object_add(item, "status", str);
 ```
 
@@ -51,7 +51,7 @@ The documentation for _*json_object_object_add*_ states:
 
 So before we can add _*str*_ to the remaining items in the JSON array _*items*_, we need to re-acquire _*ownership*_ of the JSON object. That is, we need a _*json_object_get(str)*_ statement before we try to add _*str*_ to another JSON object. So the remaining two times we add _*str*_ to an item in the _*items*_ array we must use:
 
-```
+```C
    json_object_get(str);
    json_object_object_add(item, "status", str);
 ```
@@ -77,13 +77,14 @@ Though you won't have explicit, individual calls to _*json_object_put()*_ in the
 **Note:** at no point did we in the application code have to _*json_object_put(str)*_ explicitly, as the management of _*str's*_ memory was handled by the json-c library when the _*json_object_put(root)*_ statement was executed. So as promised, we can see why it is not necessarily the case that for every _*json_object_get*_ there should eventually follow a _*json_object_put*_. It all depends upon the _*ownership*_ of the object.
 
 What about the usage of _*str*_ after the execution of _*json_object_put(root)*_? The pointer _*str*_ is no longer valid. Trying to use it after the json_object_put statement is a _*use-after-free error*_, exactly as if one attempted to do:
-```
+
+```C
 char \*str = malloc(10); free(str); \*str = 'x';.
 ```
 
 ## json-mem00.c
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -138,7 +139,7 @@ There's an alternate approach:  call _*json_object_get(str)*_ before *each* of t
 
 To illustrate this approach examine [_*json-mem01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-mem01.c) below, each new item is added to the items array in a seperate function, _*json_object \*new_item(int id, json_object \*str)*_. The function _*new_item*_ ensures it has ownership of _*str*_ when adding _*str*_ to the JSON object _*item*_ by calling _*json_object_get(str)*_. 
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
