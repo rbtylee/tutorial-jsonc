@@ -4,7 +4,7 @@
 Now that we have reviewed JSON arrays, let's examine the json-c libraries functions to sort and search arrays.
 
 First to sort a JSON array use:
-- [_*void json_object_array_sort(json_object \*jso, int(\*)(const void \*, const void \*) 	sort_fn)*_](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a5584e2f2051cd1faa7fafd07ba888fd1)
+- [_*void json_object_array_sort(json_object \*jso, int(\*)(const void \*, const void \*) 	sort_fn)*_](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a5584e2f2051cd1faa7fafd07ba888fd1)
 
 This function is very much like the C library function - [_*qsort*_](https://linux.die.net/man/3/qsort): it relies upon the application code providing a comparison function, _*sort_fn*_. The comparison function behaves like the C function [_*strcmp*_](https://linux.die.net/man/3/strcmp).
 
@@ -62,7 +62,7 @@ This array is clearly unsorted. In json-c, sorting this array is as easy as:
 
 provided one has implemented a _*sort_fn*_ that handles strings. A naive _*sort_fn*_ for such a case can be found in _*json-array03.c*_ below.
 
--  [json_object* json_object_array_bsearch(	const struct json_object *key, const struct json_object *jso, int(*)(const void *, const void *) sort_fn)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#aed353084ed3ad84e7b7575afbe7e719d)
+-  [json_object* json_object_array_bsearch(	const struct json_object *key, const struct json_object *jso, int(*)(const void *, const void *) sort_fn)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#aed353084ed3ad84e7b7575afbe7e719d)
 
 From the documentation:
 

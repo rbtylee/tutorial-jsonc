@@ -6,7 +6,7 @@ It is perhaps traditional when discussing an Object-Oriented library to first in
 
 Not surprisingly, the constructor for a new _*json_object*_ is:
 
-- [json_object\* json_object_new_object(void)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a68c383f54544fca19b5f2425be397600)
+- [json_object\* json_object_new_object(void)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a68c383f54544fca19b5f2425be397600)
 
 The (latest) documentation states this function creates:
 
@@ -43,7 +43,7 @@ The json representation:
 
 After creating a _*json\_object*_, you usually intialize it with the data you want to store in it. Remember that the data  is always in name/value pairs where name is a string and value is another _*json_object*_ of a particular _*json_type*_. The json-c function for this operation is:
 
-- [void json_object_object_add(json_object *obj, const char * key, json_object *val)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a27bd808a022251059a43f1f6370441cd)
+- [void json_object_object_add(json_object *obj, const char * key, json_object *val)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a27bd808a022251059a43f1f6370441cd)
 
 
 Consider the code snippet:
@@ -65,20 +65,20 @@ This example covers the user case of adding a key with _*json\_type\_null*_ valu
 
 Functions for adding other *_json\_types*_ are listed below and their usage should be intuitively obvious:
 
-- [json_object\* json_object_new_boolean(json_bool b)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a2e290acd80e72cca745f89fb4600fb78)
-- [json_object\* json_object_new_double(double d)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a594a093bafb9091f843da3197e0638aa)
-- [json_object\* json_object_new_double_s(double d)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a594a093bafb9091f843da3197e0638aa)
-- [json_object\* json_object_new_int(int32_t i)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#ae92f0770fb4b3c884ce35de52d3d7de8)
-- [json_object\* json_object_new_int64(int64_t i)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a7847f74494645c2b076505c37cc4cb93)
-- [json_object\* json_object_new_object(void)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a68c383f54544fca19b5f2425be397600)
-- [json_object\* json_object_new_array(void)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a84f7f8c0774c4600d958561d7548d649)
-- [json_object\* json_object_new_string(const char \*s)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a7b7b5302b3903c9347eeb1f4a64d657b)
-- [json_object\* json_object_new_string_len(const char \*s, int len)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a778a1aa34a508d08daac3bdb83e24b52)
-- [json_object\* json_object_new_null(void)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a29e23b5be729c679960242b3b81bcde0)
+- [json_object\* json_object_new_boolean(json_bool b)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a2e290acd80e72cca745f89fb4600fb78)
+- [json_object\* json_object_new_double(double d)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a594a093bafb9091f843da3197e0638aa)
+- [json_object\* json_object_new_double_s(double d)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a594a093bafb9091f843da3197e0638aa)
+- [json_object\* json_object_new_int(int32_t i)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#ae92f0770fb4b3c884ce35de52d3d7de8)
+- [json_object\* json_object_new_int64(int64_t i)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a7847f74494645c2b076505c37cc4cb93)
+- [json_object\* json_object_new_object(void)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a68c383f54544fca19b5f2425be397600)
+- [json_object\* json_object_new_array(void)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a84f7f8c0774c4600d958561d7548d649)
+- [json_object\* json_object_new_string(const char \*s)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a7b7b5302b3903c9347eeb1f4a64d657b)
+- [json_object\* json_object_new_string_len(const char \*s, int len)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a778a1aa34a508d08daac3bdb83e24b52)
+- [json_object\* json_object_new_null(void)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a29e23b5be729c679960242b3b81bcde0)
 
 ## Adding elements to json arrays
 
-- [int json_object_array_add(json_object \* obj, json_object \* val)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a18cdd9a7455e09f36cdf6e5756b7f586)
+- [int json_object_array_add(json_object \* obj, json_object \* val)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a18cdd9a7455e09f36cdf6e5756b7f586)
 
 This function returns 0 on success and -1 on failure.
 

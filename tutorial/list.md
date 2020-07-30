@@ -46,7 +46,7 @@ JSON array values must be a valid JSON type, that is, of type string, number, ob
 
 Recall our discussion in [JSON_types](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/types.md):
 
-The json-c library has an enumerated type [_*json_type*_](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__types_8h.html) which can be used with the appropriate function to test a _*json_object*_ in order to determine its type in advance. We have the following '_types_' defined:
+The json-c library has an enumerated type [_*json_type*_](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__types_8h.html) which can be used with the appropriate function to test a _*json_object*_ in order to determine its type in advance. We have the following '_types_' defined:
 
 - json_type_null
 - json_type_boolean
@@ -90,9 +90,9 @@ main(void)
 
 You access the array values by using the value's index number. Json-c provides two functions to access a JSON arrays value, one to get the value, and one to set the value as well as a function to delete the value (or values) at a specified index:
 
-- [json_object\* json_object_array_get_idx(json_object \*obj, int idx)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a676711a76545d4ec65cc75f100f5fd19)
-- [int json_object_array_put_idx(json_object *obj, size_t idx, json_object *val)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a1ac0ccdbc13a25da7d8b2dc9e421dfad)
-- [int json_object_array_del_idx(json_object *obj, size_t idx, size_t count)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#a722eca9f578704d3af38b97549242c1f)
+- [json_object\* json_object_array_get_idx(json_object \*obj, int idx)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a676711a76545d4ec65cc75f100f5fd19)
+- [int json_object_array_put_idx(json_object *obj, size_t idx, json_object *val)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a1ac0ccdbc13a25da7d8b2dc9e421dfad)
+- [int json_object_array_del_idx(json_object *obj, size_t idx, size_t count)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__object_8h.html#a722eca9f578704d3af38b97549242c1f)
 
 ### json-array01.c
 

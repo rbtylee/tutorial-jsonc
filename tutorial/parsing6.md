@@ -21,7 +21,7 @@ print_str(json_object *obj, int flags, json_object *parent, const char *key,
 
 The function that does all the work here is _*json_c_visit*_. The first thing to note is that we must include the _*json_visit.h*_ header file to use this function. Now for the specifics:
 
-- [int json_c_visit(json_object *jso, int future_flags, json_c_visit_userfunc *userfunc, void *userarg)](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__visit_8h.html)
+- [int json_c_visit(json_object *jso, int future_flags, json_c_visit_userfunc *userfunc, void *userarg)](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__visit_8h.html)
 
 From the documentation:
 
@@ -236,4 +236,4 @@ This is precisely what we wish to do at this step, terminate the search once we 
 ## Problems
 
 1. Rewrite _*json-parse11.c*_ to use _*json_object_array_bsearch*_.
-2. Review _* JSON_C_VISIT_RETURN_POP*_ and _*JSON_C_VISIT_RETURN_SKIP*_ in the [docs](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__visit_8h.html), can you think of any user case for these?
+2. Review _* JSON_C_VISIT_RETURN_POP*_ and _*JSON_C_VISIT_RETURN_SKIP*_ in the [docs](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__visit_8h.html), can you think of any user case for these?
