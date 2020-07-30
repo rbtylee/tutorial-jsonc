@@ -6,7 +6,7 @@ The answer is, naturally, yes.
 
 In json-c, this is implemented as a macro: [_*json_object_object_foreach*_](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__object_8h.html#acf5f514a9e0061c10fc08055762639ee). Typical usage is of the form:
 
-```
+```C
 json_object_object_foreach(obj, key, val)
 {
     // processing code goes here
@@ -19,7 +19,7 @@ Where obj is the JSON object you want to parse; key and value correspond to key:
 
 The simple program below illustrates the usage of this macro.
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -56,7 +56,7 @@ In cases where the value is another json\_object or a json\_array, the obj or ar
 
 So let's apply this idea to our previous example [_*json-parse04.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse04.c) and parse the entire file as before, printing out the name/value pairs: [_*json-parse07.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse07.c)
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
