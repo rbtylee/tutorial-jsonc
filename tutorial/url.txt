@@ -2,7 +2,8 @@ chapters to write: so far SEVEN to write
 
 --------------------------------------------------------------------------------
 url examples
-iteration part two
+
+copying
 printing ... display, serializers
 handling errors
 threads 
@@ -10,6 +11,8 @@ debugging
 autmake and meson
 Documentation
 --------------------------------------------------------------------------------
+iteration part two mostly finished
+
 Pointer https://www.baeldung.com/json-pointer
 
 iteration. 
