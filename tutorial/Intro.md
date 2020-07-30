@@ -13,7 +13,7 @@ In this tutorial, we are going to take a meandering path thru learning the [json
 
 If you are unfamiliar with JSON, it may be clearer to consider an actual example. The [JSON example below](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/contact.json) (taken from Wikipedia) is a possible representation of a person:
 
-```
+```json
 {
   "firstName": "John",
   "lastName": "Smith",
