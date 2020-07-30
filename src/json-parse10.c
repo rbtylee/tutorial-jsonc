@@ -9,7 +9,7 @@ static int
 doit(json_object *obj, int flags, json_object *parent, const char *key,
                        size_t *index, void *data)
 {
-   if (!parent || flags==2 ) return JSON_C_VISIT_RETURN_CONTINUE;
+   if (!parent || flags==JSON_C_VISIT_SECOND) return JSON_C_VISIT_RETURN_CONTINUE;
    printf("key: %s, value: %s\n", key, json_object_to_json_string(obj));
    return JSON_C_VISIT_RETURN_CONTINUE;
 }
