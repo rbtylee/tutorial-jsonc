@@ -4,7 +4,7 @@ Printing a json\_object is rather boring and mostly useful for debugging purpose
 
 So let's examine [_*contact.json*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/contact.json) again:
 
-```
+```json
 {
   "firstName": "John",
   "lastName": "Smith",
@@ -32,7 +32,7 @@ So let's examine [_*contact.json*_](https://github.com/rbtylee/tutorial-jsonc/bl
 ```
 Suppose we wish to read this JSON file and print only the first and last name. Examine [_*json-parse00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse00.c) below. Compile with _*gcc json-parse00.c -ljson-c -o json-parse00*_:
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -88,7 +88,7 @@ The first function, _*json\_object\_object\_get(obj, key)*_, simply returns the 
 
 In our example, we have
 
-```
+```C
 json_object *first_name = json_object_object_get(root,  "firstName");
 ```
 
@@ -100,7 +100,7 @@ Hopefully, all this is clear by now. If not, we will [later](https://github.com/
 
 So let's examine what the function _*json_object_object_get(obj, key)*_ actually does. In our case the line of code:
 
-```
+```C
 json_object *first_name = json_object_object_get(root,  "firstName");
 ```
 
@@ -127,7 +127,7 @@ Hence, it is safe to call this function with a NULL object, in which case (null)
 
 It is important to note that the returned "string memory is managed by the json\_object and will be freed when the reference count of the json\_object drops to zero." Therefore, if one wishes to 'keep' the value of this string around, one has to store it in a char array. For example, [_*json-parse01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse01.c):
 
-```
+```C
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -174,7 +174,7 @@ However, an alternative to _*json_object_object_get(obj, key)*_  is the function
 Note: this introduces a new type. _*json_bool*_, clearly as expected merely a convenience to deal with Boolean values.
 
 We have
-```
+```C
 typedef int json_bool;
 ```
 While some versions of json-c have TRUE and FALSE macros defined you probably shouldn't use them as they have removed in version 0.14. Many other libraries also provide similar 'types' and values for booleans.
@@ -185,7 +185,7 @@ Clearly the function _*json_object_object_get_ex(obj, key, &value)*_ returns TRU
 
 So here is _*json-parse00.c*_ refactored using this new function:
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
