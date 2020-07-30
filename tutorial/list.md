@@ -7,15 +7,15 @@ According to [The JSON Data Interchange Standard](http://www.ecma-international.
 
 A few valid JSON arrays:
 
-```
+```json
 ["foobar", "foo", "bar"]
 ```
 
-```
+```json
 ["foo", "bar", 32, null]
 ```
 
-```
+```json
 [
    "firstName": "John",
    "lastName": "Smith",
@@ -35,12 +35,12 @@ A few valid JSON arrays:
 
 In JSON, an array is a list of values, each a valid JSON type. This means a JSON array can not contain an attribute/value pair. For example, the following is a valid JSON:
 
-```
+```json
 { "age":32 }
 ```
 While the below is an invalid JSON array:
 
-```
+```json
 [ "age":32 ]
 ```
 
@@ -60,7 +60,7 @@ The json-c library has an enumerated type [_*json_type*_](https://json-c.github.
 
 Note, in the JSON standards we only have one numeric type defined, _number_. Whereas in C, a [_typed_](https://en.wikipedia.org/wiki/Strong_and_weak_typing) language, we need to distinguish between ints, floats, doubles, et al. Json-c therefore distinguishes between _*json_type_int*_ and _*json_type_double*_. Furthermore, since the JSON standards have two boolean types, _true_ and _false_, and C completely lacks a boolean type, the type _*json_type_boolean*_ is in reality, an *int* in the json-c representation. Remember we have:
 
-```
+```C
 typedef int json_bool;
 ```
 
@@ -70,7 +70,7 @@ An important thing to note is a JSON array by itself is valid JSON.
 
 Consider [_*json-array00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array00.c):
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -100,18 +100,18 @@ You access the array values by using the value's index number. Json-c provides t
 
 Notice that the _*json_object_array_get_idx*_ returns the _*json_object*_ at the specified index. For example, if json_object_array_get_idx(root, 2) returns a _*json_object*_ of type _*json_type_int*_, to actually access the integer one has to use:
 
-```
+```C
 i = json_object_get_int(json_object_array_get_idx(root, 2))
 ```
 
 Likewise, we can not set a JSON array value at a specific index unless the value is a _*json_object*_.  For example, we have:
 
-```
+```C
 json_object_array_put_idx(root, 2, json_object_new_string("foobar"))
 ```
 and not:
 
-```
+```C
 json_object_array_put_idx(root, 2, "foobar")
 ```
 If one tries the latter, the program will compile with a warning and if executed crash:
@@ -127,7 +127,7 @@ In this instance, all of the missing array values that will be added during the 
 
 To illustrate the usage of these functions, [_*json-array01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array01.c):
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -162,7 +162,7 @@ Recall the function _*doarray*_ in program [_*json-parse07.c*_](https://github.c
 
 To illustrate in slightly simpler code, [_*json-array02.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array02.c):
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
