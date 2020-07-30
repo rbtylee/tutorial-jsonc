@@ -36,7 +36,7 @@ From the documentation:
 For our example, [_*json-array04*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array04.c), we call _*json_c_visit*_ on our JSON array, _*root*_ with a userfunc, _*print_str*_ which merely prints the array index and array value at that index. Note that the _*userfunc*_ is declared to be type _*json_c_visit_userfunc*_. This a typedef in the _*json_visit.h*_ header file:
 
 ```C
-typedef int( 	json_c_visit_userfunc )(json_object *jso, int flags, json_object *parent_jso, const char *jso_key, size_t *jso_index, void *userarg)
+typedef int(json_c_visit_userfunc)(json_object *jso, int flags, json_object *parent_jso, const char *jso_key, size_t *jso_index, void *userarg)
 ```
 
 The _*userfunc*_ must return one of the below defined return values:
