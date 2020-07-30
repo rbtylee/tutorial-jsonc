@@ -3,7 +3,7 @@
 To ease into things, let's start by creating a simple utility function to parse a JSON file; later we'll delve into how we can control the parsing in more detail. 
 First, we consider how to read a JSON file into memory and print the file contents as a c string. For this example and many of the rest of the examples, I am going to use the JSON representation of a person taken from the aforementioned [Wikipedia article](https://en.wikipedia.org/wiki/JSON), [_*contact.json*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/contact.json):
 
-```
+```json
 {
   "firstName": "John",
   "lastName": "Smith",
@@ -33,7 +33,7 @@ First, we consider how to read a JSON file into memory and print the file conten
 
 Now examine [_*json-file00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-file00.c):
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -70,7 +70,7 @@ Admittedly, the output is not very pretty, all extraneous whitespace has been st
 Now lets look at our next program: [_*json-file01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-file01.c). Compile with
 _*gcc json-file01.c -ljson-c -o json-file01*_:
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -126,13 +126,13 @@ So let's examine what we have learned from the code above.
 
 First and foremost, I have introduced a new 'type': _*json_object*_. As expected for a C program, _*json_object*_ is really an opaque structure whose internal implementation is not available in application code outside of the json-c library. Your code will only ever deal with a _pointer_ to a _*json_object*_, and all operations must be performed through the json-c API functions. Some programmers who wish to stress the idea _*json_object*_ is a *struct* would write the line of code:
 
-```
+```C
 json_object *root = json_object_from_file("contact.json");
 ```
 
 as
 
-```
+```C
 struct json_object *root = json_object_from_file("contact.json");
 ```
 
