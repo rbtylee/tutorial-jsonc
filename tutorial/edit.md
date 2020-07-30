@@ -12,7 +12,7 @@ Since we are merely incrementing John's age, json-c fortunately provides an easy
 
 Hence:
 
-```
+```C
    json_object *root = json_object_from_file("contact.json");
    json_object *age = json_object_object_get(root, "age");
    json_object_int_inc(age, 1);
@@ -22,7 +22,7 @@ This function can also decrement as the variable value can be negative.
 
 Next, we consider changing the office phone number in the JSON. Remember the _*phoneNumbers*_ attribute is a JSON array of two JSON objects:
 
-```
+```json
   "phoneNumbers": [
     {
       "type": "home",
@@ -43,7 +43,7 @@ The json-c library provides a set of functions of the form: _*json\_object\_set\
 
 Our code snippet then looks like:
 
-```
+```C
    json_object *root = json_object_from_file("contact.json");
    
    json_object *phone_numbers =  json_object_object_get(root, "phoneNumbers");
@@ -57,13 +57,13 @@ And works as expected.
 Now we add the daughter. Recall the _*children*_ attribute of our JSON is also an array but in this case, it is empty:
 
 
-```
+```json
 "children": []
 ```
 
 Let the adopted daughter's name be _*Paige Crawford*_, age 15. As expected, the below snippet handles this case with ease:
 
-```
+```C
    json_object *root = json_object_from_file("contact.json");
 
    json_object *children =  json_object_object_get(root, "children");
@@ -75,7 +75,7 @@ Let the adopted daughter's name be _*Paige Crawford*_, age 15. As expected, the 
 
 Finally, let's add John's wife. If her name is Kate Smith, then you may think the problem would be as simple as:
 
-```
+```C
    json_object *root = json_object_from_file("contact.json");
    json_object *spouse = json_object_object_get(root, "spouse");
    json_object_set_string(spouse, "Kate Smith");
@@ -87,7 +87,7 @@ In both cases,in the json-c function,_*json_object_set_string*_, the JSON object
 
 Makes sense as _*spouse*_ is a JSON type NULL. But here it is a minor complication, solvable in this case by deleting the object first and then re-adding it:
 
-```
+```C
    json_object *root = json_object_from_file("contact.json");
    json_object *spouse = json_object_object_get(root, "spouse");
    json_object_object_del(root,"spouse");
@@ -102,7 +102,7 @@ Notice the introduction of the self-explanatory function:
 
 Wrapping it up, our complete program, [_*json-edit00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-edit00.c):
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
