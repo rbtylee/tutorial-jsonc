@@ -165,17 +165,17 @@ key: 10, value: 10
 #include <json_visit.h>
 
 static int 
-doit(json_object *jso, int flags, json_object *parent_jso, const char *jso_key,
-                       size_t *jso_index, void *userarg)
+doit(json_object *obj, int flags, json_object *parent, const char *key,
+                       size_t *index, void *data)
 {
-  if (!parent_jso || flags ==2 ) return JSON_C_VISIT_RETURN_CONTINUE;
+  if (!parent || flags ==JSON_C_VISIT_SECOND) return JSON_C_VISIT_RETURN_CONTINUE;
   
-  if (jso_key && json_object_get_type(jso) == json_type_object)
-         printf("\n%s\n\n", jso_key);
-  else if (json_object_get_type(jso) == json_type_array)
-        printf("\n%s  \n\n", jso_key);
-  else if (json_object_get_type(jso) != json_type_object)
-           printf("%s: %s\n", jso_key, (jso?  json_object_to_json_string(jso):"(null)"));
+  if (key && json_object_get_type(obj) == json_type_object)
+         printf("\n%s\n\n", key);
+  else if (json_object_get_type(obj) == json_type_array)
+        printf("\n%s  \n\n", key);
+  else if (json_object_get_type(obj) != json_type_object)
+           printf("%s: %s\n", key, (obj?json_object_to_json_string(obj):"(null)"));
      
   return JSON_C_VISIT_RETURN_CONTINUE;
 }
