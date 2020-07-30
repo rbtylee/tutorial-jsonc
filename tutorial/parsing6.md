@@ -13,7 +13,7 @@ static int
 print_str(json_object *obj, int flags, json_object *parent, const char *key,
                        size_t *index, void *data)
 {
-  if (jso_index)
+  if (index)
      printf("The value at %ld position is: %s\n", (long)* index, json_object_get_string(obj));
   return JSON_C_VISIT_RETURN_CONTINUE;
 }
@@ -52,8 +52,8 @@ These return values determine how the path through the JSON continues. Notice ou
 Also note: the very first time _*print_str*_ is called it is called with the entire JSON array itself, and hence the argument _*jso_index*_ is NULL. We are not interested in printing this value or the JSON array itself so our _*print_str*_ function tests for this condition:
 
 ```
-if (jso_index)
-     printf("The value at %ld position is: %s\n", (long)* jso_index, json_object_get_string(jso));
+if (index)
+     printf("The value at %ld position is: %s\n", (long)* index, json_object_get_string(obj));
 ```
 
 Using  _*json_c_visit*_ to loop over a JSON array as above is perhaps overkill. For production code, I would recommend using a simple loop as previously discussed. The _*json_c_visit*_ solution is provided merely for completeness sake and to introduce the subject with a rather easy to understand example.
