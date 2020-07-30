@@ -15,7 +15,7 @@ From the documentation:
 
 An example of a _*sort_fn*_ for use with an array containing only intergers is found in the json-c program, [_*test1.c*_](https://github.com/json-c/json-c/blob/master/tests/test1.c):
 
-```
+```C
 static int sort_fn(const void *j1, const void *j2)
 {
 	json_object *const *jso1, *const *jso2;
@@ -49,13 +49,13 @@ This is the general form all _*sort_fns*_ are going to take:
 
 Consider a JSON array whose values are first names. [_*names.json*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/names.json). Our JSON has the form:
 
-```
+```json
 ["Torin", "Stefin", "Emerson", "Lisandro", "Caidan", ...]
 ```
 
 This array is clearly unsorted. In json-c, sorting this array is as easy as:
 
-```
+```C
    json_object *root = json_object_from_file("names.json");
    json_object_array_sort(root, sort_fn);
 ```
@@ -72,7 +72,7 @@ From the documentation:
 
 Wrapping it all up here is a program to sort the JSON array _*names.json*_ and search for two keys, one key present and one key not present: [_*json-array03.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array03.c)
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 #include <string.h>
@@ -137,7 +137,7 @@ To fix this issue to produce more _*natural looking results*_ see Problem one be
 
 It should be noted that in many _*Real World™*_ uses of a JSON array, the array is more complex than a simple list of names or numbers. For example, consider a JSON array of the form:
 
-```
+```json
 [
   {
     "age": 27,
