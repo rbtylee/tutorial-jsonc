@@ -8,7 +8,7 @@ The usage of this function is rather simple.
 
 Consider [_*json-str00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-str00.c):
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -61,7 +61,7 @@ Problem:
 
 Verify everything works as before:
 
-```
+```C
 #define SAMPLE_JSON                            \
    "{"                                         \
    "  \"firstName\": \"John\","                \
