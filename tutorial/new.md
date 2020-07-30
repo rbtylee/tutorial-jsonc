@@ -15,7 +15,7 @@ The (latest) documentation states this function creates:
 
 Consider:
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -48,14 +48,14 @@ After creating a _*json\_object*_, you usually intialize it with the data you wa
 
 Consider the code snippet:
 
-```
+```C
     json_object *root = json_object_new_object();
     json_object_object_add(root, "id", NULL);
 ```
 
 This creates the JSON:
 
-```
+```json
 {
   "id":null
 }
@@ -86,7 +86,7 @@ This function returns 0 on success and -1 on failure.
 
 As an example of using these functions along with a new function to write the JSON to your disk, consider the program, [_*json-new00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-new00.c), below. This program creates a new contact JSON file with the same JSON structure as our _*contact.json*_. It prints the JSON and saves it to the hard drive.
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -197,7 +197,7 @@ By now you know what to do here ...
 
 1. What happens if _*json\_object \*address*_ is NULL in the above code, _*json-new00.c*_? Refactor the code above to prevent all such unlikely but serious cases of that happening.
 2. Write a json-c program to create and save the following json:
-```
+```json
 {
   "items":
   {
