@@ -17,9 +17,7 @@ A few valid JSON arrays:
 
 ```json
 [
-   "firstName": "John",
-   "lastName": "Smith",
-   {
+    {
       "type": "home",
       "number": "212 555-1234"
     },
