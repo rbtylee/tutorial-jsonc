@@ -5,11 +5,11 @@
 #include <json_visit.h>
 
 static int 
-print_str(json_object *jso, int flags, json_object *parent_jso, const char *jso_key,
-                       size_t *jso_index, void *userarg)
+print_str(json_object *jso, int flags, json_object *parent, const char *key,
+                       size_t *index, void *data)
 {
   if (jso_index)
-     printf("The value at %ld position is: %s\n", (long)* jso_index, json_object_get_string(jso));
+     printf("The value at %ld position is: %s\n", (long)* index, json_object_get_string(jso));
   return JSON_C_VISIT_RETURN_CONTINUE;
 }
 
