@@ -18,7 +18,7 @@ The json-c library has an enumerated type [_*json\_type*_](https://json-c.github
 
 Note, in the JSON standards we only have one numeric type defined, _number_. Whereas in C, a [_typed_](https://en.wikipedia.org/wiki/Strong_and_weak_typing) language, we need to distinguish between ints, floats, doubles, et al. Json-c therefore distinguishes between _*json_type_int*_ and _*json_type_double*_. Furthermore, since the JSON standards have two boolean types, _true_ and _false_, and C completely lacks a boolean type, the type _*json_type_boolean*_ is in reality, an *int* in the json-c representation. Remember we have:
 
-```
+```C
 typedef int json_bool;
 ```
 
@@ -49,7 +49,7 @@ Both of course *structs* defined in the json-c header files. For now, we can saf
 
 Now, let's demonstrate some of these function's usage with our _*contact.json*_ file. Example [_*json-type00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-type00.c) below:
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
