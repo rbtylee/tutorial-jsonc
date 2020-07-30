@@ -71,7 +71,7 @@ I am going to take the [Animated example of a depth-first search](https://en.wik
 
 <table>
 <tr>
-  <td> Json </td> <td>Graph </td>
+  <td><a href="https://github.com/rbtylee/tutorial-jsonc/blob/master/src/depth.json"> Json</a> </td> <td><a href="https://github.com/rbtylee/tutorial-jsonc/blob/master/Images/Depth-First-Search.gif">Graph</a> </td>
 </tr>
 <tr>
 <td>
@@ -111,6 +111,8 @@ To properly illustrate a depth-first search, we note the function _*json_c_visit
 if (!parent || flags==JSON_C_VISIT_SECOND) return JSON_C_VISIT_RETURN_CONTINUE;
 ```
 Note: we need to ignore the case where no parent JSON exists also. The case corresponds to the entire JSON document itself. It will be visisted both first and last as it also is a '_*container node*_'. 
+
+Putting it all together [_*json-parse10.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse10.c) reads [_*depth.json*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/depth.json) and prints the key and value of each node in the a depth-first search:
 
 ## json-parse10.c
 
