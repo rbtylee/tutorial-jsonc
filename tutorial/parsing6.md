@@ -75,7 +75,7 @@ The function _*json_c_visit*_ is best illustrated by considering an actual examp
 > Visit each object in the JSON hierarchy starting at jso.
 > Nodes will be visited depth first, but containers (arrays and objects) will be visited twice, the second time with JSON_C_VISIT_SECOND set in flags.
 
-A more general example of a Depth-first search would take through a more complex data structure. 
+A more general example of a Depth-first search would take a more complex data structure. 
 
 I am going to take the [Animated example of a depth-first search](https://en.wikipedia.org/wiki/Depth-first_search#/media/File:Depth-First-Search.gif) from [wikipedia](https://en.wikipedia.org/wiki/Depth-first_search). Illustrated below along with a JSON document with a similar structure:
 
