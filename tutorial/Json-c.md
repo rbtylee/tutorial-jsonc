@@ -11,7 +11,7 @@ Linux users may be able to install json-c using their OS's packaging system. How
 
 I will be using [Bodhi Linux 6.0](https://www.bodhilinux.com/) based on Ubuntu 20.04 as my Distro in this tutorial and gcc as my compiler. Usage of another compiler will not be discussed. Note, Bodhi 6.0 is currently unreleased but planned for this fall. So to install:
 
-```
+```sh
 sudo apt install libjson-c-dev
 ```
 
@@ -21,7 +21,7 @@ For reference, the version installed is *0.13.1+dfsg-7ubuntu0.3*. Note, this cor
 
 Without much explanation, as it is rather self-explanatory,  let's write our first json-c program, [_*json-version.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-version.c):
 
-````
+````C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -42,7 +42,7 @@ gcc json-version.c -ljson-c -o json-version
 
 The above gcc command assumes json-c was installed via the package manager. If json-c was compiled from source using the default prefix, to compile _*json-version.c*_ use the command below:
 
-```
+```sh
 gcc json-version.c -L/usr/local/lib -ljson-c -o json-version
 ```
 
