@@ -105,8 +105,12 @@ Now, the defintion of a JSON also from wikipedia:
 
 > Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.
 
+To properly illustrate a depth-first search, we note the function _*json_c_visit*_ visists container nodes twice. So in our _*json_c_visit_userfunc*_ we need to test for that and simply return as in:
 
-
+```C
+if (!parent || flags==JSON_C_VISIT_SECOND) return JSON_C_VISIT_RETURN_CONTINUE;
+```
+Note: we need to ignore the case where no parent JSON exists also. The case corresponds to the entire JSON document itself. It will be visisted both first and last as it also is a '_*container node*_'. 
 
 ## json-parse10.c
 
