@@ -2,7 +2,7 @@
 
 Examining [_*json-edit00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-edit00.c), one may note the code for changing John's office phone number seems unduly complex:
 
-```
+```C
    json_object *root = json_object_from_file("contact.json");
    
    json_object *phone_numbers =  json_object_object_get(root, "phoneNumbers");
@@ -15,7 +15,7 @@ Imagine how much more complex it would become in a JSON where objects are nested
 
 Consider again our example, John's Office phone number. For the JSON represented by our _*contact.json*_ file, the string "_*/phoneNumbers/1/number*_" is a JSON pointer to the value of his office number.
 
-```
+```json
 {
   "firstName": "John",
   ...
@@ -51,7 +51,7 @@ For more details on these functions, please consult the [documentation](https://
 
 So here is the original code to change the office phone number:
 
-```
+```C
    json_object *root = json_object_from_file("contact.json");
    
    json_object *phone_numbers =  json_object_object_get(root, "phoneNumbers");
@@ -62,7 +62,7 @@ So here is the original code to change the office phone number:
 
 and here is the JSON pointer version:
 
-```
+```C
 json_object *root = json_object_from_file("contact.json");
 
 json_pointer_set(&root, "/phoneNumbers/1/number", json_object_new_string("843 276-3583"));
