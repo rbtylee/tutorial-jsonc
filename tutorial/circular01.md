@@ -4,7 +4,7 @@ After the previous two sections, you should be pretty clear on when to use json-
 
 [Previously in a problem](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/new.md), you were asked to write a program to generate the following JSON:
 
-```
+```json
 {
   "items":
   {
@@ -25,7 +25,7 @@ After the previous two sections, you should be pretty clear on when to use json-
 
 Here is a possible solution, only it doesn't save the resulting JSON:
 
-```
+```C
 #include <stdlib.h>
 #include <stdio.h>
 #include <json-c/json.h>
@@ -61,11 +61,11 @@ main(void)
 ```
 
 Now change the line:
-```
+```C
 json_object_object_add(items, "properties", NULL
 ```
 to
-```
+```C
 json_object_object_add(items, "properties", root);
 ```
 
