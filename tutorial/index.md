@@ -50,7 +50,7 @@
 - [Parsing a Json object - part 5: Iterators](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing5.md)
     * Bettter Encapsulation using iterators
 - [Parsing a Json object - part 6: Iteration yet again](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing6.md)
-    * Loop thru an array: [_*json-array04.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array04.c)
+    * Loop through an array: [_*json-array04.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array04.c)
     * Illustrate a depth-first search: [_*json-parse10.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse10.c)
     * Search a JSON for a particular value: [_*json-parse11.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse11.c)
 - Error handling
