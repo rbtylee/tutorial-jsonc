@@ -8,7 +8,7 @@ static int
 print_str(json_object *jso, int flags, json_object *parent, const char *key,
                        size_t *index, void *data)
 {
-  if (jso_index)
+  if (index)
      printf("The value at %ld position is: %s\n", (long)* index, json_object_get_string(jso));
   return JSON_C_VISIT_RETURN_CONTINUE;
 }
