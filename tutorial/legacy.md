@@ -108,7 +108,7 @@ looks through the _*json_object*_ root, which is the internal memory representat
 
 You can see this if you insert the statement below into the code:
 
-```
+```C
  printf("%s\n", json_object_to_json_string_ext(first_name, JSON_C_TO_STRING_PRETTY));
 ```
 
