@@ -4,7 +4,7 @@ We have previously discussed two methods for iterating over _*json_type_object*_
 
 ## json-array04.c
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 #include <json_visit.h>
@@ -35,7 +35,7 @@ From the documentation:
 
 For our example, [_*json-array04*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array04.c), we call _*json_c_visit*_ on our JSON array, _*root*_ with a userfunc, _*print_str*_ which merely prints the array index and array value at that index. Note that the _*userfunc*_ is declared to be type _*json_c_visit_userfunc*_. This a typedef in the _*json_visit.h*_ header file:
 
-```
+```C
 typedef int( 	json_c_visit_userfunc )(json_object *jso, int flags, json_object *parent_jso, const char *jso_key, size_t *jso_index, void *userarg)
 ```
 
@@ -51,7 +51,7 @@ These return values determine how the path through the JSON continues. Notice ou
 
 Also note: the very first time _*print_str*_ is called it is called with the entire JSON array itself, and hence the argument _*jso_index*_ is NULL. We are not interested in printing this value or the JSON array itself so our _*print_str*_ function tests for this condition:
 
-```
+```C
 if (index)
      printf("The value at %ld position is: %s\n", (long)* index, json_object_get_string(obj));
 ```
@@ -111,7 +111,7 @@ Now, the defintion of a JSON also from wikipedia:
 
 ## json-parse10.c
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 #include <json_visit.h>
@@ -154,7 +154,7 @@ key: 10, value: 10
 
 ## json-parse11.c
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 #include <json_visit.h>
