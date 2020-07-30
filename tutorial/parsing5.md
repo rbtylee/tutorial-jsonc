@@ -4,7 +4,7 @@ We introduced the function _*json_object_object_foreach*_ previously. However, j
 
 Consider our previous example: 
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -23,7 +23,7 @@ main(void)
 
 If we refactor the above by replacing essentially implementing the macro _*json_object_object_foreach*_, we have:
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -48,7 +48,7 @@ main(void)
 
 Examining the above code, we are violating the Object-Oriented principle of [encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)) and exposing the json-c internal representation of the _*json_object*_. This is not as apparent when using the macro _*json_object_object_foreach*_, yet even then the programmer has access to the internal struct lh_entry:
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -67,7 +67,7 @@ main(void)
 
 The json-c libraries offers a way to avoid this "_*problem*_". To illustrate, consider [_*json-parse08.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse08.c):
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
