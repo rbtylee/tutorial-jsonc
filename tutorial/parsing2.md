@@ -5,14 +5,14 @@ At this point in the tutorial, we have almost all the tools needed to completely
 However, there is some ambiguity in the file _*contact.json*_ we need to address first.
 
 Consider the two attributes, "children" and "spouse":
-```
+```json
   "children": [],
   "spouse": null
 ```
 For *children*, assume a value of null means _*No Children*_ whereas an empty array means _*Unknown*_.
 Where there are children, record the full name and age, for each child:
 
-```
+```json
   "children": [
     {
       "name": "Tammy Smith",
@@ -27,7 +27,7 @@ Where there are children, record the full name and age, for each child:
 For Spouse, a value of null will mean _*No Spouse Known*_.
 Where a spouse is known, record the full name and age as in:
 
-```
+```json
   "spouse": {
       "name": "Amanda Smith",
       "age": 23
@@ -52,7 +52,7 @@ With these two functions now _under our belt_ the rest is just *grunt work*:
 
 ## json-parse04.c
 
-```
+```C
 #include <stdio.h>
 #include <json-c/json.h>
 
