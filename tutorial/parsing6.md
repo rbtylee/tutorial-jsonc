@@ -156,6 +156,27 @@ key: 8, value: 8
 key: 9, value: { "10": 10 }
 key: 10, value: 10
 ```
+## Serching a JSON
+
+We have already discussed _*json_object_array_bsearch*_ which can be used to search a **sorted** JSON array, but what if we wish to search a JSON object array or otherwise for a particular key or value? And terminate the search once the key or value is found.
+
+In [_*json-parse11.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse11.c) we wish to find the name, first and last, of the user with a particular email address, _*ptunkiny@angelfire.com*_ in the JSON document,[_*sample00.json*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/sample00.json).
+
+This JSON consists of an array containing many records of the form:
+
+```json
+{
+  "id": 1,
+  "first_name": "Catie",
+  "last_name": "Gregorin",
+  "email": "cgregorin0@elegantthemes.com",
+  "gender": "Female",
+  "ip_address": "172.219.194.172"
+}
+```
+
+As this JSON document is an array, one could use _*json_object_array_bsearch*_ to search the array with the right _*sort_fn*_. However, this has the disadvantage that the array must be sorted first. So consider _*json-parse11.c*_ below:
+
 
 ## json-parse11.c
 
@@ -204,3 +225,15 @@ main(void)
 }
 
 ```
+
+The code is fairly straightforward, note the usage of _*JSON_C_VISIT_RETURN_STOP*_ to stop _*json_c_visit*_ from visiting any further nodes in the JSON document.
+
+From the [documentation](https://json-c.github.io/json-c/json-c-0.15/doc/html/json__visit_8h.html#a5956f41bed48f90a127f9b37fad7ea97):
+> This json_c_visit_userfunc return value indicates that iteration should stop immediately, and cause json_c_visit to return success.
+
+This is precisely what we wish to do at this step, terminate the search once we have found the required record.
+
+## Problems
+
+1. Rewrite _*json-parse11.c*_ to use _*json_object_array_bsearch*_.
+2. Review _* JSON_C_VISIT_RETURN_POP*_ and _*JSON_C_VISIT_RETURN_SKIP*_ in the [docs](https://json-c.github.io/json-c/json-c-0.14/doc/html/json__visit_8h.html), can you think of any user case for these?
