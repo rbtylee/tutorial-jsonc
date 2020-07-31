@@ -175,7 +175,7 @@ This JSON consists of an array containing many records of the form:
 }
 ```
 
-As this JSON document is an array, one could use _*json_object_array_bsearch*_ to search the array with the right _*sort_fn*_. However, this has the disadvantage that the array must be sorted first. So consider _*json-parse11.c*_ below:
+As this JSON document is an array, one could use _*json_object_array_bsearch*_ to search the array with the right _*sort_fn*_. However, this has the disadvantage that the array must be sorted first. So consider [_*json-parse11.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-parse11.c) below:
 
 
 ## json-parse11.c
@@ -187,6 +187,7 @@ As this JSON document is an array, one could use _*json_object_array_bsearch*_ t
 #include <json_visit.h>
 
 #define EMAIL "ptunkiny@angelfire.com"
+#define JSON_OBJECT_STR(obj, key) json_object_get_string(json_object_object_get(obj, key))
 
 static int 
 doit(json_object *obj, int flags, json_object *parent, const char *key,
@@ -197,17 +198,10 @@ doit(json_object *obj, int flags, json_object *parent, const char *key,
        json_object_get_type(obj) == json_type_array)
       return JSON_C_VISIT_RETURN_CONTINUE;
       
-   static const char *first_name = "";
-   static const char *last_name = "";
-   
-   if (strcmp(key, "first_name") == 0)
-       first_name = json_object_get_string(obj);
-   else if (strcmp(key, "last_name") == 0)
-      last_name = json_object_get_string(obj);
-
    if (strcmp(json_object_get_string(obj), EMAIL) == 0)
    {
-      printf("Found: %s %s %s\n", first_name, last_name, json_object_to_json_string(obj));
+      printf("Found: %s %s %s\n", JSON_OBJECT_STR(parent, "first_name"), 
+             JSON_OBJECT_STR(parent, "last_name"), json_object_to_json_string(obj));
       return JSON_C_VISIT_RETURN_STOP;
    }
    return JSON_C_VISIT_RETURN_CONTINUE;
