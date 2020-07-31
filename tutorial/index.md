@@ -40,9 +40,9 @@
 - JSON Copying
    *
 - [JSON Arrays: basics](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/list.md)
-    * [_*json-array00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array00.c)
-    * [_*json-array01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array01.c)
-    * [_*json-array02.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array02.c)
+    * AJSON array by itself is valid JSON: [_*json-array00.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array00.c)
+    * Deleting a JSON array value: [_*json-array01.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array01.c)
+    * Looping over all JSON array values: [_*json-array02.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array02.c)
 - [JSON Arrays: sorting and searching](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/sort.md)
     * Sorting and searching a JSON array: [_*json-array03.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-array03.c)
 - [JSON Pointers](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/edit2.md)
