@@ -1,7 +1,7 @@
 # Json-c Tutorial Index
 
 - [Intro](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/Intro.md)
-    * contact.json introduced
+    * [contact.json](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/contact.json) introduced
 - [Json-c](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/Json-c.md)
     * Installation
     * Print version:[ _*json-version.c*_](https://github.com/rbtylee/tutorial-jsonc/blob/master/src/json-version.c)
